@@ -639,6 +639,22 @@
     });
   </script>
 
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.hmk-faq-list').forEach(function (list) {
+      var items = list.querySelectorAll('.hmk-faq-item');
+      items.forEach(function (item) {
+        item.addEventListener('toggle', function () {
+          if (item.open) {
+            items.forEach(function (other) {
+              if (other !== item) other.open = false;
+            });
+          }
+        });
+      });
+    });
+  });
+  </script>
 </body>
 
 </html>
