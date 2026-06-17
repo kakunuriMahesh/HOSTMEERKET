@@ -2013,10 +2013,10 @@ section {
 }
 
 .header_h2 {
-    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+    font-size: clamp(1.6rem, 4vw, 3.2rem);
     line-height: 1.15;
     letter-spacing: -0.025em;
-    max-width: 11ch;
+    max-width: 14ch;
 }
 
 .header_p {
@@ -2346,8 +2346,8 @@ section {
         left: 83px;
     }
       .header_h2{
-        font-size: 3.2rem;
-        line-height: 1.05;
+        font-size: clamp(1.4rem, 5vw, 2.2rem);
+        line-height: 1.2;
         text-align: center;
         width: 100%;
         max-width: 100%;
