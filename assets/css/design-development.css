@@ -359,7 +359,7 @@ body {
 }
 
 .dev-section {
-  padding: 32px 0 0 94px;
+  padding: 32px 0 !important
 }
 
 .services-section,
