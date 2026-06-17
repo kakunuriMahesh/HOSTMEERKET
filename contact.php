@@ -342,7 +342,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="terms-row">
               <input type="checkbox" id="terms" name="terms" value="accepted" required="">
               <label for="terms">
-                I agree to the <a href="terms-of-service.html" rel="noopener" target="_blank">Terms of Service</a>
+                I agree to the <a href="terms-and-conditions.html" rel="noopener" target="_blank">Terms of Service</a>
                 and understand my details will be used to respond to this enquiry.
               </label>
             </div>
