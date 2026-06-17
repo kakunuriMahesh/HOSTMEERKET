@@ -1212,7 +1212,7 @@
 }
 
 .feature-title {
-  font-size: 1.35rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: #f8fafc;
   margin-bottom: 0.5rem;
@@ -1411,9 +1411,9 @@
 }
 
 .hmk-migration-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 1.2;
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.15;
   margin-bottom: 1.2rem;
   color: var(--text-primary) !important;
 }
@@ -1559,8 +1559,9 @@
 
 .hmk-payment-title {
   color: #f8fafc;
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.15;
   margin-bottom: 1rem;
 }
 
@@ -2020,10 +2021,11 @@
 
 .hmk-compare-title {
     color: var(--text-primary) !important;
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
     font-weight: 800;
+    line-height: 1.15;
     margin-bottom: 1rem;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.025em;
 }
 
 .hmk-compare-subtitle {
@@ -2486,7 +2488,7 @@ html, body {
 }
 
 .hmk-step-card h3 {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: var(--text-primary) !important;
     margin-bottom: 0.8rem;

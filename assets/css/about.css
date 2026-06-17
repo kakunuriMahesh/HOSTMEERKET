@@ -229,11 +229,11 @@ body {
 }
 
 
-.hero-heading {
-  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
-  font-weight: 800;
-  line-height: 1.08;
-  letter-spacing: -0.03em;
+    .hero-heading {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
   margin-bottom: 1.25rem;
 }
 
@@ -409,10 +409,10 @@ section {
 }
 
 .section-title {
-  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
   font-weight: 800;
-  line-height: 1.12;
-  letter-spacing: -0.03em;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
   margin-bottom: 1rem;
 }
 
@@ -871,9 +871,10 @@ section {
 }
 
 .cta-wrap h2 {
-  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
   font-weight: 800;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
   margin-bottom: 0.75rem;
 }
 
@@ -1093,8 +1094,8 @@ body:not(.light-mode) .team-card-body strong {
   }
 
   .hero-heading {
-    font-size: clamp(2.05rem, 11vw, 2.75rem) !important;
-    line-height: 1.12;
+    font-size: clamp(1.8rem, 6vw, 2.2rem) !important;
+    line-height: 1.15;
   }
 
   .hero-desc,

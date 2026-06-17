@@ -248,12 +248,18 @@ body.light-mode .navbar-toggler-icon {
 /* Hero */
 .contact-hero {
   position: relative;
-  padding: 5rem 0;
+  padding: 8rem 0 5rem;
   background:
     radial-gradient(ellipse 80% 60% at 50% -10%, rgba(47, 134, 255, 0.18), transparent),
     radial-gradient(circle at 80% 70%, rgba(123, 97, 255, 0.10), transparent 50%),
     var(--dark-secondary);
   z-index: 1;
+}
+
+@media (max-width: 991px) {
+  .contact-hero {
+    padding: 7rem 0 4rem;
+  }
 }
 
 .contact-hero::after {
@@ -303,11 +309,11 @@ body.light-mode .navbar-toggler-icon {
   }
 }
 
-.hero-heading {
-  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
+    .hero-heading {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
   margin-bottom: 1rem;
   text-align: center;
   color: #fff;

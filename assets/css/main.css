@@ -1093,7 +1093,7 @@ footer .footer_about p {
 }
 
 .tooltip-inner {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
   box-shadow: 0px 0px 4px black;
   opacity: 1 !important;
   color: var(--white);
@@ -2313,12 +2313,12 @@ html, body {
 /* TITLE */
 
 .hosting-hero-title{
-    font-size:clamp(3rem,6vw,5.5rem);
-    line-height:1.08;
-    font-weight:900;
+    font-size:clamp(2rem,4vw,3.5rem);
+    line-height:1.1;
+    font-weight:800;
     color:#ffffff;
     margin-bottom:30px;
-    letter-spacing:-2px;
+    letter-spacing:-0.03em;
 }
 
 .hosting-blue-text{
@@ -2555,8 +2555,8 @@ html, body {
 }
 
 .hmk-pricing-title{
-    font-size: clamp(2.2rem, 4vw, 3.6rem);
-    letter-spacing: -0.04em;
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+    letter-spacing: -0.025em;
     font-weight: 800;
     color:#fff;
     margin-bottom: 12px;
@@ -2956,10 +2956,9 @@ html, body {
     }
 
     .hosting-hero-title{
-        font-size:2.6rem;
+        font-size:clamp(1.8rem, 6vw, 2.2rem);
         line-height:1.15;
         text-align:center;
-        margin-bottom:22px;
     }
 
     .hosting-hero-description{
@@ -3007,7 +3006,7 @@ html, body {
     /* Compact Menu Item Typography Rules */
     #navbarType .navbar-nav .nav-item .nav-link,
     .nav-link {
-        font-family: 'Poppins', sans-serif !important;
+        font-family: 'Inter', sans-serif !important;
         font-size: 0.95rem !important; /* Smaller, cleaner font size */
         font-weight: 500 !important;
         padding: 8px 14px !important;
@@ -3015,7 +3014,7 @@ html, body {
 
     /* Dropdown submenu nested item synchronization */
     #navbarType .navbar-nav .dropdown-menu .dropdown-item {
-        font-family: 'Poppins', sans-serif !important;
+        font-family: 'Inter', sans-serif !important;
         font-size: 0.9rem !important;
         padding: 6px 18px !important;
     }

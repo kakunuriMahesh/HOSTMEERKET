@@ -178,7 +178,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
       </a>
 
-      <div class="d-flex align-items-center d-lg-none gap-3 hmk-nav-actions">
+      <div class="d-flex align-items-center d-lg-none gap-3">
         <button class="navbar-toggler ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarType" aria-controls="navbarType">
           <span class="navbar-toggler-icon"></span>
         </button>

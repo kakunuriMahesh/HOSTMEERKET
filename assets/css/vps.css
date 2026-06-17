@@ -140,7 +140,7 @@ body.light-mode .vps-hero-wrapper {
 }
 
 .vps-hero-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2rem, 4vw, 3.5rem);
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.03em;
@@ -441,7 +441,7 @@ body.light-mode .zigzag-section { background: #f8fafc; border-color: rgba(0,0,0,
 }
 
 .zz-kicker { color: #2f86ff; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.85rem; display: block; margin-bottom: 10px; }
-.zz-title { color: #fff; font-size: 2.2rem; font-weight: 800; line-height: 1.2; margin-bottom: 20px; }
+.zz-title { color: #fff; font-size: 1.2rem; font-weight: 700; line-height: 1.3; margin-bottom: 20px; }
 body.light-mode .zz-title { color: #0f172a; }
 .zz-desc { color: #94a3b8; font-size: 1.05rem; line-height: 1.7; margin-bottom: 30px; }
 body.light-mode .zz-desc { color: #475569; }
@@ -501,7 +501,7 @@ body.light-mode .vps-stat-num { color: #1d6fd6; }
 
 body.light-mode .hmk-pricing-section { background: #f1f5f9; border-color: rgba(0,0,0,0.05); }
 
-.hmk-pricing-title { font-size: 2.5rem; font-weight: 800; color: #fff; margin-bottom: 0.5rem; }
+.hmk-pricing-title { font-size: clamp(1.5rem, 2.5vw, 2.5rem); font-weight: 800; color: #fff; margin-bottom: 0.5rem; letter-spacing: -0.025em; }
 body.light-mode .hmk-pricing-title { color: #0f172a; }
 .hmk-pricing-subtitle { color: #94a3b8; font-size: 1.05rem; }
 body.light-mode .hmk-pricing-subtitle { color: #475569; }
@@ -577,7 +577,7 @@ body.light-mode .hmk-faq-section { background: #f8fafc; border-color: rgba(0,0,0
 .hmk-faq-wrap { display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: flex-start; }
 @media (max-width: 991px) { .hmk-faq-wrap { grid-template-columns: 1fr; } }
 
-.hmk-faq-title { font-size: 2.5rem; font-weight: 800; color: #fff; margin-bottom: 1rem; }
+.hmk-faq-title { font-size: clamp(1.5rem, 2.5vw, 2.5rem); font-weight: 800; color: #fff; margin-bottom: 1rem; letter-spacing: -0.025em; }
 body.light-mode .hmk-faq-title { color: #0f172a; }
 .hmk-faq-subtitle { color: #94a3b8; font-size: 1.05rem; line-height: 1.7; }
 body.light-mode .hmk-faq-subtitle { color: #475569; }

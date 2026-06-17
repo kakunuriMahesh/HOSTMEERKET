@@ -2013,8 +2013,9 @@ section {
 }
 
 .header_h2 {
-    font-size: clamp(2.6rem, 5vw, 4.9rem);
-    line-height: 1.05;
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+    line-height: 1.15;
+    letter-spacing: -0.025em;
     max-width: 11ch;
 }
 
@@ -2100,13 +2101,12 @@ section {
         width: 100%;
     }
 
-    .header_h2{
-        font-size: 3rem;
-        line-height: 1.08;
+      .header_h2{
+        font-size: 2rem;
+        line-height: 1.15;
         text-align: center;
-        max-width: 100%;
-        margin: auto;
-    }
+        width: 100%;
+      }
 
     .header_p{
         font-size: 1rem;
@@ -2201,11 +2201,10 @@ section {
     }
 
     .header_h2{
-        font-size: 2.5rem;
-        line-height: 1;
+        font-size: 2rem;
+        line-height: 1.15;
         text-align: center;
         max-width: 100%;
-        margin: auto;
     }
 
     .header_p{
@@ -2228,9 +2227,10 @@ section {
   }
 
     .header_h2 {
-        font-size: 2.1rem;
+        font-size: 1.8rem;
         text-align: center;
         margin-bottom: 14px;
+        line-height: 1.15;
     }
 
     .header_p {
@@ -2518,8 +2518,8 @@ section {
 }
 
 .hmk-pricing-title{
-    font-size: clamp(2.2rem, 4vw, 3.6rem);
-    letter-spacing: -0.04em;
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+    letter-spacing: -0.025em;
     font-weight: 800;
     color:#fff;
     margin-bottom: 12px;
