@@ -113,7 +113,7 @@ body.light-mode .navbar-toggler-icon { background-image: url("data:image/svg+xml
 ======================================================== */
 .vps-hero-wrapper {
   position: relative;
-  padding: 140px 0 0;
+  padding: 5rem 0;
   background: radial-gradient(ellipse 70% 60% at 50% -20%, rgba(47,134,255,0.12), transparent), #06090f;
   overflow: hidden;
   text-align: center;
@@ -423,7 +423,7 @@ body.light-mode .vps-feat-text strong { color: #0f172a; }
    ZIGZAG SECTION
 ======================================================== */
 .zigzag-section {
-  padding: 100px 0;
+  padding: 5rem 0;
   background: #06090f;
   border-top: 1px solid rgba(255,255,255,0.05);
 }
@@ -494,7 +494,7 @@ body.light-mode .vps-stat-num { color: #1d6fd6; }
 .hmk-pricing-section {
   position: relative;
   z-index: 1;
-  padding: 100px 0;
+  padding: 5rem 0;
   background: #0B1120;
   border-top: 1px solid rgba(255,255,255,0.05);
 }
@@ -571,7 +571,7 @@ body.light-mode .hmk-feature-list li { color: #334155; }
 /* ========================================================
    FAQ SECTION
 ======================================================== */
-.hmk-faq-section { padding: 100px 0; background: #06090f; border-top: 1px solid rgba(255,255,255,0.05); }
+.hmk-faq-section { padding: 5rem 0; background: #06090f; border-top: 1px solid rgba(255,255,255,0.05); }
 body.light-mode .hmk-faq-section { background: #f8fafc; border-color: rgba(0,0,0,0.05); }
 
 .hmk-faq-wrap { display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: flex-start; }

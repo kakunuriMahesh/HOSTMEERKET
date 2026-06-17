@@ -115,7 +115,7 @@ display: none;
     ======================================================== */
     .wp-hero-wrapper {
       position: relative;
-      padding: 200px 0 0;
+      padding: 5rem 0;
       background: radial-gradient(ellipse 70% 60% at 50% -20%, rgba(33,150,243,0.12), transparent), #06090f;
       overflow: hidden;
       text-align: center;
@@ -408,7 +408,7 @@ display: none;
        ZIGZAG SECTION  (reusing same class names as reseller)
     ======================================================== */
     .zigzag-section {
-      padding: 100px 0;
+      padding: 5rem 0;
       background: #06090f;
       border-top: 1px solid rgba(255,255,255,0.05);
     }
@@ -458,7 +458,7 @@ display: none;
     .hmk-pricing-section {
       position: relative;
       z-index: 1;
-      padding: 100px 0;
+      padding: 5rem 0;
       background: #0B1120;
       border-top: 1px solid rgba(255,255,255,0.05);
     }
@@ -551,7 +551,7 @@ display: none;
     /* ========================================================
        FAQ SECTION
     ======================================================== */
-    .hmk-faq-section { padding: 100px 0; background: #06090f; border-top: 1px solid rgba(255,255,255,0.05); }
+    .hmk-faq-section { padding: 5rem 0; background: #06090f; border-top: 1px solid rgba(255,255,255,0.05); }
     body.light-mode .hmk-faq-section { background: #f8fafc; border-color: rgba(0,0,0,0.05); }
 
     .hmk-faq-wrap { display: grid; grid-template-columns: 1fr 1.5fr; gap: 4rem; align-items: flex-start; }

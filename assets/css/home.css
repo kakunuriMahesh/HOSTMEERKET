@@ -1659,6 +1659,7 @@
 .hmk-pricing-section {
   position: relative;
   z-index: 1;
+  padding: 5rem 0;
 }
 
 /* Pricing Toggle Pill */
@@ -2014,6 +2015,7 @@
     position: relative;
     background: var(--bg-page) !important;
     border-top: 1px solid var(--border-subtle);
+    padding: 5rem 0;
 }
 
 .hmk-compare-title {
@@ -2346,6 +2348,8 @@ body.light-mode .features-section-bg,
 body.light-mode .hmk-faq-section,
 body.light-mode .zigzag-section,
 body.light-mode .hmk-compare-section { background: #f8fafc !important; }
+
+.hmk-faq-section { padding: 5rem 0; }
 
 /* ========================================================
    PERFECT FEATURE CARD SPACING (MAGIC WIDTH TRICK)

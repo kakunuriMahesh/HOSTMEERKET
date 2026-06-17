@@ -41,7 +41,7 @@ body {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  padding: 132px 0 86px;
+  padding: 5rem 0;
   background: radial-gradient(circle at 76% 22%, rgba(47, 134, 255, .28), transparent 31rem), radial-gradient(circle at 13% 70%, rgba(34, 208, 126, .1), transparent 27rem), linear-gradient(180deg, #050b16 0%, #030712 100%);
   border-bottom: 1px solid rgba(148, 163, 184, .09)
 }
@@ -706,7 +706,7 @@ body.light-mode .process-section{
 }
 
 .final-cta-section {
-  padding: 82px 0 54px;
+  padding: 5rem 0;
   background: #030712
 }
 
@@ -870,7 +870,7 @@ body.light-mode {
 
 @media(max-width:991px) {
   .dev-hero {
-    padding: 102px 0 70px
+    padding: 5rem 0
   }
 
   .hero-art {
@@ -1025,7 +1025,7 @@ body.light-mode {
 
 /* ---- refinement pass ---- */
 .dev-hero {
-  padding: 118px 0 80px
+  padding: 5rem 0
 }
 
 .dev-hero h1 {
@@ -1278,7 +1278,7 @@ body.light-mode .footer-status {
 
 @media (max-width:991px) {
   .dev-hero {
-    padding: 104px 0 68px
+    padding: 5rem 0
   }
 
   .pricing-grid {
@@ -1338,7 +1338,7 @@ body.light-mode .footer-status {
 
 /* === Premium + conversion final polish === */
 .dev-hero {
-  padding: 120px 0 74px !important;
+  padding: 5rem 0 !important;
   background:
     radial-gradient(circle at 78% 18%, rgba(47, 134, 255, .25), transparent 30rem),
     radial-gradient(circle at 15% 72%, rgba(34, 208, 126, .11), transparent 26rem),
@@ -1390,7 +1390,7 @@ body.light-mode .dev-hero{
 }
 
 .services-section {
-  padding-bottom: 70px !important;
+  padding: 5rem 0 !important;
 }
 
 .proof-section {
@@ -1456,7 +1456,7 @@ body.light-mode .dev-hero{
 }
 
 .final-cta-section {
-  padding: 74px 0 56px !important;
+  padding: 5rem 0 !important;
 }
 
 .final-cta {
@@ -1541,7 +1541,7 @@ body.light-mode .proof-bar span {
 
 @media (max-width: 991px) {
   .dev-hero {
-    padding: 96px 0 66px !important;
+    padding: 5rem 0 !important;
   }
 
   .final-cta {
@@ -1657,11 +1657,11 @@ max-width: 100% !important;
  
  
  
- @media only screen and (min-width:991px) and (max-width: 1047px){
-     .dev-hero{
-         padding-top: 145px !important;
-     }
- }
+@media only screen and (min-width:991px) and (max-width: 1047px){
+      .dev-hero{
+          padding-top: 5rem !important;
+      }
+  }
 
  @media(max-width:768px){
   .dev-section{

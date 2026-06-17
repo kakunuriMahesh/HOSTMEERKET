@@ -2297,7 +2297,7 @@ html, body {
 
 .hosting-hero-section{
     background:#081120;
-    padding:120px 0 90px;
+    padding:5rem 0;
     position:relative;
     overflow:hidden;
 }
@@ -2534,7 +2534,7 @@ html, body {
 /*--------------------card --------------*/
 .hmk-pricing-section{
     position: relative;
-    padding: 90px 0 100px;
+    padding: 5rem 0;
     background:
         radial-gradient(circle at top, rgba(47,134,255,.14), transparent 35%),
         radial-gradient(circle at bottom, rgba(123,97,255,.10), transparent 42%),
@@ -2907,7 +2907,7 @@ html, body {
 
 @media (max-width: 991px){
     .hmk-pricing-section{
-        padding: 80px 0;
+        padding: 5rem 0;
     }
 
     .hmk-popular-card{
@@ -2952,7 +2952,7 @@ html, body {
 @media(max-width:768px){
 
     .hosting-hero-section{
-        padding:80px 0 60px;
+        padding:5rem 0;
     }
 
     .hosting-hero-title{

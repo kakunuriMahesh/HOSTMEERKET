@@ -248,7 +248,7 @@ body.light-mode .navbar-toggler-icon {
 /* Hero */
 .contact-hero {
   position: relative;
-  padding: 200px 0 80px;
+  padding: 5rem 0;
   background:
     radial-gradient(ellipse 80% 60% at 50% -10%, rgba(47, 134, 255, 0.18), transparent),
     radial-gradient(circle at 80% 70%, rgba(123, 97, 255, 0.10), transparent 50%),

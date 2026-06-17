@@ -226,7 +226,7 @@ body.light-mode {
    ======================================================== */
 .reseller-hero-wrapper {
   position: relative;
-  padding: 200px 0 60px;
+  padding: 5rem 0;
   background: radial-gradient(ellipse 70% 60% at 50% -20%, rgba(47, 134, 255, 0.15), transparent), #06090f;
   overflow: hidden;
   text-align: center;
@@ -406,7 +406,7 @@ body.light-mode .mockup-stat .label {
    THE PROFIT PIPELINE (How it works)
    ======================================================== */
 .pipeline-section {
-  padding: 80px 0;
+  padding: 5rem 0;
   background: var(--bg-page);
 }
 
@@ -515,7 +515,7 @@ body.light-mode .pipeline-step p {
    ZIGZAG FEATURES (WHM & White Label)
    ======================================================== */
 .zigzag-section {
-  padding: 100px 0;
+  padding: 5rem 0;
   background: #06090f;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -655,7 +655,7 @@ body.light-mode .zz-feature-box p {
 .hmk-pricing-section {
   position: relative;
   z-index: 1;
-  padding: 100px 0;
+  padding: 5rem 0;
   background: var(--bg-page);
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -935,7 +935,7 @@ body.light-mode .hmk-feature-list li {
    FAQ SECTION
    ======================================================== */
 .hmk-faq-section {
-  padding: 100px 0;
+  padding: 5rem 0;
   background: #06090f;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }

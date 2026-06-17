@@ -5,7 +5,7 @@
     /* ---------- HERO ---------- */
     .wcu-hero {
       background-color: #06090f;
-      padding: 170px 0 100px;
+      padding: 5rem 0;
       position: relative;
       overflow: hidden;
       text-align: center;
@@ -120,7 +120,7 @@
 
     /* ---------- SECTION SHARED ---------- */
     .wcu-section {
-      padding: 100px 0;
+      padding: 5rem 0;
       position: relative;
       overflow: hidden;
       border-bottom: 1px solid rgba(255,255,255,0.05);
@@ -244,7 +244,7 @@
 
     /* ---------- UK INFRASTRUCTURE SPLIT ---------- */
     .uk-infra-section {
-      padding: 100px 0;
+      padding: 5rem 0;
       background-color: #06090f;
       border-bottom: 1px solid rgba(255,255,255,0.05);
       position: relative;
@@ -362,7 +362,7 @@
     /* ---------- NUMBERS / TRUST BAR ---------- */
     .trust-bar {
       background: #080c15;
-      padding: 70px 0;
+      padding: 5rem 0;
       border-bottom: 1px solid rgba(255,255,255,0.05);
     }
 
@@ -413,7 +413,7 @@
     /* ---------- COMPARISON TABLE ---------- */
     .compare-section {
       background: #06090f;
-      padding: 100px 0;
+      padding: 5rem 0;
       border-bottom: 1px solid rgba(255,255,255,0.05);
     }
 
@@ -487,7 +487,7 @@
     /* ---------- TESTIMONIALS ---------- */
     .testimonials-section {
       background: #080c15;
-      padding: 100px 0;
+      padding: 5rem 0;
       border-bottom: 1px solid rgba(255,255,255,0.05);
     }
 
@@ -579,7 +579,7 @@
     /* ---------- SUPPORT PROMISE ---------- */
     .support-section {
       background: #06090f;
-      padding: 100px 0;
+      padding: 5rem 0;
       border-bottom: 1px solid rgba(255,255,255,0.05);
       position: relative;
       overflow: hidden;
@@ -668,7 +668,7 @@
     /* ---------- FINAL CTA ---------- */
     .wcu-cta {
       background: #06090f;
-      padding: 100px 0;
+      padding: 5rem 0;
       position: relative;
       overflow: hidden;
     }
@@ -773,13 +773,13 @@
 
     @media(max-width:767px) {
       .wcu-cta-inner { padding: 50px 28px; }
-      .wcu-hero { padding: 130px 0 70px; }
-      .wcu-section { padding: 70px 0; }
-      .uk-infra-section { padding: 70px 0; }
-      .trust-bar { padding: 50px 0; }
-      .compare-section { padding: 70px 0; }
-      .testimonials-section { padding: 70px 0; }
-      .support-section { padding: 70px 0; }
+      .wcu-hero { padding: 5rem 0; }
+      .wcu-section { padding: 5rem 0; }
+      .uk-infra-section { padding: 5rem 0; }
+      .trust-bar { padding: 5rem 0; }
+      .compare-section { padding: 5rem 0; }
+      .testimonials-section { padding: 5rem 0; }
+      .support-section { padding: 5rem 0; }
     }
 
     /* ============================================================
