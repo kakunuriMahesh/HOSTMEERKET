@@ -2206,12 +2206,12 @@ body.light-mode .hmk-compare-table tbody tr:hover .hmk-col {
     position: relative;
     z-index: 1;
     height: 100%;
+    display: flex;
+    flex-direction: column;
     transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-    overflow: hidden;
 }
 
 .hmk-review-card:hover {
-    transform: translateY(-8px);
     border-color: rgba(47, 134, 255, 0.3) !important;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 0 20px rgba(47, 134, 255, 0.1);
 }
@@ -2239,12 +2239,12 @@ body.light-mode .hmk-compare-table tbody tr:hover .hmk-col {
 .hmk-stars i { margin-right: 4px; }
 
 .hmk-review-text {
+    flex: 1;
     color: var(--text-secondary) !important;
     font-size: 1.02rem;
     line-height: 1.8;
     font-style: italic;
     margin-bottom: 2rem;
-    min-height: 110px; /* Keeps cards an even height */
 }
 
 .hmk-review-author {

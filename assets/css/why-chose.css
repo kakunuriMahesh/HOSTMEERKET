@@ -502,16 +502,19 @@
     @media(max-width:580px)  { .testimonials-grid { grid-template-columns: 1fr; } }
 
     .testi-card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
       background: rgba(17,24,39,0.5);
       border: 1px solid rgba(255,255,255,0.07);
       border-radius: 20px;
       padding: 28px;
       position: relative;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: top 0.3s ease, box-shadow 0.3s ease;
     }
 
     .testi-card:hover {
-      transform: translateY(-6px);
+      top: -6px;
       box-shadow: 0 24px 50px rgba(0,0,0,0.25);
     }
 
@@ -531,6 +534,7 @@
     }
 
     .testi-text {
+      flex: 1;
       font-size: 0.92rem;
       line-height: 1.7;
       color: #d1d5db;
