@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta author="Nikola Radisic">
+    <title>HostTYPE</title>
+
+    <!-- SEO for Homepage -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="en_us"/>
+    <meta name="og:description" content="" />
+    <meta name="keywords" content="">
+    <meta name="theme-color" content="#2b2f32"/>
+    <meta property="og:site_name" content="HostType Hosting"/>
+    <meta property="og:url" content=""/>
+    <meta name="og:image" content=""/>
+    <meta name="og:image:width" content="1200">
+    <meta name="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png"/>
+
+    <!-- Bootstrap v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- Poppins Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+
+    <!-- OWL Slider v2.3.4 -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+</head>
+<body>
+    <!-- Sale Banner -->
+    <div class="sale_banner">
+    <div class="container-fluid container-custom">
+        <div class="row d-flex justify-content-between">
+            <div class="col-lg-4 d-flex align-items-center">
+                <div class="d-flex align-items-center mr-auto sale_banner-left">
+                    <span class="sale-l">15% Discount First month</span>
+                </div>
+            </div>
+            <div class="col-lg-4 d-flex align-items-center">
+                <div class="d-flex align-items-center mx-auto sale_banner-center">
+                    <div class="text-center">
+                        <h6 class="sale-i my-0 mx-2"><span id="sale-d" class="mr-1"></span>Days</h6>
+                    </div>
+                    <div class="text-center">
+                        <h6 class="sale-i my-0 mx-2"><span id="sale-h" class="mr-1"></span>Hours</h6>
+                    </div>
+                    <div class="text-center">
+                        <h6 class="sale-i my-0 mx-2"><span id="sale-m" class="mr-1"></span>Minutes</h6>
+                    </div>
+                    <div class="text-center">
+                        <h6 class="sale-i my-0 mx-2"><span id="sale-s" class="mr-1"></span>Seconds</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 d-flex justify-content-between">
+                <div class="d-flex align-items-center ms-auto sale_banner-right">
+                    <div class="sale-r" id="btnCode"><i class="fal fa-paperclip"></i><span>Type15</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    
+    <div class="object_1 text-center">
+        <img src="assets/images/vector_object_1.png" class="img-fluid">
+    </div>
+    
+    <!-- Navbar -->
+    <nav id="fixedR" class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid container-custom">
+        <a class="navbar-brand text-white" href="index">
+            <div class="d-flex">
+                <img class="mr-2" src="./assets/images/logo.png">
+                <h2 class="mb-0 d-flex align-items-center">Host<span>Meerkat</span></h2>
+            </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarType" aria-controls="navbarType" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-start-lg" tabindex="-1" id="navbarType" aria-labelledby="navbarType">
+            <div class="offcanvas-header d-flex d-lg-none">
+                <div class="d-flex">
+                    <img class="mr-2" src="assets/images/logo.png">
+                    <h2 class="mb-0 d-flex align-items-center">Host<span>Meerkat</span></h2>
+                </div>
+            </div>
+            <div class="offcanvas-body p-lg-0">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="game-servers">Game Servers</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Hosting</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="web-hosting">Web Hosting <span class="d-block">Making a business</span></a></li>
+                          <li><a class="dropdown-item" href="vps-hosting">VPS Hosting <span class="d-block">Create your own server</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about">About us</a>
+                    </li>
+                    <div class="button">
+                        <div class="dropdown">
+                            <a href="#" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><img src="assets/images/user.svg"> Login</a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="#">
+                                <li><a class="dropdown-item" href="#">Billing Panel <span class="d-block">Billing and Support</span></a></li>
+                                <li><a class="dropdown-item" href="#">Game Panel <span class="d-block">Game Management</span></a></li>
+                                <li><a class="dropdown-item" href="#">Web Panel <span class="d-block">cPanel Management</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+    <!-- Header -->
+    <div class="header">
+        <div class="container-fluid container-custom">
+            <div class="row d-flex justify-content-between">
+                <div class="col-lg-6 d-flex align-items-center">
+                    <div>
+                        <h2 class="header_h2 mb-2">Gamers <span class="blue">Dont Fear</span> The Apocalypse</h2>
+                        <p class="header_p mb-4">Gaming is one of those things that's pretty amazing because when you think about it, everybody wants to game; whether you're a casual gamer, or you're an enthusiast gamer, there's a large market for us.</p>
+                        <div class="button">
+                            <a href="game-servers" class="btn">Start your Game Server <img src="assets/images/arrow-right.svg"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 header_img">
+                    <img src="assets/images/vector_object_gamer.png" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features -->
+    <div class="features py-5">
+        <div class="container-fluid container-custom">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="features_box mb-5 text-center">
+                        <img src="assets/images/features_icons/radar.svg" class="img-fluid mb-3">
+                        <h5>DDoS Protection</h5>
+                        <p>The OVH Game DDoS Protection optimized by us reliably protects your server.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="features_box mb-5 text-center">
+                        <img src="assets/images/features_icons/cloud.svg" class="img-fluid mb-3">
+                        <h5>Personal Backups</h5>
+                        <p>Our panel allows you to backup, restore, and download personal server backups.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="features_box mb-5 text-center">
+                        <img src="assets/images/features_icons/stopwatch.svg" class="img-fluid mb-3">
+                        <h5>24 / 7 Support</h5>
+                        <p>We offer 24/7 support via ticket and LiveChat! Anything you need, anytime.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="features_box mb-5 text-center">
+                        <img src="assets/images/features_icons/cpu.svg" class="img-fluid mb-3">
+                        <h5>Fast Processors</h5>
+                        <p>Unlike many other providers, we exclusively rely on CPU's optimized for gaming.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="features_box mb-5 text-center">
+                        <img src="assets/images/features_icons/folder.svg" class="img-fluid mb-3">
+                        <h5>Full file access</h5>
+                        <p>With us you have full access to all files of your server.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="features_box mb-5 text-center">
+                        <img src="assets/images/features_icons/peace.svg" class="img-fluid mb-3">
+                        <h5>Satisfied customers</h5>
+                        <p>Poor performance due to overbooked servers? Not with us! The booked performance is guaranteed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Products -->
+    <div class="products py-5 mb-5">
+        <div class="container-fluid container-custom">
+            <div class="site_title">
+                <h2>Choose from over 10 different games</h2>
+            </div>
+            <div class="owl-carousel" id="products">
+                <a href="minecraft" class="card">
+                    <img src="assets/images/products_img/minecraft.png" class="card-img-top card-img-bottom" alt="Minecraft">
+                    <div class="products_content">
+                        <h2 class="my-0">Minecraft</h2>
+                        <span>&dollar;1.40 /GB</span>
+                    </div>
+                </a>
+                <a href="ark-survival-evolved" class="card">
+                    <img src="assets/images/products_img/ark.png" class="card-img-top card-img-bottom" alt="ARK">
+                    <div class="products_content">
+                        <h2 class="my-0">ARK: Survival Evolved</h2>
+                        <span>&dollar;0.50 /slot</span>
+                    </div>
+                </a>
+                <a href="rust" class="card">
+                    <img src="assets/images/products_img/rust.png" class="card-img-top card-img-bottom" alt="RUST">
+                    <div class="products_content">
+                        <h2 class="my-0">RUST</h2>
+                        <span>&dollar;0.20 /slot</span>
+                    </div>
+                </a>
+                <a href="arma-3" class="card">
+                    <img src="assets/images/products_img/arma.png" class="card-img-top card-img-bottom" alt="ARMA III">
+                    <div class="products_content">
+                        <h2 class="my-0">Arma III</h2>
+                        <span>&dollar;0.48 /slot</span>
+                    </div>
+                </a>
+                <a href="counter-strike-global-offensive" class="card">
+                    <img src="assets/images/products_img/csgo.png" class="card-img-top card-img-bottom" alt="CS:GO">
+                    <div class="products_content">
+                        <h2 class="my-0">CS:GO</h2>
+                        <span>&dollar;0.50 /slot</span>
+                    </div>
+                </a>
+                <a href="dayz" class="card">
+                    <img src="assets/images/products_img/dayz.png" class="card-img-top card-img-bottom" alt="DayZ">
+                    <div class="products_content">
+                        <h2 class="my-0">DayZ</h2>
+                        <span>&dollar;0.96 /slot</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- World Map -->
+    <div class="locations py-5">
+        <div class="container-fluid container-custom">
+            <div class="row d-flex justify-content-between">
+                <div class="col-lg-6">
+                    <div class="map_content">
+                        <img src="assets/images/world_map.png" class="img-fluid">
+                        <a href="javascript:void(0)" class="loc_mark dallas_mark arrow_top">
+                            <span>Dallas, TX</span>
+                        </a>
+                        <a href="javascript:void(0)" class="loc_mark london_mark arrow_right">
+                            <span>London, UK</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex align-items-center">
+                    <div>
+                        <h2>Choose 2 Locations Around the World</h2>
+                        <p>We've strategically established our global network, which is now ten cities strong. We offer our customers 99.999%+ uptime and consistent server performance using the most reliable facilities, hardware, and redundant uplinks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reviews -->
+    <div class="reviews py-5">
+        <div class="container-fluid container-custom">
+            <div class="site_title mb-4">
+                <h2>Our Customers Know Us Best</h2>
+            </div>
+            <div class="owl-carousel" id="reviews">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="reviews_star mb-2">
+                            <img src="assets/images/star.svg">
+                            <img src="assets/images/star.svg">
+                            <img src="assets/images/star.svg">
+                            <img src="assets/images/star.svg">
+                            <img src="assets/images/star.svg">
+                        </div>
+                        <h3>Excelent service!</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem illo modi, porro commodi eligendi odit reiciendis voluptatem delectus, numquam, eius blanditiis corrupti assumenda minus fuga.</p>
+                        <a href="">John Doe</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="reviews_star mb-2">
+                            <img src="assets/images/star.svg">
+                            <img src="assets/images/star.svg">
+                            <img src="assets/images/star.svg">
+                            <img src="assets/images/star.svg">
+                        </div>
+                        <h3>Best performance</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem illo modi, porro commodi eligendi odit reiciendis voluptatem delectus, numquam, eius blanditiis corrupti assumenda minus fuga.</p>
+                        <a href="">Ana Yaris</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="reviews_star mb-2">
+                            <img src="assets/images/star.svg">
+                            <img src="assets/images/star.svg">
+                            <img src="assets/images/star.svg">
+                            <img src="assets/images/star.svg">
+                        </div>
+                        <h3>Amazing Support</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem illo modi, porro commodi eligendi odit reiciendis voluptatem delectus, numquam, eius blanditiis corrupti assumenda minus fuga.</p>
+                        <a href="">Redux Oto</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="reviews_star mb-2">
+                            <img src="assets/images/star.svg">
+                            <img src="assets/images/star.svg">
+                            <img src="assets/images/star.svg">
+                            <img src="assets/images/star.svg">
+                        </div>
+                        <h3>All recommendations !!!</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem illo modi, porro commodi eligendi odit reiciendis voluptatem delectus, numquam, eius blanditiis corrupti assumenda minus fuga.</p>
+                        <a href="">Bryan Pyan</a>
+                    </div>
+                </div>
+            </div>
+            <div class="reviews_footer text-center">
+                 <div class="mt-4">
+                    <h3 class="mb-1">All reviews verified by</h3>
+                    <a href="https://www.trustpilot.com/">
+                        <img src="assets/images/trustpilot.svg">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-5">
+    <div class="container-fluid container-custom">
+        <div class="need_more py-5 px-5 mb-5">
+            <span class="need_more_icon"></span>
+            <div class="row d-flex justify-content-between">
+                <div class="col-lg-8 col-md-8">
+                    <h2>Need to know more?</h2>
+                    <p>If you have any questions about any of our services, do not hesitate to reach out by getting in contact with us. We are here to serve you!</p>
+                </div>
+                <div class="col-lg-4 col-md-4 d-flex align-items-center">
+                    <div class="need_more_right float-end">
+                        <a href="mailto:support@hosttype.com" class="btn">Contact us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row footer_links">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="game-servers">Game Servers</a></li>
+                            <li><a href="web-hosting">Web Hosting</a></li>
+                            <li><a href="vps-hosting">VPS Hosting</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <h4>Useful links</h4>
+                        <ul>
+                            <li><a href="#">Affiliate Program</a></li>
+                            <li><a href="#">Client Portal</a></li>
+                            <li><a href="#">Knowledgebase</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="about">About us</a></li>
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="terms-of-service">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 footer_about">
+                <div class="d-flex mb-2">
+                    <img class="mr-2" src="assets/images/logo.png">
+                    <h2 class="mb-0 d-flex align-items-center">Host<span>Type</span></h2>
+                </div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, voluptatibus, qui. Est aut repudiandae explicabo, numquam minima in.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="footer_bottom py-2">
+    <div class="container-fluid container-custom">
+        <div class="row d-flex justify-content-between">
+            <div class="col-lg-6 col-sm-4 d-flex justify-content-between">
+                <div class="d-flex align-items-center me-auto footer-right">
+                    <img src="assets/images/paymethod.png" height="30">
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-8 d-flex align-items-center">
+                <div class="d-flex align-items-center ms-auto footer-left">
+                    <p class="mb-0">&copy; 2020-2024 HostType.com All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Jquery v3.6.1 -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap v5.2.1 -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+    <!-- OWL Slider v2.3.4 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- Sweet Alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Web Site Cookie -->
+    <script src="https://cdn.websitepolicies.io/lib/cookieconsent/cookieconsent.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+    <script>
+    // Products  //
+    jQuery("#products").owlCarousel({autoplay:!1,rewind:!0,margin:20,mouseDrag:!1,nav:!0,dots:!1,navText:['<span class="btn" aria-label="Previous">Previous</span>','<span class="btn" aria-label="Next">Next</span>'],lazyLoad:!0,responsive:{0:{items:1},576:{items:2},768:{items:2},1024:{items:3},1366:{items:4}}});
+    // Reviews //
+    jQuery("#reviews").owlCarousel({autoplay:!0,rewind:!0,margin:20,mouseDrag:!0,nav:!1,dots:!1,lazyLoad:!0,responsive:{0:{items:1},576:{items:2},768:{items:2},1024:{items:3},1366:{items:3}}});
+    </script>
+</body>
+</html>

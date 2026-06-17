@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta author="Nikola Radisic">
+    <title>Web Hosting | HostTYPE</title>
+
+    <!-- SEO for Web Hosting -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="en_us"/>
+    <meta name="og:description" content="" />
+    <meta name="keywords" content="">
+    <meta name="theme-color" content="#2b2f32"/>
+    <meta property="og:site_name" content="HostType Hosting"/>
+    <meta property="og:url" content=""/>
+    <meta name="og:image" content=""/>
+    <meta name="og:image:width" content="1200">
+    <meta name="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png"/>
+
+    <!-- Bootstrap v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- Poppins Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+
+    <!-- OWL Slider v2.3.4 -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+</head>
+<body>
+    <!-- Sale Banner -->
+    <div class="sale_banner">
+    <div class="container-fluid container-custom">
+        <div class="row d-flex justify-content-between">
+            <div class="col-lg-4 d-flex align-items-center">
+                <div class="d-flex align-items-center mr-auto sale_banner-left">
+                    <span class="sale-l">15% Discount First month</span>
+                </div>
+            </div>
+            <div class="col-lg-4 d-flex align-items-center">
+                <div class="d-flex align-items-center mx-auto sale_banner-center">
+                    <div class="text-center">
+                        <h6 class="sale-i my-0 mx-2"><span id="sale-d" class="mr-1"></span>Days</h6>
+                    </div>
+                    <div class="text-center">
+                        <h6 class="sale-i my-0 mx-2"><span id="sale-h" class="mr-1"></span>Hours</h6>
+                    </div>
+                    <div class="text-center">
+                        <h6 class="sale-i my-0 mx-2"><span id="sale-m" class="mr-1"></span>Minutes</h6>
+                    </div>
+                    <div class="text-center">
+                        <h6 class="sale-i my-0 mx-2"><span id="sale-s" class="mr-1"></span>Seconds</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 d-flex justify-content-between">
+                <div class="d-flex align-items-center ms-auto sale_banner-right">
+                    <div class="sale-r" id="btnCode"><i class="fal fa-paperclip"></i><span>Type15</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>    
+    <div class="object_1 text-center">
+        <img src="assets/images/vector_object_1.png" class="img-fluid">
+    </div>
+    
+    <!-- Navbar -->
+    <nav id="fixedR" class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid container-custom">
+        <a class="navbar-brand text-white" href="index">
+            <div class="d-flex">
+                <img class="mr-2" src="assets/images/logo.svg">
+                <h2 class="mb-0 d-flex align-items-center">Host<span>Type</span></h2>
+            </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarType" aria-controls="navbarType" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-start-lg" tabindex="-1" id="navbarType" aria-labelledby="navbarType">
+            <div class="offcanvas-header d-flex d-lg-none">
+                <div class="d-flex">
+                    <img class="mr-2" src="assets/images/logo.svg">
+                    <h2 class="mb-0 d-flex align-items-center">Host<span>Type</span></h2>
+                </div>
+            </div>
+            <div class="offcanvas-body p-lg-0">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="game-servers">Game Servers</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Hosting</a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="web-hosting">Web Hosting <span class="d-block">Making a business</span></a></li>
+                          <li><a class="dropdown-item" href="vps-hosting">VPS Hosting <span class="d-block">Create your own server</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about">About us</a>
+                    </li>
+                    <div class="button">
+                        <div class="dropdown">
+                            <a href="#" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><img src="assets/images/user.svg"> Login</a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="#">
+                                <li><a class="dropdown-item" href="#">Billing Panel <span class="d-block">Billing and Support</span></a></li>
+                                <li><a class="dropdown-item" href="#">Game Panel <span class="d-block">Game Management</span></a></li>
+                                <li><a class="dropdown-item" href="#">Web Panel <span class="d-block">cPanel Management</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+    <!-- Header -->
+    <div class="header">
+        <div class="container-fluid container-custom">
+            <div class="text-center">
+                <h2 class="mb-2">Web Hosting</h2>
+                <p>Affordable High Availability, Security and Flexibility You Need to Grow Your Business Seamlessly.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="web_plans py-5">
+        <div class="container-fluid container-custom">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4 card_margin card_standard">
+                        <div class="card-body">
+                            <div class="web_plans_icon text-center">
+                                <svg fill="#E94B35" width="60" height="60" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="1em">
+                                    <path class="element_two" d="M15,2c-3.3772,0.00142-6.27155,2.41462-6.88025,5.73651c2.90693-1.59074,6.553-0.52375,8.14374,2.38317c0.98206,1.79462,0.98206,3.96594,0,5.76057c3.8013-0.69634,6.31837-4.3424,5.62202-8.14369C21.27662,4.41261,18.37925,1.99872,15,2z"></path>
+                                    <circle cx="7" cy="17" r="5"></circle>
+                                    <path class="element_three" d="M11,7c-3.08339,0.00031-5.66461,2.33759-5.97,5.40582c2.5358-1.08949,5.47469,0.08297,6.56418,2.61877c0.54113,1.25947,0.54113,2.68593,0,3.94541c3.29729-0.32786,5.7045-3.26663,5.37664-6.56392C16.66569,9.33735,14.08386,6.99972,11,7z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="mt-3 red">Standard</h3>
+                            <p class="mb-4">Great for new WordPress or small sites without much traffic</p>
+                            <h2 class="mb-4 fw-bold">$3.99
+                                <sup class="sup-month">/ month</sup>
+                            </h2>
+                            <ul>
+                                <li>
+                                    <div class="badge icon me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12l6 6L20 6"></path></svg>
+                                    </div>
+                                    1 GB Disk Space
+                                </li>
+                                <li>
+                                    <div class="badge icon me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12l6 6L20 6"></path></svg>
+                                    </div>
+                                    10 GB Bandwidth
+                                </li>
+                                <li>
+                                    <div class="badge icon me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12l6 6L20 6"></path></svg>
+                                    </div>
+                                    1 Subdomain
+                                </li>
+                                <li>
+                                    <div class="badge icon me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12l6 6L20 6"></path></svg>
+                                    </div>
+                                    1 Email Address
+                                </li>
+                                <li>
+                                    <div class="badge icon me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12l6 6L20 6"></path></svg>
+                                    </div>
+                                    1 FTP Account
+                                </li>
+                                <li>
+                                    <div class="badge icon me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12l6 6L20 6"></path></svg>
+                                    </div>
+                                    1 MySQL Database
+                                </li>
+                            </ul>
+                            <div class="text-center">
+                                <a href="" class="btn btn-red">Order now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card_popular mb-4">
+                        <div class="card-body">
+                            <div class="web_plans_icon text-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#EECA02" width="60" height="60">
+                                    <rect width="20" height="15" x="2" y="3" class="element_two" rx="3"></rect>
+                                    <path d="M16,21H8a.99992.99992,0,0,1-.832-1.55469l4-6a1.03785,1.03785,0,0,1,1.66406,0l4,6A.99992.99992,0,0,1,16,21Z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-center my-3 yellow">Professional <span class="badge rounded-pill bg-warning">Popular</span></h3>
+                            <p class="mb-4">Perfect for supporting lots of WordPress and large sites</p>
+                            <h2 class="mb-4 fw-bold">$6.99
+                                <sup class="sup-month">/ month</sup>
+                            </h2>
+                            <ul>
+                                <li>
+                                    <div class="badge icon me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12l6 6L20 6"></path></svg>
+                                    </div>
+                                    1 GB Disk Space
+                                </li>
+                                <li>
+                                    <div class="badge icon me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12l6 6L20 6"></path></svg>
+                                    </div>
+                                    10 GB Bandwidth
+                                </li>
+                                <li>
+                                    <div class="badge icon me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12l6 6L20 6"></path></svg>
+                                    </div>
+                                    1 Subdomain
+                                </li>
+                                <li>
+                                    <div class="badge icon me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12l6 6L20 6"></path></svg>
+                                    </div>
+                                    1 Email Address
+                                </li>
+                                <li>
+                                    <div class="badge icon me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12l6 6L20 6"></path></svg>
+                                    </div>
+                                    1 FTP Account
+                                </li>
+                                <li>
+                                    <div class="badge icon me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12l6 6L20 6"></path></svg>
+                                    </div>
+                                    1 MySQL Database
+                                </li>
+                            </ul>
+                            <div class="text-center">
+                                <a href="" class="btn btn-yellow">Order now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 card_margin card_enterprice">
+                        <div class="card-body">
+                            <div class="web_plans_icon text-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="#1873D3" width="60" height="60">
+                                    <path class="element_two" d="M20.23,7.24L12,12L3.77,7.24c0.16898-0.29248,0.40995-0.53689,0.7-0.71L11,2.76c0.62072-0.35004,1.37928-0.35004,2,0l6.53,3.77C19.82005,6.70311,20.06102,6.94752,20.23,7.24z"></path>
+                                    <path class="element_three" d="M12,12v9.5c-0.31529-0.00043-0.6264-0.07223-0.91-0.21L4.5,17.48c-0.61772-0.35735-0.99865-1.01637-1-1.73v-7.5c0.00166-0.35428,0.09466-0.70215,0.27-1.01L12,12z"></path>
+                                    <path d="M20.5,8.25v7.5c-0.00135,0.71363-0.38228,1.37265-1,1.73l-6.62,3.82c-0.27531,0.12984-0.57562,0.1981-0.88,0.2V12l8.23-4.76C20.40534,7.54785,20.49834,7.89572,20.5,8.25z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-center my-3 blue">Enterprice</h3>
+                            <p class="mb-4">The best for WordPress sites that need a dedicated support team</p>
+                            <h2 class="mb-4 fw-bold">$10
+                                <sup class="sup-month">/ month</sup>
+                            </h2>
+                            <ul>
+                                <li>
+                                    <div class="badge icon me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12l6 6L20 6"></path></svg>
+                                    </div>
+                                    1 GB Disk Space
+                                </li>
+                                <li>
+                                    <div class="badge icon me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12l6 6L20 6"></path></svg>
+                                    </div>
+                                    10 GB Bandwidth
+                                </li>
+                                <li>
+                                    <div class="badge icon me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12l6 6L20 6"></path></svg>
+                                    </div>
+                                    1 Subdomain
+                                </li>
+                                <li>
+                                    <div class="badge icon me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12l6 6L20 6"></path></svg>
+                                    </div>
+                                    1 Email Address
+                                </li>
+                                <li>
+                                    <div class="badge icon me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12l6 6L20 6"></path></svg>
+                                    </div>
+                                    1 FTP Account
+                                </li>
+                                <li>
+                                    <div class="badge icon me-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="0.9em" height="0.9em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12l6 6L20 6"></path></svg>
+                                    </div>
+                                    1 MySQL Database
+                                </li>
+                            </ul>
+                            <div class="text-center">
+                                <a href="" class="btn btn-blue">Order now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="one_click py-5">
+        <div class="container-fluid container-custom">
+            <div class="site_title text-center mb-5">
+                <h2>1-Click Distributions</h2>
+                <p>Need an OS that is not on the list? Send us a ticket and we will install it!</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 text-center">
+                    <img src="assets/images/wordpress.png" class="img-fluid mb-3">
+                    <h4>WordPress</h4>
+                </div>
+                <div class="col-sm-3 text-center">
+                    <img src="assets/images/joomla.png" class="img-fluid mb-3">
+                    <h4>Joomla</h4>
+                </div>
+                <div class="col-sm-3 text-center">
+                    <img src="assets/images/drupal.png" class="img-fluid mb-3">
+                    <h4>Drupal</h4>
+                </div>
+                <div class="col-sm-3 text-center">
+                    <img src="assets/images/magento.png" class="img-fluid mb-3">
+                    <h4>Magento</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel py-5">
+        <div class="container-fluid container-custom">
+            <div class="row d-flex justify-content-between">
+                <div class="col-lg-6 d-flex align-items-center">
+                    <div class="panel_content">
+                        <h2>cPanel Panel</h2>
+                        <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium cupiditate eaque quisquam, itaque sint iusto dolores eligendi reprehenderit ipsum natus unde nulla explicabo quia voluptate libero vel eveniet minima laborum.</p>
+                        <ul>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <li><img src="assets/images/web_console.svg"> Full FTP Access</li>
+                                    <li><img src="assets/images/ftp.svg"> Enable/disable modules</li>
+                                </div>
+                                <div class="col-md-7">
+                                    <li><img src="assets/images/mod.svg"> Multiple PHP Versions</li>
+                                    <li><img src="assets/images/sub_users.svg"> View statistics and errors</li>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="owl-carousel" id="panel">
+                        <img class="img-fluid" src="https://via.placeholder.com/560x360/2B2F32/FFFFFF?text=Login+Page">
+                        <img class="img-fluid" src="https://via.placeholder.com/560x360/2B2F32/FFFFFF?text=ISO+Managment">
+                        <img class="img-fluid" src="https://via.placeholder.com/560x360/2B2F32/FFFFFF?text=Server+List">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="py-5">
+    <div class="container-fluid container-custom">
+        <div class="need_more py-5 px-5 mb-5">
+            <span class="need_more_icon"></span>
+            <div class="row d-flex justify-content-between">
+                <div class="col-lg-8 col-md-8">
+                    <h2>Need to know more?</h2>
+                    <p>If you have any questions about any of our services, do not hesitate to reach out by getting in contact with us. We are here to serve you!</p>
+                </div>
+                <div class="col-lg-4 col-md-4 d-flex align-items-center">
+                    <div class="need_more_right float-end">
+                        <a href="mailto:support@hosttype.com" class="btn">Contact us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row footer_links">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="game-servers">Game Servers</a></li>
+                            <li><a href="web-hosting">Web Hosting</a></li>
+                            <li><a href="vps-hosting">VPS Hosting</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <h4>Useful links</h4>
+                        <ul>
+                            <li><a href="#">Affiliate Program</a></li>
+                            <li><a href="#">Client Portal</a></li>
+                            <li><a href="#">Knowledgebase</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="about">About us</a></li>
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="terms-of-service">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 footer_about">
+                <div class="d-flex mb-2">
+                    <img class="mr-2" src="assets/images/logo.svg">
+                    <h2 class="mb-0 d-flex align-items-center">Host<span>Type</span></h2>
+                </div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, voluptatibus, qui. Est aut repudiandae explicabo, numquam minima in.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="footer_bottom py-2">
+    <div class="container-fluid container-custom">
+        <div class="row d-flex justify-content-between">
+            <div class="col-lg-6 col-sm-4 d-flex justify-content-between">
+                <div class="d-flex align-items-center me-auto footer-right">
+                    <img src="assets/images/paymethod.png" height="30">
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-8 d-flex align-items-center">
+                <div class="d-flex align-items-center ms-auto footer-left">
+                    <p class="mb-0">&copy; 2020-2024 HostType.com All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Jquery v3.6.1 -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap v5.2.1 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+    <!-- OWL Slider v2.3.4 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- Sweet Alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Web Site Cookie -->
+    <script src="https://cdn.websitepolicies.io/lib/cookieconsent/cookieconsent.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+    // Panel Preview //
+    jQuery("#panel").owlCarousel({autoplay:!1,rewind:!0,margin:0,mouseDrag: true,nav:false,dots:false,lazyLoad:!0,items:1});
+    </script>
+</body>
+</html>

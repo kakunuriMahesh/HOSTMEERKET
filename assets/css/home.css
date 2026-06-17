@@ -1,0 +1,2604 @@
+.hero-animation {
+  position: relative;
+  width: 100%;
+  max-width: 660px;
+  height: 520px;
+  margin: auto;
+}
+
+/* ---------- AMBIENT GLOW ---------- */
+.ha-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  opacity: .5;
+}
+
+.card-ai
+
+
+.ha-glow-1 {
+  width: 320px;
+  height: 320px;
+  background: rgba(47, 134, 255, .35);
+  top: -20px;
+  left: 40px;
+  animation: haPulse 7s ease-in-out infinite;
+}
+
+.ha-glow-2 {
+  width: 260px;
+  height: 260px;
+  background: rgba(123, 97, 255, .3);
+  bottom: 10px;
+  right: 30px;
+  animation: haPulse 6s ease-in-out infinite 1.5s;
+}
+
+.ha-glow-3 {
+  width: 180px;
+  height: 180px;
+  background: rgba(0, 212, 255, .2);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: haPulse 8s ease-in-out infinite 3s;
+}
+
+/* ---------- GRID FLOOR ---------- */
+.ha-grid {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) perspective(600px) rotateX(65deg);
+  width: 700px;
+  height: 340px;
+  background:
+    linear-gradient(rgba(47, 134, 255, .06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(47, 134, 255, .06) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse 70% 80% at center, #000 30%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 80% at center, #000 30%, transparent 70%);
+  opacity: .6;
+  pointer-events: none;
+}
+
+/* ---------- CENTRAL HUB ---------- */
+.ha-hub {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.ha-hub-core {
+  width: 100%;
+  height: 100%;
+  border-radius: 28px;
+  background:
+    linear-gradient(135deg, rgba(47, 134, 255, .25), rgba(123, 97, 255, .2));
+  border: 1px solid rgba(47, 134, 255, .35);
+  backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  animation: haFloat 5s ease-in-out infinite;
+  box-shadow:
+    0 0 60px rgba(47, 134, 255, .15),
+    0 25px 50px rgba(0, 0, 0, .4),
+    inset 0 1px 0 rgba(255, 255, 255, .08);
+}
+
+.ha-hub-core i {
+  font-size: 42px;
+  background: linear-gradient(135deg, #5ab2ff, #a78bfa);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 18px rgba(90, 178, 255, .5));
+}
+
+/* Hub ring pulse */
+.ha-hub-ring {
+  position: absolute;
+  inset: -18px;
+  border-radius: 38px;
+  border: 1px solid rgba(47, 134, 255, .15);
+  animation: haRingPulse 3s ease-in-out infinite;
+}
+
+.ha-hub-ring:nth-child(2) {
+  inset: -34px;
+  border-radius: 46px;
+  animation-delay: .8s;
+  border-color: rgba(123, 97, 255, .1);
+}
+
+/* ---------- SERVER NODES ---------- */
+.ha-node {
+  position: absolute;
+  width: 100px;
+  height: 130px;
+  border-radius: 20px;
+  background:
+    linear-gradient(180deg, rgba(20, 30, 60, .95), rgba(10, 16, 35, .98));
+  border: 1px solid rgba(47, 134, 255, .12);
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, .45),
+    inset 0 1px 0 rgba(255, 255, 255, .04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  z-index: 5;
+  backdrop-filter: blur(10px);
+}
+
+.ha-node::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 20%;
+  right: 20%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(47, 134, 255, .5), transparent);
+  border-radius: 2px;
+}
+
+.ha-node-bar {
+  width: 54px;
+  height: 4px;
+  border-radius: 99px;
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, .06);
+}
+
+.ha-node-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 99px;
+  animation: haBarFill 3s ease-in-out infinite;
+}
+
+.ha-node:nth-child(1) {
+  top: 60px;
+  left: 40px;
+  animation: haFloat 6s ease-in-out infinite
+}
+
+.ha-node:nth-child(2) {
+  top: 30px;
+  right: 160px;
+  animation: haFloat 5s ease-in-out infinite .5s
+}
+
+.ha-node:nth-child(3) {
+  top: 80px;
+  right: 30px;
+  animation: haFloat 7s ease-in-out infinite 1s
+}
+
+.ha-node:nth-child(4) {
+  bottom: 70px;
+  left: 100px;
+  animation: haFloat 5.5s ease-in-out infinite 1.5s
+}
+
+.ha-node:nth-child(5) {
+  bottom: 50px;
+  right: 90px;
+  animation: haFloat 6.5s ease-in-out infinite 2s
+}
+
+/* Bar color variants */
+.ha-node:nth-child(1) .ha-node-bar::after {
+  background: linear-gradient(90deg, #2f86ff, #5ab2ff);
+  width: 78%
+}
+
+.ha-node:nth-child(2) .ha-node-bar::after {
+  background: linear-gradient(90deg, #7b61ff, #a78bfa);
+  width: 92%
+}
+
+.ha-node:nth-child(3) .ha-node-bar::after {
+  background: linear-gradient(90deg, #00d4ff, #06b6d4);
+  width: 65%
+}.ha-node:nth-child(4) .ha-node-bar::after {
+  background: linear-gradient(90deg, #2f86ff, #5ab2ff);
+  width: 85%
+}
+
+.ha-node:nth-child(5) .ha-node-bar::after {
+  background: linear-gradient(90deg, #7b61ff, #a78bfa);
+  width: 70%
+}
+
+/* Node status LED */
+.ha-node-led {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 10px rgba(34, 197, 94, .6);
+  animation: haLedBlink 2.5s ease-in-out infinite;
+}
+
+/* ---------- CONNECTION LINES (SVG) ---------- */
+.ha-connections {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.ha-conn-line {
+  stroke: url(#connGrad);
+  stroke-width: 1.5;
+  fill: none;
+  opacity: .3;
+}
+
+.ha-conn-particle {
+  fill: #5ab2ff;
+  filter: drop-shadow(0 0 4px rgba(90, 178, 255, .8));
+}
+
+/* ---------- FLOATING ICON BADGES ---------- */
+.ha-badge {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 12;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, .35);
+  border: 1px solid rgba(255, 255, 255, .1);
+}
+
+.ha-badge i {
+  font-size: 22px;
+  color: #fff;
+}
+
+.ha-badge-shield {
+  background: linear-gradient(135deg, #2f86ff, #7b61ff);
+  bottom: 100px;
+  left: 60px;
+  animation: haBadgeFloat 6s ease-in-out infinite;
+}
+
+.ha-badge-lock {
+  background: linear-gradient(135deg, rgba(30, 40, 70, .9), rgba(20, 28, 55, .95));
+  border-color: rgba(0, 212, 255, .2);
+  top: 40px;
+  right: 60px;
+  animation: haBadgeFloat 5s ease-in-out infinite 1s;
+}
+
+.ha-badge-bolt {
+  background: linear-gradient(135deg, #ff8a2d, #ff6f1a);
+  bottom: 60px;
+  right: 40px;
+  animation: haBadgeFloat 7s ease-in-out infinite 2s;
+}
+
+.ha-badge-cloud {
+  background: linear-gradient(135deg, rgba(20, 30, 55, .92), rgba(15, 22, 45, .95));
+  border-color: rgba(47, 134, 255, .2);
+  top: 70px;
+  left: 155px;
+  animation: haBadgeFloat 5.5s ease-in-out infinite .5s;
+}
+
+/* ---------- ORBIT RING ---------- */
+.ha-orbit {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1px dashed rgba(47, 134, 255, .08);
+  animation: haOrbitSpin 40s linear infinite;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.ha-orbit-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2f86ff;
+  box-shadow: 0 0 14px rgba(47, 134, 255, .6);
+}
+
+.ha-orbit-dot:nth-child(1) {
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%)
+}
+
+.ha-orbit-dot:nth-child(2) {
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%)
+}
+
+.ha-orbit-dot:nth-child(3) {
+  top: 50%;
+  right: -4px;
+  transform: translateY(-50%)
+}
+
+/* ---------- PARTICLE FIELD ---------- */
+.ha-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.ha-particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #5ab2ff;
+  border-radius: 50%;
+  opacity: 0;
+  animation: haParticleRise linear infinite;
+}
+
+.ha-particle:nth-child(1) {
+  left: 15%;
+  animation-duration: 8s;
+  animation-delay: 0s
+}
+
+.ha-particle:nth-child(2) {
+  left: 30%;
+  animation-duration: 6s;
+  animation-delay: 1s
+}
+
+.ha-particle:nth-child(3) {
+  left: 45%;
+  animation-duration: 9s;
+  animation-delay: 2s
+}
+
+.ha-particle:nth-child(4) {
+  left: 60%;
+  animation-duration: 7s;
+  animation-delay: 0.5s
+}
+
+.ha-particle:nth-child(5) {
+  left: 75%;
+  animation-duration: 8.5s;
+  animation-delay: 3s
+}
+
+.ha-particle:nth-child(6) {
+  left: 85%;
+  animation-duration: 6.5s;
+  animation-delay: 1.5s
+}
+
+.ha-particle:nth-child(7) {
+  left: 20%;
+  animation-duration: 10s;
+  animation-delay: 4s
+}
+
+.ha-particle:nth-child(8) {
+  left: 55%;
+  animation-duration: 7.5s;
+  animation-delay: 2.5s
+}
+
+
+/* ============ KEYFRAMES ============ */
+
+@keyframes haPulse {
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: .5
+  }
+
+  50% {
+    transform: translate(5px, -8px) scale(1.08);
+    opacity: .65
+  }
+}
+
+@keyframes haFloat {
+
+  0%,
+  100% {
+    transform: translateY(0)
+  }
+
+  50% {
+    transform: translateY(-12px)
+  }
+}
+
+@keyframes haRingPulse {
+
+  0%,
+  100% {
+    opacity: .4;
+    transform: scale(1)
+  }
+
+  50% {
+    opacity: .15;
+    transform: scale(1.06)
+  }
+}
+
+@keyframes haBarFill {
+
+  0%,
+  100% {
+    opacity: .7
+  }
+
+  50% {
+    opacity: 1
+  }
+}
+
+@keyframes haLedBlink {
+
+  0%,
+  100% {
+    opacity: 1
+  }
+
+  50% {
+    opacity: .3
+  }
+}
+
+@keyframes haBadgeFloat {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg)
+  }
+
+  33% {
+    transform: translateY(-8px) rotate(2deg)
+  }
+
+  66% {
+    transform: translateY(-4px) rotate(-1deg)
+  }
+}
+
+@keyframes haOrbitSpin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg)
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg)
+  }
+}
+
+@keyframes haParticleRise {
+  0% {
+    transform: translateY(100%) scale(0);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: .6
+  }
+
+  90% {
+    opacity: .4
+  }
+
+  100% {
+    transform: translateY(-520px) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes haDataPulse {
+  0% {
+    offset-distance: 0%
+  }
+
+  100% {
+    offset-distance: 100%
+  }
+}
+
+/* ============ RESPONSIVE ============ */
+/* Keep your existing responsive scale rules.
+           These mirror what you had: */
+
+@media(max-width:1024px) {
+  .hero-animation {
+    max-width: 580px;
+    height: 460px
+  }
+}
+
+@media(max-width:992px) {
+  .hero-animation {
+    transform: scale(.85);
+    height: 420px
+  }
+}
+
+@media(max-width:767px) {
+  .hero-animation {
+    transform: scale(.65);
+    height: 380px
+  }
+
+  .ha-badge-cloud {
+    display: none
+  }
+  .ha-grid{
+   width:100%;
+   max-width:100%;
+}
+.card-ssl{
+   left:0;
+}
+
+.card-up{
+   right:0;
+}
+
+}
+
+@media(max-width:575px) {
+  .hero-animation {
+    transform: scale(.55);
+    height: 340px
+  }
+}
+
+
+/* ====== HERO ANIMATION (3D server) — CSS START ====== */
+.hmk-hero {
+  position: relative;
+  width: 560px;
+  max-width: 100%;
+  filter: drop-shadow(0 40px 60px rgba(0, 0, 0, .55));
+  transition: transform .3s ease-out;
+}
+
+.hp-scene {
+  animation: hpFloat 7s ease-in-out infinite
+}
+
+.hp-scene svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible
+}
+
+/* svg element animations */
+.amb {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: hpGlow 9s ease-in-out infinite
+}
+
+.amb.a2 {
+  animation-duration: 11s;
+  animation-delay: -3s
+}
+
+.amb.a3 {
+  animation-duration: 13s;
+  animation-delay: -6s
+}
+
+.led {
+  animation: hpBlink 2.2s ease-in-out infinite
+}
+
+.led-h {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: hpHalo 2.2s ease-in-out infinite
+}
+
+.seam {
+  animation: hpSeam 3.4s ease-in-out infinite
+}
+
+.scan {
+  animation: hpScan 4.6s cubic-bezier(.4, 0, .2, 1) infinite
+}
+
+.dust {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: hpDust 8s linear infinite
+}
+
+@keyframes hpFloat {
+
+  0%,
+  100% {
+    transform: translateY(0)
+  }
+
+  50% {
+    transform: translateY(-15px)
+  }
+}
+
+@keyframes hpGlow {
+
+  0%,
+  100% {
+    opacity: .32;
+    transform: scale(1)
+  }
+
+  50% {
+    opacity: .52;
+    transform: scale(1.12)
+  }
+}
+
+@keyframes hpBlink {
+
+  0%,
+  100% {
+    opacity: 1
+  }
+
+  50% {
+    opacity: .25
+  }
+}
+
+@keyframes hpHalo {
+
+  0%,
+  100% {
+    opacity: .4;
+    transform: scale(1)
+  }
+
+  50% {
+    opacity: .12;
+    transform: scale(.7)
+  }
+}
+
+@keyframes hpSeam {
+
+  0%,
+  100% {
+    opacity: .55
+  }
+
+  50% {
+    opacity: 1
+  }
+}
+
+@keyframes hpScan {
+  0% {
+    transform: translateY(-170px);
+    opacity: 0
+  }
+
+  12% {
+    opacity: .9
+  }
+
+  88% {
+    opacity: .9
+  }
+
+  100% {
+    transform: translateY(360px);
+    opacity: 0
+  }
+}
+
+@keyframes hpDust {
+  0% {
+    transform: translateY(20px);
+    opacity: 0
+  }
+
+  20% {
+    opacity: .9
+  }
+
+  80% {
+    opacity: .9
+  }
+
+  100% {
+    transform: translateY(-130px);
+    opacity: 0
+  }
+}
+
+/* glass cards */
+.hp-card {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 13px 16px;
+  border-radius: 16px;
+  background: linear-gradient(150deg, rgba(255, 255, 255, .12), rgba(255, 255, 255, .04));
+  border: 1px solid rgba(255, 255, 255, .16);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 20px 38px -14px rgba(0, 0, 0, .7), inset 0 1px 0 rgba(255, 255, 255, .22);
+}
+
+.hp-card .ic {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #fff;
+  box-shadow: 0 8px 16px -6px rgba(0, 0, 0, .5);
+}
+
+.hp-card .tx b {
+  display: block;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2
+}
+
+.hp-card .tx span {
+  color: rgba(255, 255, 255, .6);
+  font-size: 10.5px
+}
+
+/* ---- NEW: AI Optimisation card with radial gauge (replaces Page Speed) ---- */
+.hp-card.card-ai {
+  top: 12%;
+  right: 2%;
+  animation: hpCard 5.5s ease-in-out infinite
+}
+
+.hp-gauge {
+  position: relative;
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0
+}
+
+.hp-gauge svg {
+  width: 46px;
+  height: 46px;
+  display: block
+}
+
+.hp-gauge .g-track {
+  fill: none;
+  stroke: rgba(255, 255, 255, .12);
+  stroke-width: 5
+}
+
+.hp-gauge .g-fill {
+  fill: none;
+  stroke: url(#aiGauge);
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-dasharray: 126;
+  stroke-dashoffset: 126;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  animation: hpGauge 3.4s ease-in-out infinite
+}
+
+.hp-gauge .g-num {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff
+}
+
+.hp-card.card-ai .tx b {
+  display: flex;
+  align-items: center;
+  gap: 5px
+}
+
+.hp-card.card-ai .tx b .spark {
+  width: 11px;
+  height: 11px;
+  background: linear-gradient(135deg, #9bf3fb, #8b5cf6);
+  clip-path: polygon(50% 0, 60% 40%, 100% 50%, 60% 60%, 50% 100%, 40% 60%, 0 50%, 40% 40%);
+  animation: hpTwinkle 2.4s ease-in-out infinite
+}
+
+@keyframes hpGauge {
+  0% {
+    stroke-dashoffset: 126
+  }
+
+  55%,
+  100% {
+    stroke-dashoffset: 34
+  }
+}
+
+@keyframes hpTwinkle {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0)
+  }
+
+  50% {
+    opacity: .45;
+    transform: scale(.8) rotate(90deg)
+  }
+}
+
+.card-ssl {
+  top: 44%;
+  left: -9%;
+  animation: hpCard 6.8s ease-in-out infinite reverse
+}
+
+.card-ssl .ic {
+  background: linear-gradient(135deg, #22d07e, #13a3a8)
+}
+
+.card-up {
+  bottom: 13%;
+  right: -5%;
+  animation: hpCard 7.6s ease-in-out infinite
+}
+
+.card-up .ic {
+  background: linear-gradient(135deg, #2f7bff, #16d3e0)
+}
+
+@keyframes hpCard {
+
+  0%,
+  100% {
+    transform: translateY(0)
+  }
+
+  50% {
+    transform: translateY(-16px)
+  }
+}
+
+.hp-pill {
+  position: absolute;
+  left: 4%;
+  bottom: 8%;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 13px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, .08);
+  border: 1px solid rgba(255, 255, 255, .15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+  animation: hpCard 6s ease-in-out infinite;
+}
+
+.hp-pill .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22d07e;
+  box-shadow: 0 0 8px #22d07e;
+  animation: hpBlink 1.6s infinite
+}
+
+/* ============ RESPONSIVE — desktop down to small phones ============ */
+@media(max-width:1199px) {
+  .hmk-hero {
+    width: 500px
+  }
+}
+
+@media(max-width:991px) {
+
+  /* tablets: shrink a little, pull floating cards inward so nothing clips */
+  .hmk-hero {
+    width: 430px
+  }
+
+  .hp-card {
+    padding: 10px 12px;
+    gap: 9px;
+    border-radius: 14px
+  }
+
+  .hp-card .ic {
+    width: 34px;
+    height: 34px;
+    font-size: 14px
+  }
+
+  .hp-card .tx b {
+    font-size: 11.5px
+  }
+
+  .hp-card .tx span {
+    font-size: 9.5px
+  }
+
+  .hp-gauge,
+  .hp-gauge svg {
+    width: 40px;
+    height: 40px
+  }
+
+  .card-ai {
+    top: 4%;
+    right: -2%
+  }
+
+  .card-ssl {
+    top: 44%;
+    left: -3%
+  }
+
+  .card-up {
+    bottom: 11%;
+    right: -1%
+  }
+
+  .hp-pill {
+    left: 2%;
+    bottom: 6%
+  }
+}
+
+@media(max-width:767px) {
+
+  /* phones: cards sit fully inside, smaller, parallax disabled via JS below */
+  .hmk-hero {
+    width: 340px;
+    filter: drop-shadow(0 24px 36px rgba(0, 0, 0, .5))
+  }
+
+  .card-ai {
+    top: 1%;
+    right: 3%
+  }
+
+  .card-ssl {
+    top: 42%;
+    left: 2%
+  }
+
+  .card-up {
+    bottom: 9%;
+    right: 3%
+  }
+
+  .hp-card .tx span {
+    display: none
+  }
+
+  /* keep cards compact on small screens */
+  .card-ssl .tx span,
+  .card-up .tx span {
+    display: none
+  }
+}
+
+@media(max-width:479px) {
+  .hmk-hero {
+    width: 290px;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+
+  .hp-pill {
+    left: -6%;
+  }
+
+  .hp-card {
+    padding: 8px 10px
+  }
+
+  .hp-card .ic {
+    width: 30px;
+    height: 30px;
+    font-size: 12px
+  }
+
+  .hp-card .tx b {
+    font-size: 10.5px
+  }
+
+  .hp-gauge,
+  .hp-gauge svg {
+    width: 34px;
+    height: 34px
+  }
+
+  .hp-gauge .g-num {
+    font-size: 10px
+  }
+
+  .hp-pill {
+    font-size: 10px;
+    padding: 6px 10px
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .hmk-hero * {
+    animation: none !important
+  }
+}
+
+/* ====== HERO ANIMATION (3D server) — CSS END ====== */
+
+/* ========================================================
+   1. ULTRA-MODERN FEATURE CARDS
+   ======================================================== */
+.feature-card {
+  background: linear-gradient(160deg, #111827 0%, #06090f 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 22px;
+  padding: 1.8rem;
+  height: auto;
+  position: relative;
+  z-index: 1;
+  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  overflow: hidden;
+}
+
+/* Subtle Tech Grid inside the card */
+.feature-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.3;
+  z-index: -2;
+  transition: opacity 0.5s ease;
+}
+
+/* Glowing Animated Border on Hover */
+.feature-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  padding: 2px;
+  /* Border thickness */
+  background: linear-gradient(135deg, rgba(47, 134, 255, 0), rgba(47, 134, 255, 0.9), rgba(139, 92, 246, 0.9), rgba(0, 212, 255, 0));
+  background-size: 200% 200%;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  background: linear-gradient(160deg, #162032 0%, #06090f 100%);
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.6), 0 0 40px rgba(47, 134, 255, 0.15);
+}
+
+.feature-card:hover::before {
+  opacity: 1;
+  animation: gradientShift 3s ease infinite;
+}
+
+.feature-card:hover::after {
+  opacity: 0.6;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Elevated Icon Box */
+.icon-box {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  margin-bottom: 0.7rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: transform 0.4s ease;
+}
+
+.icon-box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: inherit;
+  filter: blur(12px);
+  opacity: 0.5;
+  z-index: -1;
+  transition: opacity 0.4s ease;
+}
+
+.feature-card:hover .icon-box {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.feature-card:hover .icon-box::before {
+  opacity: 0.8;
+}
+
+/* Custom Icon Colors */
+.icon-orange {
+  background: linear-gradient(135deg, #ffb13d, #ff6f1a);
+  border: 1px solid rgba(255, 177, 61, 0.3);
+}
+
+.icon-green {
+  background: linear-gradient(135deg, #22d07e, #0ea5e9);
+  border: 1px solid rgba(34, 208, 126, 0.3);
+}
+
+.icon-blue {
+  background: linear-gradient(135deg, #16d3e0, #2f7bff);
+  border: 1px solid rgba(22, 211, 224, 0.3);
+}
+
+.icon-purple {
+  background: linear-gradient(135deg, #a78bfa, #7b61ff);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.feature-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.feature-text {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-top: .45rem;
+  margin-bottom: 0;
+
+}
+
+/* ========================================================
+   2. CREATIVE, HIGH-END FOOTER
+   ======================================================== */
+.footer-wrap {
+  background: #030712;
+  /* Deep, professional void black */
+  position: relative;
+  padding-top: 5rem;
+  overflow: hidden;
+}
+
+/* The "Glowing Horizon" Separator */
+.footer-horizon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(47, 134, 255, 0.6), rgba(139, 92, 246, 0.6), transparent);
+  box-shadow: 0 0 30px 2px rgba(47, 134, 255, 0.4);
+}
+
+.footer_links h4 {
+  color: #f8fafc;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.footer_links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer_links ul li {
+  margin-bottom: 1rem;
+}
+
+.footer_links ul li a {
+  color: #64748b;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer_links ul li a:hover {
+  color: #e2e8f0;
+  transform: translateX(4px);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.footer_about p {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-top: 1.5rem;
+}
+
+/* Professional Status Badge */
+.footer-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(34, 208, 126, 0.1);
+  border: 1px solid rgba(34, 208, 126, 0.2);
+  padding: 8px 16px;
+  border-radius: 50px;
+  color: #22d07e;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+
+.footer-status .pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22d07e;
+  box-shadow: 0 0 10px #22d07e;
+  animation: statusPulse 2s infinite;
+}
+
+@keyframes statusPulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scale(0.95);
+    opacity: 1;
+  }
+}
+
+.footer_bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 4rem;
+  padding: 2rem 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.footer_bottom p {
+  color: #475569;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Responsive Footer Adjustments */
+@media (max-width: 768px) {
+  .feature-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .footer-wrap {
+    padding-top: 3rem;
+  }
+
+  .footer_links .col-sm-4 {
+    margin-bottom: 2.5rem;
+  }
+
+  .footer_about {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .footer_about .d-flex {
+    justify-content: center;
+  }
+
+  .footer-status {
+    margin: 1.5rem auto 0;
+  }
+
+  .footer_bottom .row {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+}
+
+
+/* ========================================================
+   5. MIGRATION SECTION - MODERN UPGRADE
+   ======================================================== */
+
+.hmk-migration-section {
+  padding: 5rem 0;
+  position: relative;
+  background: var(--bg-page) !important;
+}
+
+.hmk-section-copy {
+  padding-right: 2rem;
+}
+
+/* The neat little blue tag above the title */
+.hmk-section-kicker {
+  display: inline-block;
+  color: #2f86ff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  background: rgba(47, 134, 255, 0.1);
+  padding: 6px 14px;
+  border-radius: 50px;
+  border: 1px solid rgba(47, 134, 255, 0.2);
+}
+
+.hmk-migration-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+  color: var(--text-primary) !important;
+}
+
+.hmk-migration-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-secondary) !important;
+  margin-bottom: 2.5rem;
+}
+
+/* Gradient Button */
+.hmk-section-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #2f86ff, #16d3e0);
+  color: #fff !important;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(47, 134, 255, 0.2);
+}
+
+.hmk-section-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(47, 134, 255, 0.4);
+}
+
+/* Migration Steps Vertical Stack */
+.hmk-migration-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Individual Step Cards */
+.hmk-migration-card {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-card) !important;
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Slide slightly right on hover */
+.hmk-migration-card:hover {
+  transform: translateX(10px);
+  background: var(--bg-card-hover) !important;
+  border-color: var(--border-card-hover) !important;
+  box-shadow: 0 10px 30px rgba(47, 134, 255, 0.1);
+}
+
+/* Icons inside cards */
+.hmk-migration-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  color: #fff;
+}
+
+/* Gradient Icon colors matching your HTML classes */
+.hmk-icon-dark {
+  background: linear-gradient(135deg, #7b61ff, #a78bfa);
+  box-shadow: 0 4px 15px rgba(123, 97, 255, 0.3);
+}
+
+.hmk-icon-blue {
+  background: linear-gradient(135deg, #2f86ff, #16d3e0);
+  box-shadow: 0 4px 15px rgba(47, 134, 255, 0.3);
+}
+
+.hmk-icon-green {
+  background: linear-gradient(135deg, #22d07e, #0ea5e9);
+  box-shadow: 0 4px 15px rgba(34, 208, 126, 0.3);
+}
+
+/* Text inside cards */
+.hmk-migration-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary) !important;
+}
+
+.hmk-migration-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary) !important;
+}
+
+/* Mobile & Tablet Responsiveness */
+@media (max-width: 991px) {
+  .hmk-section-copy {
+    padding-right: 0;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .hmk-migration-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+
+  /* Pop up instead of sliding right on mobile */
+  .hmk-migration-card:hover {
+    transform: translateY(-5px);
+  }
+}
+
+/* ========================================================
+   3. PAYMENT CARDS SECTION FIX
+   ======================================================== */
+.hmk-payment-section {
+  padding: 5rem 0;
+  background: #030712;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.hmk-section-kicker {
+  display: inline-block;
+  color: #2f86ff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.hmk-payment-title {
+  color: #f8fafc;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hmk-payment-subtitle {
+  color: #94a3b8;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.hmk-section-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #2f86ff, #16d3e0);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hmk-section-btn:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(47, 134, 255, 0.3);
+}
+
+.hmk-payment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+}
+
+.hmk-payment-card {
+  background: linear-gradient(160deg, #111827 0%, #06090f 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #94a3b8;
+  transition: all 0.4s ease;
+  text-align: center;
+}
+
+.hmk-payment-card i {
+  font-size: 2.5rem;
+  color: #cbd5e1;
+  transition: color 0.3s ease;
+}
+
+.hmk-payment-card span {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.hmk-payment-card:hover {
+  transform: translateY(-8px);
+  background: linear-gradient(160deg, #162032 0%, #06090f 100%);
+  border-color: rgba(47, 134, 255, 0.3);
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(47, 134, 255, 0.1);
+  color: #f8fafc;
+}
+
+.hmk-payment-card:hover i {
+  color: #2f86ff;
+}
+
+.hmk-payment-card-highlight {
+  background: linear-gradient(160deg, rgba(34, 208, 126, 0.05), #06090f);
+  border-color: rgba(34, 208, 126, 0.2);
+}
+
+.hmk-payment-card-highlight i {
+  color: #22d07e;
+}
+
+.hmk-payment-card-highlight:hover {
+  border-color: rgba(34, 208, 126, 0.5);
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(34, 208, 126, 0.15);
+}
+
+.hmk-payment-card-highlight:hover i {
+  color: #22d07e;
+}
+
+/* ========================================================
+   1. PRICING SECTION - MODERN UPGRADE
+   ======================================================== */
+
+.hmk-pricing-section {
+  position: relative;
+  z-index: 1;
+}
+
+/* Pricing Toggle Pill */
+.hmk-toggle-wrap {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 50px;
+  display: inline-flex;
+  padding: 5px !important;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hmk-toggle-btn {
+  border-radius: 40px !important;
+  padding: 10px 24px !important;
+  font-weight: 600;
+  color: var(--text-secondary) !important;
+  transition: all 0.3s ease;
+}
+
+.hmk-toggle-btn.active {
+  background: #2f86ff !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(47, 134, 255, 0.3);
+}
+
+/* Pricing Cards */
+.hmk-price-card {
+  background: var(--pricing-card-bg) !important;
+  border: 1px solid var(--border-card) !important;
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Subtle tech grid background matching feature cards */
+.hmk-price-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(var(--feature-grid-dot) 1px, transparent 1px) !important;
+  background-size: 20px 20px;
+  opacity: 0.3;
+  z-index: -1;
+  transition: opacity 0.5s ease;
+}
+
+.hmk-price-card:hover {
+  transform: translateY(-10px);
+  background: var(--bg-card-hover) !important;
+  border-color: var(--border-card-hover) !important;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3), 0 0 30px rgba(47, 134, 255, 0.1) !important;
+}
+
+.hmk-popular-card {
+  border: 2px solid #2f86ff !important;
+  box-shadow: 0 10px 30px rgba(47, 134, 255, 0.08) !important;
+}
+
+/* Card Internals */
+.hmk-card-top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.hmk-icon-box {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+}
+
+.hmk-popular-badge {
+  background: linear-gradient(135deg, #2f86ff, #16d3e0);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  height: fit-content;
+  align-self: center;
+}
+
+.hmk-mini-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.hmk-mini-tags span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.hmk-price-wrap {
+  margin-bottom: 0.5rem;
+}
+
+.hmk-price {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.hmk-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 2rem 0;
+  flex-grow: 1;
+}
+
+.hmk-feature-list li {
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hmk-order-btn {
+  display: block;
+  text-align: center;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+/* Button Colors */
+.hmk-btn-purple {
+  background: rgba(139, 92, 246, 0.1);
+  color: #a78bfa;
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.hmk-btn-purple:hover {
+  background: #8b5cf6;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);
+}
+
+.hmk-btn-blue {
+  background: #2f86ff;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(47, 134, 255, 0.2);
+}
+
+.hmk-btn-blue:hover {
+  background: #1d6fd6;
+  color: #fff;
+  box-shadow: 0 8px 25px rgba(47, 134, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.hmk-btn-orange {
+  background: rgba(255, 111, 26, 0.1);
+  color: #ff8a2d;
+  border-color: rgba(255, 111, 26, 0.3);
+}
+
+.hmk-btn-orange:hover {
+  background: #ff6f1a;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(255, 111, 26, 0.3);
+}
+
+
+/* ========================================================
+   2. FAQ SECTION - MODERN UPGRADE
+   ======================================================== */
+
+.hmk-faq-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  padding: 3rem 0;
+  align-items: flex-start;
+}
+
+.hmk-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hmk-faq-item {
+  background: var(--faq-bg) !important;
+  border: 1px solid var(--faq-border) !important;
+  border-radius: 16px;
+  padding: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.hmk-faq-item:hover {
+  border-color: var(--border-card-hover) !important;
+}
+
+.hmk-faq-item summary {
+  font-size: 1.1rem;
+  font-weight: 600;
+  outline: none;
+  list-style: none;
+  position: relative;
+  padding-right: 2rem;
+  color: var(--text-primary) !important;
+}
+
+/* Custom +/- Icons */
+.hmk-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.hmk-faq-item summary::after {
+  content: '\f067';
+  /* FontAwesome Plus */
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #2f86ff;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.hmk-faq-item[open] summary::after {
+  content: '\f068';
+  /* FontAwesome Minus */
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.hmk-faq-item p {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  line-height: 1.7;
+  color: var(--text-secondary) !important;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.hmk-faq-help-card {
+  background: linear-gradient(160deg, var(--bg-card) 0%, var(--bg-primary) 100%) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hmk-faq-help-icon {
+  background: rgba(47, 134, 255, 0.1);
+  color: #2f86ff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.hmk-faq-help-card a {
+  color: #2f86ff;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+
+/* ========================================================
+   3. RESPONSIVE MEDIA QUERIES (Mobile & Tablet)
+   ======================================================== */
+
+@media (max-width: 991px) {
+
+  /* Stack FAQ on Tablets */
+  .hmk-faq-wrap {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hmk-faq-help-card {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  /* Scale down Pricing Cards */
+  .hmk-price-card {
+    padding: 1.5rem !important;
+  }
+
+  .hmk-plan-name {
+    font-size: 1.5rem;
+  }
+
+  .hmk-price {
+    font-size: 2.5rem;
+  }
+
+  /* Make toggle full width */
+  .hmk-toggle-wrap {
+    width: 100%;
+    display: flex;
+  }
+
+  .hmk-toggle-wrap .nav-item {
+    flex: 1;
+  }
+
+  .hmk-toggle-btn {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0 !important;
+  }
+
+  /* Adjust FAQ padding */
+  .hmk-faq-item {
+    padding: 1.2rem;
+  }
+}
+/* ========================================================
+   PREMIUM COMPARISON TABLE SECTION
+   ======================================================== */
+.hmk-compare-section {
+    position: relative;
+    background: var(--bg-page) !important;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.hmk-compare-title {
+    color: var(--text-primary) !important;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    letter-spacing: -0.03em;
+}
+
+.hmk-compare-subtitle {
+    color: var(--text-secondary) !important;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.hmk-compare-table-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border-subtle) !important;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+.hmk-compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.hmk-compare-table th,
+.hmk-compare-table td {
+    padding: 1.35rem 1rem;
+    border-bottom: 1px solid var(--border-subtle) !important;
+    color: var(--text-secondary) !important;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.hmk-compare-table th {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.85rem;
+    background: rgba(255,255,255,0.015);
+    color: var(--text-primary) !important;
+}
+
+.hmk-compare-table tr:last-child td {
+    border-bottom: none !important;
+}
+
+.feature-col {
+    text-align: left;
+    font-weight: 600;
+    color: var(--text-primary) !important;
+    width: 40%;
+    padding-left: 2.5rem !important;
+}
+
+/* --- THE GLOWING HOSTMEERKAT PILLAR --- */
+.hmk-col {
+    background: linear-gradient(180deg, rgba(47, 134, 255, 0.12) 0%, rgba(47, 134, 255, 0.02) 100%) !important;
+    border-left: 1px solid rgba(47, 134, 255, 0.25) !important;
+    border-right: 1px solid rgba(47, 134, 255, 0.25) !important;
+    font-weight: 700;
+    color: var(--text-primary) !important;
+    width: 32%;
+    position: relative;
+}
+
+/* Header of the highlighted column */
+.hmk-compare-table thead .hmk-col {
+    background: linear-gradient(180deg, rgba(47, 134, 255, 0.2) 0%, rgba(47, 134, 255, 0.08) 100%) !important;
+    border-top: 4px solid #2f86ff !important;
+    box-shadow: 0 10px 30px -10px rgba(47, 134, 255, 0.2);
+    overflow: hidden;
+}
+
+/* Animated Glass Sheen Effect */
+.hmk-compare-table thead .hmk-col::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -150%; width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+    transform: skewX(-25deg);
+    animation: tableShine 5s infinite;
+    pointer-events: none;
+}
+
+@keyframes tableShine {
+    0% { left: -150%; }
+    20% { left: 150%; }
+    100% { left: 150%; } /* Pauses for 4 seconds */
+}
+
+/* Neon Glow on Checkmarks */
+.hmk-compare-table .hmk-col i.text-success {
+    color: #22d07e !important;
+    filter: drop-shadow(0 0 8px rgba(34, 208, 126, 0.7));
+    font-size: 1.25rem;
+}
+
+.hmk-brand-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.hmk-brand-badge span {
+    font-size: 1.15rem;
+    text-transform: none;
+    letter-spacing: normal;
+    color: var(--text-primary) !important;
+}
+
+/* --- THE COMPETITORS COLUMN --- */
+.others-col {
+    width: 28%;
+    background: rgba(0,0,0,0.15);
+    opacity: 0.7;
+}
+
+/* Hover Dynamics: Focus on HostMeerkat, Dim Competitors */
+.hmk-compare-table tbody tr:hover td {
+    background: rgba(255,255,255,0.02);
+}
+.hmk-compare-table tbody tr:hover .hmk-col {
+    background: linear-gradient(180deg, rgba(47, 134, 255, 0.18) 0%, rgba(47, 134, 255, 0.08) 100%) !important;
+    box-shadow: inset 0 0 15px rgba(47, 134, 255, 0.1);
+}
+.hmk-compare-table tbody tr:hover .others-col {
+    opacity: 0.3; /* Fades out the competition */
+    filter: grayscale(1);
+}
+
+.hmk-compare-table i {
+    margin-right: 8px;
+    font-size: 1.1rem;
+    vertical-align: middle;
+}
+
+/* --- LIGHT MODE OVERRIDES --- */
+body.light-mode .hmk-compare-table-wrapper {
+    background: #ffffff !important;
+    border-color: rgba(0,0,0,0.08) !important;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+}
+body.light-mode .hmk-compare-table th { background: #f8fafc !important; }
+body.light-mode .hmk-col {
+    background: linear-gradient(180deg, rgba(47, 134, 255, 0.08) 0%, rgba(47, 134, 255, 0.02) 100%) !important;
+    border-color: rgba(47, 134, 255, 0.25) !important;
+    color: #0f172a !important;
+}
+body.light-mode .hmk-compare-table thead .hmk-col { background: rgba(47, 134, 255, 0.12) !important; }
+body.light-mode .others-col { background: rgba(0,0,0,0.02); }
+
+body.light-mode .hmk-compare-table tbody tr:hover td { background: #f1f5f9; }
+body.light-mode .hmk-compare-table tbody tr:hover .hmk-col {
+    background: linear-gradient(180deg, rgba(47, 134, 255, 0.15) 0%, rgba(47, 134, 255, 0.05) 100%) !important;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 767px) {
+    .feature-col { padding-left: 1rem !important; width: 35%; font-size: 0.85rem; }
+    .hmk-brand-badge img { display: none; }
+    .hmk-brand-badge span { font-size: 0.95rem; }
+    .hmk-compare-table th, .hmk-compare-table td { padding: 1rem 0.5rem; font-size: 0.8rem; }
+    .hmk-compare-table i { font-size: 0.95rem; margin-right: 4px; }
+    .hmk-compare-table .hmk-col i.text-success { font-size: 1rem; }
+}
+
+/* ========================================================
+   TESTIMONIAL CARDS SECTION
+   ======================================================== */
+.hmk-testimonial-section {
+    background: var(--bg-primary) !important;
+    position: relative;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.hmk-review-card {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border-subtle) !important;
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    overflow: hidden;
+}
+
+.hmk-review-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(47, 134, 255, 0.3) !important;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 0 20px rgba(47, 134, 255, 0.1);
+}
+
+.quote-watermark {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 5rem;
+    color: rgba(255, 255, 255, 0.02);
+    z-index: -1;
+    transition: color 0.4s ease;
+}
+
+.hmk-review-card:hover .quote-watermark {
+    color: rgba(47, 134, 255, 0.06);
+}
+
+.hmk-stars {
+    color: #f59e0b;
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+}
+
+.hmk-stars i { margin-right: 4px; }
+
+.hmk-review-text {
+    color: var(--text-secondary) !important;
+    font-size: 1.02rem;
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 2rem;
+    min-height: 110px; /* Keeps cards an even height */
+}
+
+.hmk-review-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 1.5rem;
+}
+
+/* Gradient Initial Avatars */
+.hmk-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.hmk-avatar-blue { background: linear-gradient(135deg, #2f86ff, #06b6d4); }
+.hmk-avatar-purple { background: linear-gradient(135deg, #7b61ff, #a78bfa); }
+.hmk-avatar-orange { background: linear-gradient(135deg, #ffb13d, #ff6f1a); }
+.hmk-avatar-green { background: linear-gradient(135deg, #22d07e, #0ea5e9); }
+
+.hmk-author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.hmk-author-name {
+    color: var(--text-primary) !important;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 0.2rem 0;
+}
+
+.hmk-author-role {
+    color: var(--text-muted) !important;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* --- Light Mode Overrides --- */
+body.light-mode .hmk-review-card {
+    background: #ffffff !important;
+    border-color: rgba(0,0,0,0.08) !important;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+}
+body.light-mode .hmk-review-card:hover {
+    border-color: rgba(47, 134, 255, 0.4) !important;
+    box-shadow: 0 15px 35px rgba(47, 134, 255, 0.12);
+}
+body.light-mode .quote-watermark { color: rgba(0,0,0,0.02); }
+body.light-mode .hmk-review-card:hover .quote-watermark { color: rgba(47, 134, 255, 0.06); }
+body.light-mode .hmk-author-name { color: #0f172a !important; }
+body.light-mode .hmk-review-text { color: #475569 !important; }
+body.light-mode .hmk-review-author { border-color: rgba(0,0,0,0.08); }
+
+/* ========================================================
+   GLOBAL DEEP BLUE BACKGROUND UPDATE
+   ======================================================== */
+
+/* 1. Main Page Background (Replaces the dark slate) */
+body {
+    background-color: #081225 !important; 
+}
+
+/* 2. The Footer & Payment Sections (Replaces pitch black) */
+.footer-wrap,
+.hmk-payment-section {
+    background: #040a15 !important; /* Very deep navy */
+}
+
+/* 3. Alternating Sections (FAQ, Compare, Features) */
+.features-section-bg,
+.hmk-faq-section,
+.zigzag-section,
+.hmk-compare-section {
+    background: #060e1d !important; /* Slightly lighter deep blue for contrast */
+}
+
+/* 4. Update the Footer "Horizon" Line to match */
+.footer-horizon {
+    background: linear-gradient(90deg, transparent, rgba(47, 134, 255, 0.8), rgba(0, 212, 255, 0.8), transparent) !important;
+    box-shadow: 0 0 30px 2px rgba(47, 134, 255, 0.6) !important;
+}
+
+/* 5. Light Mode Protection (Ensures Light Mode stays white/grey) */
+body.light-mode { background-color: #f1f5f9 !important; }
+body.light-mode .footer-wrap,
+body.light-mode .hmk-payment-section { background: #ffffff !important; }
+body.light-mode .features-section-bg,
+body.light-mode .hmk-faq-section,
+body.light-mode .zigzag-section,
+body.light-mode .hmk-compare-section { background: #f8fafc !important; }
+
+/* ========================================================
+   PERFECT FEATURE CARD SPACING (MAGIC WIDTH TRICK)
+   ======================================================== */
+/* 1. Reset the row to default Bootstrap math AND ADD TOP PADDING */
+.container.pb-5 > .row {
+    --bs-gutter-x: 1.5rem !important;
+    --bs-gutter-y: 2rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-top: 5rem !important; /* <--- NEW: Pushes the cards down! */
+}
+
+/* 2. Center the contents of the columns */
+.container.pb-5 .col-md-6 {
+    display: flex;
+    justify-content: center;
+}
+
+/* 3. The Magic Gap: Shrink the cards slightly to create a massive gap between them */
+.container.pb-5 .feature-card {
+    width: 88% !important; /* Leaves a 12% gap between the cards! */
+    margin: 0 auto !important; 
+    height: 100%; 
+}
+
+/* 4. Mobile Mode: Go back to full 100% width and reduce top padding */
+@media (max-width: 767px) {
+    .container.pb-5 > .row {
+        padding-top: 2.5rem !important; /* Neater top spacing for mobile */
+    }
+    .container.pb-5 .feature-card {
+        width: 100% !important; 
+        margin-bottom: 1rem !important;
+        text-align:center;
+    }
+    .container.pb-5 .feature-card .feature-title{
+        justify-content:center;
+        width:100%;
+    }
+}
+
+/* Safety Net */
+html, body {
+    overflow-x: hidden !important;
+}
+.hero-left::before{
+    content:"";
+    position:absolute;
+    width:400px;
+    height:400px;
+    background:rgba(47,134,255,.15);
+    filter:blur(120px);
+}
+/* ========================================================
+   HOW IT WORKS (4 STEPS) - DESKTOP & MOBILE SLIDER
+   ======================================================== */
+.hmk-steps-section {
+    background: var(--bg-page) !important;
+    position: relative;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.hmk-steps-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
+    padding: 2.5rem 0 1rem 0;
+}
+
+/* The Glowing Desktop Connecting Line */
+.hmk-steps-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(47, 134, 255, 0) 0%, #2f86ff 20%, #7b61ff 80%, rgba(123, 97, 255, 0) 100%);
+    box-shadow: 0 0 15px rgba(47, 134, 255, 0.6);
+    z-index: -1;
+    transform: translateY(-50%);
+}
+
+/* Glassmorphism Step Cards */
+.hmk-step-card {
+    background: var(--bg-card) !important;
+    border: 1px solid var(--border-subtle) !important;
+    border-radius: 20px;
+    padding: 3rem 1.5rem 2rem;
+    text-align: center;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.hmk-step-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(47, 134, 255, 0.4) !important;
+    box-shadow: 0 20px 40px rgba(47, 134, 255, 0.15), inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+/* Floating Number Badges */
+.step-number {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 44px;
+    height: 44px;
+    background: linear-gradient(135deg, #2f86ff, #16d3e0);
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.25rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(47, 134, 255, 0.4);
+    border: 4px solid var(--bg-page);
+    transition: border-color 0.3s ease;
+}
+
+.step-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.2rem;
+    background: linear-gradient(135deg, #2f86ff, #a78bfa);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 4px 10px rgba(47,134,255,0.2));
+}
+
+.hmk-step-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary) !important;
+    margin-bottom: 0.8rem;
+}
+
+.hmk-step-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-secondary) !important;
+    margin: 0;
+}
+
+/* Light Mode Overrides */
+body.light-mode .hmk-step-card {
+    background: #ffffff !important;
+    border-color: rgba(0,0,0,0.08) !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+body.light-mode .step-number {
+    border-color: #f1f5f9;
+}
+body.light-mode .hmk-step-card h3 { color: #0f172a !important; }
+body.light-mode .hmk-step-card p { color: #475569 !important; }
+
+/* --------------------------------------------------------
+   CSS-ONLY MOBILE SLIDER (NATIVE SWIPE SCROLLING)
+   -------------------------------------------------------- */
+@media (max-width: 991px) {
+    .hmk-steps-wrapper {
+        display: flex;
+        grid-template-columns: none;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        gap: 1.5rem;
+        padding: 2.5rem 1rem 3rem 1rem; /* Extra padding so shadows don't cut off */
+        margin: 0 -15px; /* Bleed to edge of the phone screen */
+        scrollbar-width: none; /* Hide scrollbar for Firefox */
+    }
+    
+    /* Hide scrollbar for Chrome/Safari/Edge */
+    .hmk-steps-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+    .hmk-steps-wrapper::before {
+        display: none; /* Hide the glowing track line on mobile */
+    }
+
+    /* Cards snap to the center of the screen when sliding */
+    .hmk-step-card {
+        flex: 0 0 75%; /* Card width on tablet */
+        scroll-snap-align: center;
+    }
+}
+
+@media (max-width: 575px) {
+    .hmk-step-card {
+        flex: 0 0 88%; /* Card width on mobile phones */
+    }
+}
+
+/* integrated legal footer polish */
+.footer_links ul,
+.footer_links ol {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+.footer_links li {
+  list-style: none !important;
+  margin: 0 0 9px 0 !important;
+  padding-left: 0 !important;
+}
+.footer_links li::before,
+.footer_links li::marker {
+  content: "" !important;
+  display: none !important;
+}
+.footer_links a {
+  text-decoration: none !important;
+  border-bottom: 0 !important;
+}
+.footer_links h4 {
+  margin-bottom: 18px !important;
+}
+
+
+@media only screen and (min-width:991px) and (max-width: 1097px){
+     .header {
+        padding-top: 100px;
+    }
+ }
+
+ @media(max-width:768px){
+
+  .hmk-hero{
+      width:100% !important;
+      max-width:340px !important;
+      height:auto !important;
+      margin:0 auto !important;
+  }
+
+  .hp-scene{
+      width:100% !important;
+      height:auto !important;
+      aspect-ratio:auto !important;
+      transform:scale(.97) !important;
+      transform-origin:center top !important;
+  }
+
+  .hmk-hero svg{
+      width:100% !important;
+      height:auto !important;
+      display:block !important;
+  }
+
+}

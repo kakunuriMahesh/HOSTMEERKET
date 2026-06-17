@@ -1,0 +1,675 @@
+/* ========================================================
+   THEME TOGGLE PILL SWITCH (Universal)
+   ======================================================== */
+.theme-toggle-btn {
+  position: relative;
+  width: 54px;
+  height: 28px;
+  border-radius: 999px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, 0.2);
+  transition: background 0.35s ease, box-shadow 0.35s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.theme-toggle-btn::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
+.theme-toggle-btn .icon-dark,
+.theme-toggle-btn .icon-light {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 10px;
+  line-height: 1;
+  transition: opacity 0.2s ease;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.theme-toggle-btn .icon-dark {
+  right: 6px;
+  color: rgba(255, 255, 255, 0.75);
+  opacity: 1;
+}
+
+.theme-toggle-btn .icon-light {
+  left: 6px;
+  color: #f59e0b;
+  opacity: 0;
+}
+
+body.light-mode .theme-toggle-btn {
+  background: #2f86ff;
+  box-shadow: inset 0 0 0 1.5px rgba(47, 134, 255, 0.5), 0 3px 10px rgba(47, 134, 255, 0.3);
+}
+
+body.light-mode .theme-toggle-btn::before {
+  transform: translateX(26px);
+}
+
+body.light-mode .theme-toggle-btn .icon-dark {
+  opacity: 0;
+}
+
+body.light-mode .theme-toggle-btn .icon-light {
+  opacity: 1;
+}
+
+.navbar-toggler {
+  padding: 4px 8px !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+body.light-mode .navbar-toggler {
+  border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+body.light-mode .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%230f172a' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* ========================================================
+   EXACT MOBILE DRAWER DESIGN MATCH
+   ======================================================== */
+@media (max-width: 991px) {
+  .offcanvas {
+    border-right: none;
+    box-shadow: 5px 0 25px rgba(0, 0, 0, 0.1);
+    max-width: 280px;
+  }
+
+  .offcanvas-header {
+    padding: 1.5rem 1.5rem 1.5rem;
+    border-bottom: none;
+  }
+
+  .offcanvas-body {
+    padding: 0 1.5rem 2rem;
+  }
+
+  .offcanvas .nav-item {
+    margin-bottom: 0.35rem;
+  }
+
+  .offcanvas .nav-link {
+    font-size: 1.05rem;
+    font-weight: 600;
+    padding: 0.65rem 1rem;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  /* --- Mobile Login Button --- */
+  .offcanvas .button .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #1976D2 !important;
+    /* Exact blue from screenshot */
+    color: #ffffff !important;
+    padding: 0.75rem 1rem;
+    border-radius: 50px !important;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(25, 118, 210, 0.3);
+    border: none;
+  }
+
+  .offcanvas .button .dropdown-toggle::after {
+    margin-left: 8px;
+  }
+
+  /* --- Submenu styling --- */
+  .offcanvas .dropdown-menu {
+    border: none;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding-left: 1rem;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .offcanvas .dropdown-item {
+    font-weight: 500;
+    padding: 0.4rem 0;
+  }
+
+  /* === Mobile Light Mode Specifics === */
+  body.light-mode .offcanvas {
+    background-color: #ffffff;
+  }
+
+  body.light-mode .offcanvas .nav-link {
+    color: #334155;
+  }
+
+  body.light-mode .offcanvas .nav-link.active {
+    background-color: #e2e8f0 !important;
+    color: #0f172a !important;
+  }
+
+  body.light-mode .offcanvas .dropdown-item {
+    color: #475569 !important;
+  }
+
+  /* === Mobile Dark Mode Specifics === */
+  body:not(.light-mode) .offcanvas {
+    background-color: #0B1120;
+  }
+
+  body:not(.light-mode) .offcanvas-header .text-dark {
+    color: #ffffff !important;
+  }
+
+  body:not(.light-mode) .offcanvas .nav-link {
+    color: #F8FAFC;
+  }
+
+  body:not(.light-mode) .offcanvas .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+  }
+
+  body:not(.light-mode) .offcanvas .dropdown-item {
+    color: #CBD5E1 !important;
+  }
+}
+
+/* ========================================================
+   ATTRACTIVE FEATURE CARDS (Modern Theme Match)
+   ======================================================== */
+.feature-card {
+  background: linear-gradient(160deg, #111827 0%, #06090f 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 22px;
+  padding: 2rem;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #2f86ff, #06b6d4);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  background: linear-gradient(160deg, #162032 0%, #06090f 100%);
+  border-color: rgba(47, 134, 255, 0.2);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(47, 134, 255, 0.1);
+}
+
+.feature-card:hover::before {
+  opacity: 1;
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: rgba(47, 134, 255, 0.1);
+  color: #2f86ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin: 0 auto 1.5rem;
+  transition: transform 0.4s ease, background 0.4s ease;
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.1) rotate(-5deg);
+  background: linear-gradient(135deg, #2f86ff, #06b6d4);
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(47, 134, 255, 0.3);
+}
+
+.feature-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-bottom: 0.8rem;
+}
+
+.feature-text {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+/* ========================================================
+   CPANEL DESCRIPTION CARD FIX
+   ======================================================== */
+.desc-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 3px solid #2f86ff;
+  padding: 1.5rem;
+  border-radius: 14px;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.desc-card p {
+  margin: 0;
+  color: #CBD5E1;
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+/* ========================================================
+   WEB HOSTING PAGE: COMPLETE LIGHT MODE FIXES
+   ======================================================== */
+body.light-mode {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+
+/* Base sections background to white/light grey */
+body.light-mode .header.web-hero-bg,
+body.light-mode .hmk-pricing-section,
+body.light-mode .features-section-bg,
+body.light-mode .cpanel-section {
+  background: #f1f5f9 !important;
+  background-image: none !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+body.light-mode .header.web-hero-bg {
+  background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(47, 134, 255, 0.08), transparent), #f8fafc !important;
+}
+
+/* Text & Headers overrides */
+body.light-mode .hosting-hero-title,
+body.light-mode .hmk-pricing-title,
+body.light-mode .cpanel-title,
+body.light-mode .cpanel-label,
+body.light-mode .cta-text h3 {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+}
+
+/* Restoring the blue text inside headers */
+body.light-mode .hosting-blue-text,
+body.light-mode .cpanel-title .blu {
+  color: #2f86ff !important;
+  -webkit-text-fill-color: #2f86ff !important;
+}
+
+/* Descriptions */
+body.light-mode .hosting-hero-description,
+body.light-mode .hmk-pricing-subtitle,
+body.light-mode .cpanel-header-right,
+body.light-mode .cta-text p {
+  color: #475569 !important;
+  -webkit-text-fill-color: #475569 !important;
+}
+
+/* --- Pricing Cards Light Mode --- */
+body.light-mode .hmk-price-card {
+  background: #ffffff !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04) !important;
+}
+
+body.light-mode .hmk-price-card:hover {
+  box-shadow: 0 12px 40px rgba(47, 134, 255, 0.12) !important;
+}
+
+body.light-mode .hmk-plan-name,
+body.light-mode .hmk-price {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+}
+
+body.light-mode .hmk-plan-text,
+body.light-mode .hmk-price-small,
+body.light-mode .hmk-year-text,
+body.light-mode .hmk-feature-list li {
+  color: #475569 !important;
+  -webkit-text-fill-color: #475569 !important;
+}
+
+body.light-mode .hmk-mini-tags span {
+  background: #f1f5f9 !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  color: #475569 !important;
+}
+
+/* --- Feature Cards Light Mode --- */
+body.light-mode .feature-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03) !important;
+}
+
+body.light-mode .feature-card:hover {
+  background: #f8fafc !important;
+  border-color: rgba(47, 134, 255, 0.3) !important;
+  box-shadow: 0 15px 35px rgba(47, 134, 255, 0.1) !important;
+}
+
+body.light-mode .feature-title {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+}
+
+body.light-mode .feature-text {
+  color: #475569 !important;
+  -webkit-text-fill-color: #475569 !important;
+}
+
+/* --- cPanel Section Light Mode Fixes --- */
+body.light-mode .desc-card {
+  background: #ffffff !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03) !important;
+}
+
+body.light-mode .desc-card p {
+  color: #475569 !important;
+  -webkit-text-fill-color: #475569 !important;
+}
+
+body.light-mode .feat-item {
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  color: #334155 !important;
+}
+
+body.light-mode .stat-box {
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+body.light-mode .stat-box strong {
+  color: #2f86ff !important;
+}
+
+body.light-mode .stat-box span {
+  color: #64748b !important;
+}
+
+body.light-mode .cpanel-pill {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+body.light-mode .cpanel-pill strong {
+  color: #0f172a !important;
+}
+
+body.light-mode .cpanel-pill span {
+  color: #64748b !important;
+}
+
+body.light-mode .cta-inner {
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Ensure Dark Mode Stays Intact */
+body:not(.light-mode) .hosting-hero-title,
+body:not(.light-mode) .hmk-pricing-title,
+body:not(.light-mode) .cpanel-title,
+body:not(.light-mode) .cta-text h3 {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+body:not(.light-mode) .hosting-hero-description,
+body:not(.light-mode) .hmk-pricing-subtitle,
+body:not(.light-mode) .cpanel-header-right,
+body:not(.light-mode) .cta-text p {
+  color: #CBD5E1 !important;
+  -webkit-text-fill-color: #CBD5E1 !important;
+}
+
+/* ========================================================
+   2. CREATIVE, HIGH-END FOOTER
+   ======================================================== */
+.footer-wrap {
+  background: #030712;
+  position: relative;
+  padding-top: 5rem;
+  overflow: hidden;
+}
+
+.footer-horizon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(47, 134, 255, 0.6), rgba(139, 92, 246, 0.6), transparent);
+  box-shadow: 0 0 30px 2px rgba(47, 134, 255, 0.4);
+}
+
+.footer_links h4 {
+  color: #f8fafc;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.footer_links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer_links ul li {
+  margin-bottom: 1rem;
+}
+
+.footer_links ul li a {
+  color: #64748b;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer_links ul li a:hover {
+  color: #e2e8f0;
+  transform: translateX(4px);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.footer_about p {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-top: 1.5rem;
+}
+
+.footer-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(34, 208, 126, 0.1);
+  border: 1px solid rgba(34, 208, 126, 0.2);
+  padding: 8px 16px;
+  border-radius: 50px;
+  color: #22d07e;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+
+.footer-status .pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22d07e;
+  box-shadow: 0 0 10px #22d07e;
+  animation: statusPulse 2s infinite;
+}
+
+@keyframes statusPulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scale(0.95);
+    opacity: 1;
+  }
+}
+
+.footer_bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 4rem;
+  padding: 2rem 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.footer_bottom p {
+  color: #475569;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* ── MOBILE FOOTER FIX ── */
+@media (max-width: 768px) {
+
+  .footer-wrap .footer_links,
+  .footer-wrap .footer_links .row,
+  .footer-wrap .footer_links .row>div,
+  .footer-wrap .col-lg-8,
+  .footer-wrap .col-md-4,
+  .footer-wrap .col-sm-6,
+  .footer-wrap .col-lg-4,
+  .footer-wrap .col-md-12 {
+    text-align: center !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .footer-wrap .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .footer-wrap .footer_links ul {
+    padding: 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .footer-wrap .footer_links ul li {
+    display: block !important;
+    text-align: center !important;
+    width: 100% !important;
+    padding: 0 !important;
+    line-height: 2.2 !important;
+  }
+
+  .footer-wrap .footer_links ul li a {
+    display: block !important;
+    text-align: center !important;
+    width: 100% !important;
+    padding: 0 !important;
+    position: static !important;
+    letter-spacing: normal !important;
+  }
+
+  .footer-wrap .footer_links ul li a::before {
+    display: none !important;
+  }
+
+  .footer-wrap .footer_links ul li a:hover {
+    transform: none !important;
+    letter-spacing: normal !important;
+  }
+
+  .footer-wrap .footer_links h4 {
+    text-align: center !important;
+  }
+
+  .footer-wrap .footer_about {
+    text-align: center !important;
+    margin-top: 1rem !important;
+  }
+
+  .footer-wrap .footer_about .d-flex {
+    justify-content: center !important;
+  }
+
+  .footer-wrap .footer_about p {
+    margin: 1rem auto 0 !important;
+    max-width: 320px;
+    text-align: center !important;
+  }
+
+  .footer-wrap .footer-status {
+    margin: 1.2rem auto 0 !important;
+  }
+
+  .footer-wrap .footer_bottom .row {
+    text-align: center !important;
+    gap: 1rem;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .offcanvas {
+    z-index: 2000 !important;
+  }
+
+  .offcanvas-backdrop {
+    z-index: 1999 !important;
+  }
+
+  .header,
+  .web-hero-bg,
+  .object_1,
+  .sale_banner {
+    z-index: auto !important;
+  }
+}

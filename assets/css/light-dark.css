@@ -1,0 +1,1656 @@
+.hmk-faq-item summary/* ============================================================
+   HostMeerkat — Light / Dark Mode
+   Link after all other stylesheets in <head>.
+   Toggle by adding/removing class "light-mode" on <html> or <body>.
+   Default = dark  |  .light-mode = light
+   ============================================================ */
+
+/* ── CSS CUSTOM PROPERTIES ─────────────────────────────────── */
+
+/* DARK (default — matches the existing site design) */
+:root {
+  --bg-page:           #030712;
+  --bg-primary:        #06090f;
+  --bg-card:           #111827;
+  --bg-card-hover:     #162032;
+  --bg-nav:            rgba(6, 9, 15, 0.92);
+  --bg-sale:           #0d1526;
+  --bg-footer:         #030712;
+  --bg-footer-bottom:  rgba(0, 0, 0, 0.2);
+
+  --text-primary:      #f8fafc;
+  --text-secondary:    #94a3b8;
+  --text-muted:        #64748b;
+  --text-footer-link:  #64748b;
+  --text-copyright:    #475569;
+
+  --border-subtle:     rgba(255, 255, 255, 0.05);
+  --border-card:       rgba(255, 255, 255, 0.05);
+  --border-card-hover: rgba(47, 134, 255, 0.3);
+  --border-nav:        rgba(255, 255, 255, 0.06);
+
+  --sale-text:         #cbd5e1;
+  --sale-badge-bg:     rgba(47, 134, 255, 0.15);
+  --sale-badge-border: rgba(47, 134, 255, 0.35);
+
+  --nav-link:          rgba(255, 255, 255, 0.75);
+  --nav-link-hover:    #ffffff;
+  --dropdown-bg:       #111827;
+  --dropdown-border:   rgba(255, 255, 255, 0.08);
+  --dropdown-hover-bg: rgba(47, 134, 255, 0.12);
+
+  --feature-grid-dot:  rgba(255, 255, 255, 0.06);
+  --icon-box-glow:     0.5;
+
+  --pricing-card-bg:   linear-gradient(160deg, #111827 0%, #06090f 100%);
+  --pricing-popular-bg: rgba(47, 134, 255, 0.06);
+
+  --migration-card-bg: rgba(255, 255, 255, 0.03);
+  --migration-border:  rgba(255, 255, 255, 0.07);
+
+  --faq-bg:            rgba(255, 255, 255, 0.03);
+  --faq-border:        rgba(255, 255, 255, 0.07);
+  --faq-summary:       #f8fafc;
+  --faq-body:          #94a3b8;
+
+  --payment-card-bg:   linear-gradient(160deg, #111827 0%, #06090f 100%);
+  --payment-card-hover-bg: linear-gradient(160deg, #162032 0%, #06090f 100%);
+  --payment-icon:      #cbd5e1;
+
+  --footer-link-hover: #e2e8f0;
+  --footer-heading:    #f8fafc;
+
+  --scrollbar-thumb:   #1e2a45;
+  --scrollbar-track:   #030712;
+}
+
+/* LIGHT MODE overrides */
+body.light-mode,
+html.light-mode {
+  --bg-page:           #f1f5f9;
+  --bg-primary:        #f8fafc;
+  --bg-card:           #ffffff;
+  --bg-card-hover:     #eff6ff;
+  --bg-nav:            rgba(255, 255, 255, 0.95);
+  --bg-sale:           #dbeafe;
+  --bg-footer:         #1e293b;
+  --bg-footer-bottom:  rgba(0, 0, 0, 0.15);
+
+  --text-primary:      #0f172a;
+  --text-secondary:    #475569;
+  --text-muted:        #64748b;
+  --text-footer-link:  #94a3b8;
+  --text-copyright:    #94a3b8;
+
+  --border-subtle:     rgba(0, 0, 0, 0.06);
+  --border-card:       rgba(0, 0, 0, 0.07);
+  --border-card-hover: rgba(47, 134, 255, 0.4);
+  --border-nav:        rgba(0, 0, 0, 0.08);
+
+  --sale-text:         #1e3a5f;
+  --sale-badge-bg:     rgba(47, 134, 255, 0.1);
+  --sale-badge-border: rgba(47, 134, 255, 0.25);
+
+  --nav-link:          #334155;
+  --nav-link-hover:    #0f172a;
+  --dropdown-bg:       #ffffff;
+  --dropdown-border:   rgba(0, 0, 0, 0.08);
+  --dropdown-hover-bg: rgba(47, 134, 255, 0.07);
+
+  --feature-grid-dot:  rgba(0, 0, 0, 0.05);
+  --icon-box-glow:     0.35;
+
+  --pricing-card-bg:   linear-gradient(160deg, #ffffff 0%, #f8fafc 100%);
+  --pricing-popular-bg: rgba(47, 134, 255, 0.04);
+
+  --migration-card-bg: #ffffff;
+  --migration-border:  rgba(0, 0, 0, 0.08);
+
+  --faq-bg:            #ffffff;
+  --faq-border:        rgba(0, 0, 0, 0.07);
+  --faq-summary:       #0f172a;
+  --faq-body:          #475569;
+
+  --payment-card-bg:   linear-gradient(160deg, #ffffff 0%, #f8fafc 100%);
+  --payment-card-hover-bg: linear-gradient(160deg, #eff6ff 0%, #f8fafc 100%);
+  --payment-icon:      #475569;
+
+  --footer-link-hover: #f8fafc;
+  --footer-heading:    #f8fafc;
+
+  --scrollbar-thumb:   #cbd5e1;
+  --scrollbar-track:   #f1f5f9;
+}
+
+/* ── BASE ───────────────────────────────────────────────────── */
+
+
+body {
+  background-color: var(--bg-page) !important;
+  color: var(--text-primary) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ── SCROLLBAR ──────────────────────────────────────────────── */
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--scrollbar-track); }
+::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 3px; }
+
+/* ── SALE BANNER ────────────────────────────────────────────── */
+
+.sale_banner {
+  background: var(--bg-sale) !important;
+  border-bottom: 1px solid var(--border-subtle) !important;
+  transition: background 0.3s ease;
+}
+
+.sale_banner .sale-l,
+.sale_banner .sale-i,
+.sale_banner .sale-i span {
+  color: var(--sale-text) !important;
+}
+
+.sale_banner .sale-r {
+  background: var(--sale-badge-bg) !important;
+  border: 1px solid var(--sale-badge-border) !important;
+  color: var(--sale-text) !important;
+  transition: all 0.3s ease;
+}
+
+/* ── NAVBAR ─────────────────────────────────────────────────── */
+
+#fixedR {
+  background: var(--bg-nav) !important;
+  border-bottom: 1px solid var(--border-nav) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: background 0.3s ease;
+}
+
+#fixedR .navbar-brand h2 {
+  color: var(--text-primary) !important;
+}
+
+/* ── NAVBAR LINKS & ACTIVE STATE (DARK MODE DEFAULT) ── */
+/* ── NAVBAR LINKS & ACTIVE STATE (DARK MODE DEFAULT) ── */
+#fixedR .nav-link {
+  color: var(--nav-link) !important;
+}
+
+/* Hover state for inactive links */
+#fixedR .nav-link:hover {
+  color: var(--nav-link-hover) !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* The UNIQUE Active State */
+#fixedR .nav-link.active {
+  color: #ffffff !important;
+  background: rgba(47, 134, 255, 0.15) !important;
+  box-shadow: inset 0 0 0 1px rgba(47, 134, 255, 0.3);
+  font-weight: 700 !important; /* Bumps active link to Bold */
+}
+
+#fixedR .dropdown-menu {
+  background: var(--dropdown-bg) !important;
+  border: 1px solid var(--dropdown-border) !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+#fixedR .dropdown-item {
+  color: var(--text-primary) !important;
+  transition: background 0.2s ease;
+}
+
+#fixedR .dropdown-item:hover {
+  background: var(--dropdown-hover-bg) !important;
+}
+
+#fixedR .dropdown-item span {
+  color: var(--text-muted) !important;
+}
+
+/* mobile offcanvas */
+.offcanvas {
+  background: var(--dropdown-bg) !important;
+  border-right: 1px solid var(--border-subtle) !important;
+}
+
+/* ── HERO / HEADER ──────────────────────────────────────────── */
+
+.header {
+  background-color: var(--bg-primary) !important;
+  transition: background 0.3s ease;
+}
+
+.header_h2 {
+  color: var(--text-primary) !important;
+}
+
+.header_p {
+  color: var(--text-secondary) !important;
+}
+
+/* ── FEATURE CARDS ──────────────────────────────────────────── */
+
+.feature-card {
+  background: var(--pricing-card-bg) !important;
+  border: 1px solid var(--border-card) !important;
+  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.feature-card:hover {
+  background: var(--bg-card-hover) !important;
+  border-color: var(--border-card-hover) !important;
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.15), 0 0 40px rgba(47, 134, 255, 0.1) !important;
+}
+
+.feature-card::after {
+  background-image: radial-gradient(var(--feature-grid-dot) 1px, transparent 1px) !important;
+}
+
+.feature-title {
+  color: var(--text-primary) !important;
+}
+
+.feature-text {
+  color: var(--text-secondary) !important;
+}
+
+/* ── PRICING SECTION ────────────────────────────────────────── */
+
+.hmk-pricing-section {
+  background-color: var(--bg-primary) !important;
+  border-color: var(--border-subtle) !important;
+}
+
+.hmk-pricing-title {
+  color: var(--text-primary) !important;
+}
+
+.hmk-pricing-subtitle {
+  color: var(--text-secondary) !important;
+}
+
+/* toggle pill */
+.hmk-toggle-wrap {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-subtle) !important;
+}
+
+.hmk-toggle-btn {
+  color: var(--text-secondary) !important;
+}
+
+.hmk-toggle-btn.active {
+  color: #ffffff !important;
+}
+
+/* pricing cards */
+.hmk-price-card {
+  background: var(--pricing-card-bg) !important;
+  border: 1px solid var(--border-card) !important;
+  transition: all 0.4s ease;
+}
+
+.hmk-price-card:hover {
+  border-color: var(--border-card-hover) !important;
+}
+
+.hmk-popular-card {
+  background: var(--pricing-popular-bg) !important;
+}
+
+.hmk-plan-name {
+  color: var(--text-primary) !important;
+}
+
+.hmk-plan-text {
+  color: var(--text-secondary) !important;
+}
+
+.hmk-price {
+  color: var(--text-primary) !important;
+}
+
+.hmk-price-small {
+  color: var(--text-muted) !important;
+}
+
+.hmk-year-text {
+  color: var(--text-muted) !important;
+}
+
+.hmk-divider {
+  border-color: var(--border-subtle) !important;
+}
+
+.hmk-feature-title {
+  color: var(--text-muted) !important;
+}
+
+.hmk-feature-list li {
+  color: var(--text-secondary) !important;
+}
+
+.hmk-mini-tags span {
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-subtle) !important;
+  color: var(--text-muted) !important;
+}
+
+/* ── MIGRATION SECTION ──────────────────────────────────────── */
+
+.hmk-migration-section {
+  background-color: var(--bg-page) !important;
+}
+
+.hmk-migration-title {
+  color: var(--text-primary) !important;
+}
+
+.hmk-migration-subtitle {
+  color: var(--text-secondary) !important;
+}
+
+.hmk-migration-card {
+  background: var(--migration-card-bg) !important;
+  border: 1px solid var(--migration-border) !important;
+  transition: all 0.3s ease;
+}
+
+.hmk-migration-card h3 {
+  color: var(--text-primary) !important;
+}
+
+.hmk-migration-card p {
+  color: var(--text-secondary) !important;
+}
+
+/* ── FAQ SECTION ────────────────────────────────────────────── */
+
+.hmk-faq-section {
+  background-color: var(--bg-primary) !important;
+}
+
+.hmk-faq-title {
+  color: var(--text-primary) !important;
+}
+
+.hmk-faq-subtitle {
+  color: var(--text-secondary) !important;
+}
+
+.hmk-faq-item {
+  background: var(--faq-bg) !important;
+  border: 1px solid var(--faq-border) !important;
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+.hmk-faq-item summary {
+  color: var(--faq-summary) !important;
+}
+
+.hmk-faq-item p {
+  color: var(--faq-body) !important;
+}
+
+.hmk-faq-help-card {
+  background: var(--faq-bg) !important;
+  border: 1px solid var(--faq-border) !important;
+}
+
+.hmk-faq-help-card h3 {
+  color: var(--text-primary) !important;
+}
+
+.hmk-faq-help-card p {
+  color: var(--text-secondary) !important;
+}
+
+/* ── PAYMENT SECTION ────────────────────────────────────────── */
+
+.hmk-payment-section {
+  background: var(--bg-page) !important;
+  border-color: var(--border-subtle) !important;
+}
+
+.hmk-payment-title {
+  color: var(--text-primary) !important;
+}
+
+.hmk-payment-subtitle {
+  color: var(--text-secondary) !important;
+}
+
+.hmk-payment-card {
+  background: var(--payment-card-bg) !important;
+  border: 1px solid var(--border-card) !important;
+  color: var(--text-secondary) !important;
+  transition: all 0.4s ease;
+}
+
+.hmk-payment-card i {
+  color: var(--payment-icon) !important;
+  transition: color 0.3s ease;
+}
+
+.hmk-payment-card:hover {
+  background: var(--payment-card-hover-bg) !important;
+  border-color: var(--border-card-hover) !important;
+  color: var(--text-primary) !important;
+}
+
+.hmk-payment-card:hover i {
+  color: #2f86ff !important;
+}
+
+/* ── FOOTER ─────────────────────────────────────────────────── */
+
+.footer-wrap {
+  background: var(--bg-footer) !important;
+}
+
+.footer_links h4 {
+  color: var(--footer-heading) !important;
+}
+
+.footer_links ul li a {
+  color: var(--text-footer-link) !important;
+}
+
+.footer_links ul li a:hover {
+  color: var(--footer-link-hover) !important;
+}
+
+.footer_about p {
+  color: var(--text-footer-link) !important;
+}
+
+.footer_bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+  background: var(--bg-footer-bottom) !important;
+}
+
+.footer_bottom p {
+  color: var(--text-copyright) !important;
+}
+
+/* ── SECTION KICKER ─────────────────────────────────────────── */
+
+.hmk-section-kicker {
+  color: #2f86ff !important;
+}
+
+/* ── GENERAL TYPOGRAPHY ─────────────────────────────────────── */
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+/* ── FORCED HEADING VISIBILITY ──────────────────────────────── */
+/* High-specificity selectors to beat hardcoded colors in       */
+/* main.css / style.css / customize.css and the inline <style>  */
+
+body .hmk-pricing-title,
+body .hmk-faq-title,
+body .hmk-migration-title,
+body .hmk-payment-title,
+body .hmk-plan-name,
+body .feature-title,
+html body .hmk-pricing-title,
+html body .hmk-faq-title,
+html body .hmk-migration-title,
+html body .hmk-payment-title,
+html body .hmk-plan-name,
+html body .feature-title,
+html body .header_h2,
+html body .hmk-section-copy h2,
+html body .hmk-migration-card h3,
+html body .hmk-faq-help-card h3,
+html body .footer_links h4 {
+  color: var(--text-primary) !important;
+  opacity: 1 !important;
+}
+
+body .hmk-pricing-subtitle,
+body .hmk-faq-subtitle,
+body .hmk-migration-subtitle,
+body .hmk-payment-subtitle,
+body .hmk-plan-text,
+body .feature-text,
+body .header_p,
+body .hmk-migration-card p,
+body .hmk-faq-help-card p,
+body .hmk-year-text {
+  color: var(--text-secondary) !important;
+  opacity: 1 !important;
+}
+
+/* Explicit light-mode values — html + body prefix beats equal-specificity
+   rules with color:#ffffff that load after this file in customize.css      */
+html body.light-mode .hmk-pricing-title,
+html body.light-mode .hmk-faq-title,
+html body.light-mode .hmk-migration-title,
+html body.light-mode .hmk-payment-title,
+html body.light-mode .hmk-plan-name,
+html body.light-mode .feature-title,
+html body.light-mode .header_h2,
+html body.light-mode .hmk-section-copy h2,
+html body.light-mode .hmk-migration-card h3,
+html body.light-mode .hmk-faq-help-card h3,
+html body.light-mode .footer_links h4 {
+  color: #0f172a !important;
+}
+
+body.light-mode .hmk-pricing-subtitle,
+body.light-mode .hmk-faq-subtitle,
+body.light-mode .hmk-migration-subtitle,
+body.light-mode .hmk-payment-subtitle,
+body.light-mode .hmk-plan-text,
+body.light-mode .feature-text,
+body.light-mode .header_p,
+body.light-mode .hmk-migration-card p,
+body.light-mode .hmk-faq-help-card p,
+body.light-mode .hmk-year-text {
+  color: #475569 !important;
+}
+
+/* ── LIGHT MODE: hero animation SVG ambient ellipses ────────── */
+
+body.light-mode .amb {
+  opacity: 0.18 !important;
+}
+
+body.light-mode .ha-glow-1,
+body.light-mode .ha-glow-2,
+body.light-mode .ha-glow-3 {
+  opacity: 0.25 !important;
+}
+
+/* ── THEME TOGGLE — pill switch ─────────────────────────────── */
+
+
+/* knob */
+#theme-toggle::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
+/* icons inside track */
+#theme-toggle .icon-dark,
+#theme-toggle .icon-light {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 10px;
+  line-height: 1;
+  transition: opacity 0.2s ease;
+  z-index: 0;
+  pointer-events: none;
+}
+
+#theme-toggle .icon-dark  { right: 5px; color: rgba(255,255,255,0.75); opacity: 1; }
+#theme-toggle .icon-light { left: 5px;  color: #f59e0b; opacity: 0; }
+
+/* light mode — knob slides right, track turns blue */
+body.light-mode #theme-toggle {
+  background: #2f86ff;
+  box-shadow: inset 0 0 0 1.5px rgba(47,134,255,0.5),
+              0 3px 10px rgba(47,134,255,0.3);
+}
+
+body.light-mode #theme-toggle::before {
+  transform: translateX(26px);
+}
+
+body.light-mode #theme-toggle .icon-dark  { opacity: 0; }
+body.light-mode #theme-toggle .icon-light { opacity: 1; }
+
+/* hover */
+#theme-toggle:hover {
+  box-shadow: inset 0 0 0 1.5px rgba(255,255,255,0.35),
+              0 0 0 3px rgba(255,255,255,0.07);
+}
+
+body.light-mode #theme-toggle:hover {
+  box-shadow: inset 0 0 0 1.5px rgba(47,134,255,0.6),
+              0 0 0 3px rgba(47,134,255,0.12);
+}
+
+/* ── NAVBAR alignment ───────────────────────────────────────── */
+
+/* desktop: toggle sits inline with login, vertically centred */
+/* ── NAVBAR alignment ───────────────────────────────────────── */
+
+/* Desktop: login button alignment */
+
+
+.navbar-nav #theme-toggle,
+.offcanvas-body #theme-toggle {
+  align-self: center;
+  margin-top: 0;
+  margin-left: 0; /* Prevents double-margins since we use gap now */
+}
+
+
+/* Strip any stray margins pushing the toggle off-center */
+.hmk-nav-actions #theme-toggle {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  margin-left: 0 !important; /* Overrides the base 10px margin */
+  align-self: center !important;
+}
+
+/* Optional: Removes the ugly square border when clicking the hamburger menu */
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+.navbar-nav #theme-toggle,
+.offcanvas-body #theme-toggle {
+  align-self: center;
+  margin-top: 0;
+}
+
+/* ── MOBILE: stack login button and toggle vertically ── */
+@media (max-width: 991px) {
+  
+
+  .offcanvas-body .button .dropdown {
+    width: 100% !important;
+  }
+
+  .offcanvas-body .button .btn,
+  .offcanvas-body .button .dropdown-toggle {
+    width: 100% !important;
+  }
+
+  /* Aligns the toggle to the left. Change to 'center' or 'flex-end' if preferred */
+  .offcanvas-body #theme-toggle {
+    align-self: flex-start !important; 
+    margin-left: 0 !important;
+    flex-shrink: 0;
+  }
+}
+/* ── TRANSITION SMOOTHING ───────────────────────────────────── */
+
+.feature-card,
+.hmk-price-card,
+.hmk-payment-card,
+.hmk-migration-card,
+.hmk-faq-item,
+#fixedR,
+.footer-wrap,
+.sale_banner {
+  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* ── DARK MODE: headings hardcoded #ffffff in customize.css ─────
+   These are invisible on dark backgrounds because the section bg
+   is very close to white. Force a visible light value.
+   Using #hosting-faq id + section tag for maximum specificity.   */
+
+section.hmk-faq-section .hmk-faq-title,
+#hosting-faq .hmk-faq-title,
+section.hmk-migration-section .hmk-migration-title,
+#free-migration .hmk-migration-title,
+section.hmk-payment-section .hmk-payment-title,
+#payment-methods .hmk-payment-title {
+  color: #ffffff !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+section.hmk-pricing-section .hmk-pricing-title,
+#pricing .hmk-pricing-title {
+  color: #ffffff !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+section.hmk-migration-section .hmk-migration-title,
+#free-migration .hmk-migration-title {
+  color: #f1f5f9 !important;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.6);
+}
+
+section.hmk-payment-section .hmk-payment-title,
+#payment-methods .hmk-payment-title {
+  color: #f1f5f9 !important;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* ── LIGHT MODE: same selectors → dark text, no gradient ─────── */
+
+body.light-mode section.hmk-faq-section .hmk-faq-title,
+body.light-mode #hosting-faq .hmk-faq-title,
+body.light-mode section.hmk-pricing-section .hmk-pricing-title,
+body.light-mode #pricing .hmk-pricing-title,
+body.light-mode section.hmk-migration-section .hmk-migration-title,
+body.light-mode #free-migration .hmk-migration-title,
+body.light-mode section.hmk-payment-section .hmk-payment-title,
+body.light-mode #payment-methods .hmk-payment-title {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+  text-shadow: none !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+}
+
+
+/* ============================================================
+   COMPLETE LIGHT MODE — section & card background overrides
+   These target hardcoded dark backgrounds from customize.css
+   using body.light-mode prefix for guaranteed specificity
+   ============================================================ */
+
+/* ── PAGE & SECTIONS ─────────────────────────────────────────── */
+
+body.light-mode {
+  background-color: #f1f5f9 !important;
+}
+
+body.light-mode .header {
+  background: #ffffff !important;
+}
+
+body.light-mode .hmk-pricing-section {
+  background: #f1f5f9 !important;
+  background-image: none !important;
+  border-top: 1px solid rgba(0,0,0,0.06) !important;
+}
+
+body.light-mode .hmk-faq-section {
+  background: #f1f5f9 !important;
+  background-image: none !important;
+  border-top: 1px solid rgba(0,0,0,0.06) !important;
+}
+
+body.light-mode .hmk-migration-section {
+  background: #ffffff !important;
+  background-image: none !important;
+}
+
+body.light-mode .hmk-payment-section {
+  background: #f8fafc !important;
+  background-image: none !important;
+  border-top: 1px solid rgba(0,0,0,0.06) !important;
+  border-bottom: 1px solid rgba(0,0,0,0.06) !important;
+}
+
+/* ── PRICING CARDS ───────────────────────────────────────────── */
+
+body.light-mode .hmk-price-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(0,0,0,0.08) !important;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07) !important;
+  color: #0f172a !important;
+}
+
+body.light-mode .hmk-popular-card,
+body.light-mode .hmk-card-blue {
+  background: #ffffff !important;
+  border: 2px solid #2f86ff !important;
+}
+
+body.light-mode .hmk-card-purple,
+body.light-mode .hmk-card-orange {
+  background: #ffffff !important;
+}
+
+body.light-mode .hmk-price-card:hover {
+  box-shadow: 0 12px 40px rgba(47,134,255,0.15) !important;
+  border-color: rgba(47,134,255,0.4) !important;
+}
+
+body.light-mode .hmk-plan-name {
+  color: #0f172a !important;
+}
+
+body.light-mode .hmk-plan-text {
+  color: #64748b !important;
+}
+
+body.light-mode .hmk-price {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+}
+
+body.light-mode .hmk-price-small {
+  color: #64748b !important;
+}
+
+body.light-mode .hmk-year-text {
+  color: #64748b !important;
+}
+
+body.light-mode .hmk-divider {
+  border-color: rgba(0,0,0,0.08) !important;
+}
+
+body.light-mode .hmk-feature-title {
+  color: #94a3b8 !important;
+}
+
+body.light-mode .hmk-feature-list li {
+  color: #334155 !important;
+}
+
+body.light-mode .hmk-mini-tags span {
+  background: #f1f5f9 !important;
+  border: 1px solid rgba(0,0,0,0.08) !important;
+  color: #475569 !important;
+}
+
+/* ── PRICING TOGGLE ──────────────────────────────────────────── */
+
+body.light-mode .hmk-toggle-wrap {
+  background: #e2e8f0 !important;
+  border: 1px solid rgba(0,0,0,0.08) !important;
+}
+
+body.light-mode .hmk-toggle-btn {
+  color: #475569 !important;
+}
+
+body.light-mode .hmk-toggle-btn.active {
+  color: #ffffff !important;
+}
+
+body.light-mode .hmk-faq-intro h4 {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+}
+
+/* ── FEATURE CARDS ───────────────────────────────────────────── */
+
+body.light-mode .feature-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(0,0,0,0.08) !important;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07) !important;
+}
+
+body.light-mode .feature-card:hover {
+  background: #f0f7ff !important;
+  box-shadow: 0 12px 40px rgba(47,134,255,0.12) !important;
+}
+
+body.light-mode .feature-title {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+}
+
+body.light-mode .feature-text {
+  color: #475569 !important;
+  -webkit-text-fill-color: #475569 !important;
+}
+
+/* ── MIGRATION CARDS ─────────────────────────────────────────── */
+
+body.light-mode .hmk-migration-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(0,0,0,0.08) !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07) !important;
+}
+
+body.light-mode .hmk-migration-card h3 {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+}
+
+body.light-mode .hmk-migration-card p {
+  color: #475569 !important;
+  -webkit-text-fill-color: #475569 !important;
+}
+
+/* ── FAQ ─────────────────────────────────────────────────────── */
+
+body.light-mode .hmk-faq-item {
+  background: #ffffff !important;
+  border: 1px solid rgba(0,0,0,0.08) !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06) !important;
+}
+
+body.light-mode .hmk-faq-item summary {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+}
+
+body.light-mode .hmk-faq-item p {
+  color: #475569 !important;
+  -webkit-text-fill-color: #475569 !important;
+}
+
+body.light-mode .hmk-faq-help-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(0,0,0,0.08) !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07) !important;
+}
+
+body.light-mode .hmk-faq-help-card h3 {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+}
+
+body.light-mode .hmk-faq-help-card p {
+  color: #475569 !important;
+  -webkit-text-fill-color: #475569 !important;
+}
+
+/* ── PAYMENT CARDS ───────────────────────────────────────────── */
+
+body.light-mode .hmk-payment-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(0,0,0,0.08) !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07) !important;
+  backdrop-filter: none !important;
+}
+
+body.light-mode .hmk-payment-card i {
+  color: #2f86ff !important;
+  filter: none !important;
+}
+
+body.light-mode .hmk-payment-card span {
+  color: #334155 !important;
+}
+
+body.light-mode .hmk-payment-card:hover {
+  background: #f0f7ff !important;
+  border-color: rgba(47,134,255,0.35) !important;
+  box-shadow: 0 10px 30px rgba(47,134,255,0.12) !important;
+}
+
+body.light-mode .hmk-payment-card-highlight {
+  background: #f0fdf4 !important;
+  border-color: rgba(34,208,126,0.3) !important;
+}
+
+body.light-mode .hmk-payment-card-highlight i {
+  color: #16a34a !important;
+}
+
+/* ── NAVBAR (light) ──────────────────────────────────────────── */
+
+body.light-mode #fixedR {
+  background: rgba(255,255,255,0.97) !important;
+  border-bottom: 1px solid rgba(0,0,0,0.08) !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07) !important;
+}
+
+/* ── NAVBAR LINKS & ACTIVE STATE (LIGHT MODE) ── */
+body.light-mode .navbar-nav .nav-link {
+  color: #475569 !important;
+}
+
+/* Hover state for inactive links */
+body.light-mode .navbar-nav .nav-link:hover {
+  color: #0f172a !important;
+  background: #f1f5f9 !important;
+}
+
+/* The UNIQUE Active State */
+/* The UNIQUE Active State */
+body.light-mode #fixedR .navbar-nav .nav-link.active {
+  color: #0f172a !important; 
+  -webkit-text-fill-color: #0f172a !important; /* Forces color in webkit browsers */
+  background: #e2e8f0 !important;              /* Elegant slate/gray-blue pill */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important; 
+  font-weight: 600 !important;
+}
+body.light-mode .navbar-brand h2,
+body.light-mode .offcanvas-header h2 {
+  color: #0f172a !important;
+}
+
+body.light-mode .dropdown-menu {
+  background: #ffffff !important;
+  border: 1px solid rgba(0,0,0,0.08) !important;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1) !important;
+}
+
+body.light-mode .dropdown-item {
+  color: #0f172a !important;
+}
+
+body.light-mode .dropdown-item span {
+  color: #64748b !important;
+}
+
+body.light-mode .offcanvas {
+  background: #ffffff !important;
+}
+
+/* ── MISC TEXT ───────────────────────────────────────────────── */
+
+body.light-mode .hmk-pricing-subtitle,
+body.light-mode .hmk-faq-subtitle,
+body.light-mode .hmk-migration-subtitle,
+body.light-mode .hmk-payment-subtitle {
+  color: #475569 !important;
+  -webkit-text-fill-color: #475569 !important;
+}
+
+body.light-mode .hmk-section-kicker {
+  color: #1d6fd6 !important;
+  background: rgba(47,134,255,0.08) !important;
+  border-color: rgba(47,134,255,0.25) !important;
+}
+
+body.light-mode .hmk-section-kicker::before {
+  background: #2f86ff !important;
+  box-shadow: none !important;
+}
+
+/* ── OBJECT / BACKGROUND VECTOR ──────────────────────────────── */
+
+body.light-mode .object_1 {
+  opacity: 0.06 !important;
+}
+
+
+/* ── LIGHT MODE: hero floating cards ─────────────────────────── */
+
+body.light-mode .hp-card {
+  background: rgba(255, 255, 255, 0.92) !important;
+  border: 1px solid rgba(0, 0, 0, 0.10) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12) !important;
+  backdrop-filter: blur(16px) !important;
+}
+
+body.light-mode .hp-card .tx b,
+body.light-mode .hp-card .tx b * {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+}
+
+body.light-mode .hp-card .tx span {
+  color: #475569 !important;
+  -webkit-text-fill-color: #475569 !important;
+}
+
+body.light-mode .hp-gauge .g-num {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+}
+
+body.light-mode .hp-pill {
+  background: rgba(255, 255, 255, 0.88) !important;
+  border: 1px solid rgba(0, 0, 0, 0.10) !important;
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+}
+
+/* ── LIGHT MODE: mobile hamburger toggler ────────────────────── */
+
+body.light-mode .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%230f172a' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+body.light-mode .navbar-toggler {
+  border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+/* ── LIGHT MODE: footer full white ──────────────────────────── */
+
+body.light-mode .footer-wrap {
+  background: #ffffff !important;
+}
+
+body.light-mode .footer-horizon {
+  background: linear-gradient(90deg, transparent, rgba(47, 134, 255, 0.3), rgba(139, 92, 246, 0.3), transparent) !important;
+  box-shadow: none !important;
+}
+
+body.light-mode .footer_links h4 {
+  color: #1d4ed8 !important;
+  -webkit-text-fill-color: #1d4ed8 !important;
+}
+
+body.light-mode .footer_links ul li a {
+  color: #475569 !important;
+  -webkit-text-fill-color: #475569 !important;
+}
+
+body.light-mode .footer_links ul li a:hover {
+  color: #1d4ed8 !important;
+  -webkit-text-fill-color: #1d4ed8 !important;
+  text-shadow: none !important;
+}
+
+body.light-mode .footer_about h2 {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+}
+
+body.light-mode .footer_about h2 span {
+  color: #2563eb !important;
+  -webkit-text-fill-color: #2563eb !important;
+}
+
+body.light-mode .footer_about p {
+  color: #475569 !important;
+  -webkit-text-fill-color: #475569 !important;
+}
+
+body.light-mode .footer-status {
+  background: rgba(34, 208, 126, 0.08) !important;
+  border-color: rgba(34, 208, 126, 0.25) !important;
+  color: #15803d !important;
+}
+
+body.light-mode .footer_bottom {
+  background: #f1f5f9 !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.07) !important;
+}
+
+body.light-mode .footer_bottom p {
+  color: #64748b !important;
+  -webkit-text-fill-color: #64748b !important;
+}
+
+body.light-mode .footer_bottom img {
+  opacity: 0.7 !important;
+  filter: invert(1) !important;
+}
+/* ========================================================
+   COMPLETE LIGHT MODE OVERRIDES FOR ABOUT PAGE
+   ======================================================== */
+
+/* 1. Base Page Colors */
+body.light-mode {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+
+/* 2. Reset Dark Backgrounds on all major Sections */
+body.light-mode .about-hero,
+body.light-mode .mission-section,
+body.light-mode .infra-section,
+body.light-mode .features-section,
+body.light-mode .team-section,
+body.light-mode .cta-section {
+  background: #f1f5f9 !important;
+  background-image: none !important;
+  border-color: rgba(0, 0, 0, 0.06) !important;
+}
+
+/* 3. Hero Section Specifics */
+body.light-mode .about-hero {
+  background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(47,134,255,0.08), transparent), #f8fafc !important;
+}
+body.light-mode .about-hero::after {
+  background: linear-gradient(to bottom, transparent, #f1f5f9) !important;
+}
+
+/* 4. Cards & Containers to Pure White */
+body.light-mode .mission-card,
+body.light-mode .glass-card,
+body.light-mode .team-card,
+body.light-mode .stat-pill,
+body.light-mode .cta-wrap,
+body.light-mode .dc-feature,
+body.light-mode .float-badge {
+  background: #ffffff !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Hover Effects on Light Mode Cards */
+body.light-mode .mission-card:hover,
+body.light-mode .glass-card:hover,
+body.light-mode .team-card:hover {
+  box-shadow: 0 12px 40px rgba(47, 134, 255, 0.12) !important;
+  border-color: rgba(47, 134, 255, 0.3) !important;
+}
+
+/* 5. Fix Dark Overlays on Images */
+body.light-mode .hero-img-card img,
+body.light-mode .infra-media img {
+  filter: brightness(0.95) saturate(1.1) !important; /* Strips the dark tint! */
+}
+body.light-mode .hero-img-card::before,
+body.light-mode .infra-media::before {
+  background: linear-gradient(135deg, rgba(255,255,255,0.2), transparent 60%) !important;
+}
+
+/* 6. Stats Band Fixes (Removing the dark blue gradient) */
+body.light-mode .stats-band {
+  background: #ffffff !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04) !important;
+}
+body.light-mode .stats-band-item {
+  background: #f8fafc !important;
+  border-color: rgba(0, 0, 0, 0.05) !important;
+}
+body.light-mode .stats-band-value {
+  color: #2f86ff !important;
+  text-shadow: none !important;
+}
+body.light-mode .stats-band-label {
+  color: #475569 !important;
+}
+
+/* 7. Team Card Banners & Avatars */
+body.light-mode .team-card-banner {
+  background: linear-gradient(135deg, #e2e8f0, #f8fafc) !important; /* Turns dark blue to light slate */
+}
+body.light-mode .team-avatar {
+  border: 3px solid #ffffff !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* 8. Headings and Text Formatting */
+body.light-mode .hero-heading,
+body.light-mode .section-title,
+body.light-mode .mission-card h3,
+body.light-mode .glass-card h3,
+body.light-mode .cta-wrap h2,
+body.light-mode .team-card-body strong,
+body.light-mode .dc-feature,
+body.light-mode .float-badge-text strong {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+}
+
+body.light-mode .hero-desc,
+body.light-mode .section-desc,
+body.light-mode .mission-card p,
+body.light-mode .glass-card p,
+body.light-mode .feat-list li,
+body.light-mode .cta-wrap p,
+body.light-mode .team-top .section-desc {
+  color: #475569 !important;
+  -webkit-text-fill-color: #475569 !important;
+}
+
+body.light-mode .stat-pill span,
+body.light-mode .float-badge-text span,
+body.light-mode .team-card-body span {
+  color: #64748b !important;
+}
+
+/* Fix the specific gradient heading on the hero */
+body.light-mode .heading-gradient {
+  background: linear-gradient(135deg, #1d4ed8, #0284c7) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* Hide glowing borders from dark mode cards */
+body.light-mode .mission-card::after,
+body.light-mode .hero-img-card::after,
+body.light-mode .infra-media::after,
+body.light-mode .cta-wrap::after {
+  display: none !important;
+}
+/* Ensure the navbar is fixed when scrolled */
+.navbar-scrolled-fixed {
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Add padding to the body ONLY when the navbar is fixed */
+body.navbar-scrolled-padding {
+    padding-top: 80px; /* Adjust to match your actual navbar height */
+}
+/* ========================================================
+   THEME TOGGLE PILL SWITCH
+   ======================================================== */
+
+#theme-toggle {
+    position: relative;
+    width: 54px;
+    height: 28px;
+    border-radius: 999px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    flex-shrink: 0;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, 0.2);
+    transition: background 0.35s ease, box-shadow 0.35s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+#theme-toggle::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+}
+.theme-toggle-btn {
+    position: relative;
+    width: 54px;
+    height: 28px;
+    border-radius: 999px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    flex-shrink: 0;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, 0.2);
+    transition: background 0.35s ease, box-shadow 0.35s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.theme-toggle-btn::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+}
+
+.theme-toggle-btn .icon-dark,
+.theme-toggle-btn .icon-light {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 10px;
+    line-height: 1;
+    transition: opacity 0.2s ease;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.theme-toggle-btn .icon-dark  { right: 6px; color: rgba(255,255,255,0.75); opacity: 1; }
+.theme-toggle-btn .icon-light { left: 6px;  color: #f59e0b; opacity: 0; }
+
+body.light-mode .theme-toggle-btn {
+    background: #2f86ff;
+    box-shadow: inset 0 0 0 1.5px rgba(47,134,255,0.5), 0 3px 10px rgba(47,134,255,0.3);
+}
+
+body.light-mode .theme-toggle-btn::before { 
+    transform: translateX(26px); 
+}
+
+body.light-mode .theme-toggle-btn .icon-dark { opacity: 0; }
+body.light-mode .theme-toggle-btn .icon-light { opacity: 1; }
+
+.navbar-toggler {
+    padding: 4px 8px !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+body.light-mode .navbar-toggler {
+    border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+body.light-mode .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%230f172a' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+#theme-toggle .icon-dark,
+#theme-toggle .icon-light {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 10px;
+    line-height: 1;
+    transition: opacity 0.2s ease;
+    z-index: 0;
+    pointer-events: none;
+}
+
+#theme-toggle .icon-dark  { right: 6px; color: rgba(255,255,255,0.75); opacity: 1; }
+#theme-toggle .icon-light { left: 6px;  color: #f59e0b; opacity: 0; }
+
+body.light-mode #theme-toggle {
+    background: #2f86ff;
+    box-shadow: inset 0 0 0 1.5px rgba(47,134,255,0.5), 0 3px 10px rgba(47,134,255,0.3);
+}
+
+body.light-mode #theme-toggle::before { 
+    transform: translateX(26px); 
+}
+@media (min-width: 992px) {
+    .hmk-nav-actions {
+        display: none !important;
+    }
+}
+
+body.light-mode #theme-toggle .icon-dark { opacity: 0; }
+body.light-mode #theme-toggle .icon-light { opacity: 1; }
+
+/* Fix the drawer header logo alignment */
+.offcanvas-header .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 0;
+}
+
+.hmk-drawer-brand {
+    font-style: italic;
+    letter-spacing: -0.5px;
+}
+
+/* Ensure the drawer container doesn't overflow */
+.offcanvas-header {
+    background-color: #0B1120; /* Matches your dark theme */
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.offcanvas {
+    z-index: 9999 !important;
+}
+
+.offcanvas-backdrop {
+    z-index: 9998 !important;
+}
+/* ============================================================
+   HostMeerkat — Support Widget Light / Dark Mode Fix
+   Append this to your light-dark.css OR support-widget.css
+   ============================================================ */
+
+/* ── DARK MODE (default) ───────────────────────────────────── */
+
+.support-widget .support-popup {
+  background: #111827 !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5) !important;
+  color: #f8fafc !important;
+}
+
+.support-widget .support-header {
+  background: linear-gradient(135deg, #1a2a4a 0%, #0d1526 100%) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+.support-widget .support-header span,
+.support-widget .support-header h2 {
+  color: #f8fafc !important;
+  -webkit-text-fill-color: #f8fafc !important;
+}
+
+.support-widget .support-header p {
+  color: #94a3b8 !important;
+  -webkit-text-fill-color: #94a3b8 !important;
+}
+
+.support-widget .support-item {
+  background: #1a2235 !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+  color: #f8fafc !important;
+  transition: background 0.2s ease, border-color 0.2s ease !important;
+}
+
+.support-widget .support-item:hover {
+  background: #1e2d45 !important;
+  border-color: rgba(47, 134, 255, 0.35) !important;
+}
+
+.support-widget .support-item strong {
+  color: #f8fafc !important;
+  -webkit-text-fill-color: #f8fafc !important;
+}
+
+.support-widget .support-item small {
+  color: #64748b !important;
+  -webkit-text-fill-color: #64748b !important;
+}
+
+.support-widget .support-arrow {
+  color: #475569 !important;
+}
+
+.support-widget .support-footer {
+  background: #0d1526 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+  color: #64748b !important;
+  -webkit-text-fill-color: #64748b !important;
+}
+
+/* The floating button stays blue in both modes — no change needed */
+.support-widget .support-button {
+  background: linear-gradient(135deg, #2f7bff, #16d3e0) !important;
+  box-shadow: 0 4px 20px rgba(47, 123, 255, 0.45) !important;
+}
+
+/* ── ICON BOX COLOURS ──────────────────────────────────────── */
+
+.support-widget .support-icon-box {
+  background: rgba(47, 134, 255, 0.12) !important;
+  border: 1px solid rgba(47, 134, 255, 0.2) !important;
+}
+
+.support-widget .support-icon-box img {
+  filter: none !important;
+}
+
+.support-widget .ticket-box {
+  background: rgba(139, 92, 246, 0.12) !important;
+  border: 1px solid rgba(139, 92, 246, 0.2) !important;
+}
+
+/* ── LIGHT MODE OVERRIDES ──────────────────────────────────── */
+
+body.light-mode .support-widget .support-popup {
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12) !important;
+  color: #0f172a !important;
+}
+
+body.light-mode .support-widget .support-header {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07) !important;
+}
+
+body.light-mode .support-widget .support-header span,
+body.light-mode .support-widget .support-header h2 {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+}
+
+body.light-mode .support-widget .support-header p {
+  color: #475569 !important;
+  -webkit-text-fill-color: #475569 !important;
+}
+
+body.light-mode .support-widget .support-item {
+  background: #f8fafc !important;
+  border: 1px solid rgba(0, 0, 0, 0.07) !important;
+  color: #0f172a !important;
+}
+
+body.light-mode .support-widget .support-item:hover {
+  background: #eff6ff !important;
+  border-color: rgba(47, 134, 255, 0.35) !important;
+  box-shadow: 0 4px 14px rgba(47, 134, 255, 0.1) !important;
+}
+
+body.light-mode .support-widget .support-item strong {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+}
+
+body.light-mode .support-widget .support-item small {
+  color: #64748b !important;
+  -webkit-text-fill-color: #64748b !important;
+}
+
+body.light-mode .support-widget .support-arrow {
+  color: #94a3b8 !important;
+}
+
+body.light-mode .support-widget .support-footer {
+  background: #f1f5f9 !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.07) !important;
+  color: #94a3b8 !important;
+  -webkit-text-fill-color: #94a3b8 !important;
+}
+
+body.light-mode .support-widget .support-icon-box {
+  background: rgba(47, 134, 255, 0.08) !important;
+  border: 1px solid rgba(47, 134, 255, 0.18) !important;
+}
+
+body.light-mode .support-widget .ticket-box {
+  background: rgba(139, 92, 246, 0.08) !important;
+  border: 1px solid rgba(139, 92, 246, 0.18) !important;
+}
+
+/* ── HEAD-ICON EMOJI (the 🎧 icon area) ────────────────────── */
+
+body.light-mode .support-widget .support-head-icon {
+  background: rgba(47, 134, 255, 0.10) !important;
+  border: 1px solid rgba(47, 134, 255, 0.2) !important;
+}
+
+/* ── TRANSITION SMOOTHING ──────────────────────────────────── */
+
+.support-widget .support-popup,
+.support-widget .support-header,
+.support-widget .support-item,
+.support-widget .support-footer,
+.support-widget .support-icon-box,
+.support-widget .ticket-box {
+  transition: background 0.3s ease, border-color 0.3s ease,
+              color 0.3s ease, box-shadow 0.3s ease !important;
+}

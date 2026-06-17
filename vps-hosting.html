@@ -1,0 +1,827 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="HostMeerkat.co.uk">
+  <title>High-Performance VPS Hosting UK | HostMeerkat</title>
+  
+  <meta name="description" content="High-performance UK VPS hosting with dedicated resources, full root access, and NVMe SSD storage. Scale on demand with HostMeerkat.">
+  <meta name="keywords" content="vps hosting, virtual private server, uk vps hosting, managed vps, cloud vps">
+  <link rel="canonical" href="https://hostmeerkat.co.uk/vps-hosting.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="og:title" content="High-Performance VPS Hosting UK | HostMeerkat" />
+  <meta property="og:description" content="High-performance VPS hosting with dedicated resources, full root access, and NVMe SSD storage. Scale on demand." />
+  <meta property="og:site_name" content="HostMeerkat" />
+  <meta property="og:url" content="https://hostmeerkat.co.uk/vps-hosting.html" />
+  <meta property="og:image" content="https://hostmeerkat.co.uk/assets/images/og_image.png" />
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://hostmeerkat.co.uk/vps-hosting.html">
+  <meta name="twitter:title" content="High-Performance VPS Hosting UK | HostMeerkat">
+  <meta name="twitter:description" content="High-performance VPS hosting with dedicated resources, full root access, and NVMe SSD storage. Scale on demand.">
+  <meta name="twitter:image" content="https://hostmeerkat.co.uk/assets/images/og_image.png">
+
+  <meta name="theme-color" content="#2b2f32" />
+
+  <link rel="shortcut icon" href="assets/images/favicon.png" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="assets/css/vps.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/customize.css">
+  <link rel="stylesheet" href="assets/css/light-dark.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "HostMeerkat UK VPS Hosting",
+    "description": "High-performance UK VPS hosting with dedicated vCPUs, guaranteed RAM, NVMe SSD storage, and full root access.",
+    "brand": {
+      "@type": "Brand",
+      "name": "HostMeerkat"
+    },
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "GBP",
+      "lowPrice": "8.00",
+      "highPrice": "65.00",
+      "offerCount": "3"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <nav id="fixedR" class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid container-custom">
+      <a class="navbar-brand text-white" href="index.html">
+        <div class="d-flex align-items-center">
+          <img class="mr-2" src="assets/images/logo.png" alt="HostMeerkat UK Web Hosting Logo">
+          <h2 class="mb-0 d-flex align-items-center">Host<span>Meerkat</span></h2>
+        </div>
+      </a>
+
+      <div class="d-flex align-items-center d-lg-none gap-3 hmk-nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle theme">
+          <i class="fa-solid fa-moon icon-dark"></i>
+          <i class="fa-solid fa-sun icon-light"></i>
+        </button>
+        <button class="navbar-toggler ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarType"
+          aria-controls="navbarType">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="navbarType" aria-labelledby="navbarTypeLabel">
+        <div class="offcanvas-header border-0">
+          <a class="navbar-brand d-flex align-items-center" href="index.html" style="text-decoration: none;">
+            <img src="assets/images/logo.png" alt="HostMeerkat UK Web Hosting Logo" style="height: 32px; margin-right: 8px;">
+            <h3 class="mb-0 hmk-drawer-brand" style="font-weight: 800; font-size: 1.2rem; color: #fff;">
+              Host<span style="color: #3b82f6;">MEERKAT</span>
+            </h3>
+          </a>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body p-lg-0">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">Hosting</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="web-hosting.html">Web Hosting</a></li>
+                <li><a class="dropdown-item" href="wordpress-hosting.html">WordPress Hosting</a></li>
+                <li><a class="dropdown-item" href="reseller-hosting.html">Reseller Hosting</a></li>
+                <li><a class="dropdown-item active" href="vps-hosting.html">VPS Hosting</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="design-development.html">Design &amp; Development</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.php">Contact</a>
+            </li>
+
+            <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+              <div class="button">
+                <div class="dropdown w-100">
+                  <a href="#" class="btn dropdown-toggle w-100" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-user me-2 d-lg-none"></i> <img src="assets/images/user.svg" alt="HostMeerkat Client Portal Login"
+                      class="d-none d-lg-inline"> LOGIN
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="https://clients.hostmeerkat.co.uk/login">Client Area</a></li>
+                    <li><a class="dropdown-item" href="#">Web Panel</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item ms-lg-4 mt-4 mt-lg-0 d-none d-lg-block">
+              <button class="theme-toggle-btn" aria-label="Toggle theme">
+                <i class="fa-solid fa-moon icon-dark"></i>
+                <i class="fa-solid fa-sun icon-light"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="vps-hero-wrapper">
+    <div class="container container-custom">
+      <span class="vps-badge"><i class="fa-solid fa-server me-2"></i>Dedicated Virtual Resources</span>
+      <h1 class="vps-hero-title">VPS Hosting<br><span class="grad">Pure Raw Power</span></h1>
+      <p class="vps-hero-sub">
+        Dedicated vCPUs, guaranteed RAM, NVMe SSD storage, and full root access. No noisy neighbours. No shared slowdowns. Just your server, your rules.
+      </p>
+      <div class="vps-hero-ctas">
+        <a href="#pricing" class="vps-btn-primary"><i class="fa-solid fa-bolt me-2"></i>View Plans</a>
+        <a href="contact.php" class="vps-btn-secondary">Talk to Sales →</a>
+      </div>
+
+      <div class="vps-mockup">
+        <div class="vps-mockup-bar">
+          <div class="vps-dots">
+            <div class="vps-dot r"></div>
+            <div class="vps-dot y"></div>
+            <div class="vps-dot g"></div>
+          </div>
+          <div class="vps-url-bar">root@vps-uk-01 ~ ssh</div>
+        </div>
+        <div class="vps-mockup-body">
+          <div class="vps-terminal">
+            <div class="vps-term-line">
+              <span class="t-prompt">root@vps-uk-01</span><span class="t-sep">:</span><span class="t-path">~</span><span class="t-hash">#</span>
+              <span class="t-cmd"> htop</span>
+            </div>
+            <div class="vps-resource-bars">
+              <div class="vps-res-row">
+                <span class="vps-res-label">CPU</span>
+                <div class="vps-res-track"><div class="vps-res-fill cpu" style="width:34%"></div></div>
+                <span class="vps-res-val">34%</span>
+              </div>
+              <div class="vps-res-row">
+                <span class="vps-res-label">MEM</span>
+                <div class="vps-res-track"><div class="vps-res-fill mem" style="width:52%"></div></div>
+                <span class="vps-res-val">4.1/8GB</span>
+              </div>
+              <div class="vps-res-row">
+                <span class="vps-res-label">DISK</span>
+                <div class="vps-res-track"><div class="vps-res-fill disk" style="width:28%"></div></div>
+                <span class="vps-res-val">28GB/100GB</span>
+              </div>
+              <div class="vps-res-row">
+                <span class="vps-res-label">NET</span>
+                <div class="vps-res-track"><div class="vps-res-fill net" style="width:12%"></div></div>
+                <span class="vps-res-val">↑ 12 Mbps</span>
+              </div>
+            </div>
+            <div class="vps-proc-table">
+              <div class="vps-proc-header">
+                <span>PID</span><span>USER</span><span>CPU%</span><span>MEM%</span><span>COMMAND</span>
+              </div>
+              <div class="vps-proc-row"><span>1842</span><span>nginx</span><span>8.2</span><span>1.4</span><span>nginx: worker process</span></div>
+              <div class="vps-proc-row"><span>2031</span><span>mysql</span><span>6.7</span><span>9.8</span><span>mysqld --daemonize</span></div>
+              <div class="vps-proc-row"><span>2214</span><span>root</span><span>4.1</span><span>2.1</span><span>php-fpm: pool www</span></div>
+            </div>
+            <div class="vps-term-line mt-2">
+              <span class="t-prompt">root@vps-uk-01</span><span class="t-sep">:</span><span class="t-path">~</span><span class="t-hash">#</span>
+              <span class="t-cmd t-blink"> _</span>
+            </div>
+          </div>
+          <div class="vps-info-panel">
+            <div class="vps-info-card">
+              <div class="vps-info-icon"><i class="fa-solid fa-microchip"></i></div>
+              <div>
+                <div class="vps-info-val">4 vCPU</div>
+                <div class="vps-info-label">Dedicated Cores</div>
+              </div>
+            </div>
+            <div class="vps-info-card">
+              <div class="vps-info-icon mem-c"><i class="fa-solid fa-memory"></i></div>
+              <div>
+                <div class="vps-info-val">8 GB RAM</div>
+                <div class="vps-info-label">Guaranteed Memory</div>
+              </div>
+            </div>
+            <div class="vps-info-card">
+              <div class="vps-info-icon disk-c"><i class="fa-solid fa-hard-drive"></i></div>
+              <div>
+                <div class="vps-info-val">100 GB NVMe</div>
+                <div class="vps-info-label">SSD Storage</div>
+              </div>
+            </div>
+            <div class="vps-info-card">
+              <div class="vps-info-icon net-c"><i class="fa-solid fa-network-wired"></i></div>
+              <div>
+                <div class="vps-info-val">1 Gbps</div>
+                <div class="vps-info-label">Port Speed</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="vps-perf-strip">
+          <div class="vps-perf-item"><div class="vps-perf-dot"></div><span>Location:</span><strong>&nbsp;London, UK</strong></div>
+          <div class="vps-perf-item"><div class="vps-perf-dot"></div><span>Uptime:</span><strong>&nbsp;99.99%</strong></div>
+          <div class="vps-perf-item"><div class="vps-perf-dot"></div><span>Root Access:</span><strong>&nbsp;Full SSH</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="vps-features-bar">
+    <div class="container container-custom">
+      <div class="vps-feat-grid">
+        <div class="vps-feat-item">
+          <div class="vps-feat-icon"><i class="fa-solid fa-microchip"></i></div>
+          <div class="vps-feat-text">
+            <strong>Dedicated vCPUs</strong>
+            <span>No shared CPU contention</span>
+          </div>
+        </div>
+        <div class="vps-feat-item">
+          <div class="vps-feat-icon"><i class="fa-solid fa-terminal"></i></div>
+          <div class="vps-feat-text">
+            <strong>Full Root Access</strong>
+            <span>Install anything, configure everything</span>
+          </div>
+        </div>
+        <div class="vps-feat-item">
+          <div class="vps-feat-icon"><i class="fa-solid fa-sliders"></i></div>
+          <div class="vps-feat-text">
+            <strong>Instant Scaling</strong>
+            <span>Upgrade RAM & CPU on demand</span>
+          </div>
+        </div>
+        <div class="vps-feat-item">
+          <div class="vps-feat-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="vps-feat-text">
+            <strong>UK Data Centre</strong>
+            <span>Low-latency for UK traffic</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="zigzag-section">
+    <div class="container container-custom">
+
+      <div class="zz-row">
+        <div class="zz-content">
+          <span class="zz-kicker">Total Control</span>
+          <h2 class="zz-title">Your Server. Your Rules. Zero Limits.</h2>
+          <p class="zz-desc">
+            Get full root SSH access the moment your VPS spins up. Deploy any OS, install any stack — Node.js, Python, Ruby, PHP, or your own custom runtime. No cPanel restrictions, no locked-down environments. Build exactly what you need.
+          </p>
+          <a href="#pricing" class="hmk-order-btn hmk-btn-blue" style="width:auto;">View Plans</a>
+        </div>
+        <div class="zz-visual">
+          <div class="zz-feature-box">
+            <div class="zz-icon vps-icon"><i class="fa-solid fa-terminal"></i></div>
+            <h4>SSH Root Access</h4>
+            <p>Instant full root access via SSH on every plan, from day one.</p>
+          </div>
+          <div class="zz-feature-box" style="transform: translateY(30px);">
+            <div class="zz-icon vps-icon"><i class="fa-solid fa-box"></i></div>
+            <h4>Custom OS Images</h4>
+            <p>Ubuntu, Debian, CentOS, AlmaLinux — deploy your preferred distro.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="zz-row reverse mt-5">
+        <div class="zz-visual">
+          <div class="zz-feature-box">
+            <div class="zz-icon vps-icon"><i class="fa-solid fa-gauge-high"></i></div>
+            <h4>NVMe SSD Storage</h4>
+            <p>10× faster than traditional SSD — database queries fly, deploys are instant.</p>
+          </div>
+          <div class="zz-feature-box" style="transform: translateY(30px);">
+            <div class="zz-icon vps-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h4>DDoS Protection</h4>
+            <p>Always-on volumetric DDoS mitigation included at no extra cost.</p>
+          </div>
+        </div>
+        <div class="zz-content ps-lg-5">
+          <span class="zz-kicker">Enterprise Infrastructure</span>
+          <h2 class="zz-title">Hardware That Won't Hold You Back</h2>
+          <p class="zz-desc">
+            Every VPS runs on enterprise-grade AMD EPYC processors with NVMe SSD storage in RAID-10. Your vCPUs are truly dedicated — not oversold. Your RAM is reserved, not shared. Consistent performance, always.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="vps-perf-section">
+    <div class="container container-custom">
+      <div class="vps-stat-grid">
+        <div>
+          <div class="vps-stat-num">99.99%</div>
+          <div class="vps-stat-label">Uptime SLA</div>
+        </div>
+        <div>
+          <div class="vps-stat-num">1 Gbps</div>
+          <div class="vps-stat-label">Network Port</div>
+        </div>
+        <div>
+          <div class="vps-stat-num">10×</div>
+          <div class="vps-stat-label">Faster Than HDD VPS</div>
+        </div>
+        <div>
+          <div class="vps-stat-num">24/7</div>
+          <div class="vps-stat-label">Expert UK Support</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hmk-pricing-section" id="pricing">
+    <div class="container-fluid container-custom">
+      <div class="row mb-5">
+        <div class="col-lg-7 mx-auto text-center">
+          <span class="hmk-section-kicker text-center mb-2">Simple Pricing</span>
+          <h2 class="hmk-pricing-title">VPS Hosting Plans</h2>
+          <p class="hmk-pricing-subtitle">Every plan includes full root access, free snapshots, and DDoS protection.</p>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-center align-items-center gap-3 mb-5 flex-wrap">
+        <ul class="nav nav-pills hmk-toggle-wrap p-1" role="tablist">
+          <li class="nav-item">
+            <button class="nav-link active hmk-toggle-btn" id="monthly-tab" data-bs-toggle="pill" data-bs-target="#hmk-monthly" type="button" role="tab">Monthly</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link hmk-toggle-btn" id="yearly-tab" data-bs-toggle="pill" data-bs-target="#hmk-yearly" type="button" role="tab">Yearly</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="hmk-monthly" role="tabpanel">
+          <div class="row g-4 justify-content-center">
+
+            <div class="col-lg-3 col-md-6">
+              <div class="hmk-price-card">
+                <div class="hmk-card-top">
+                  <div class="hmk-icon-box"><i class="fa-solid fa-seedling bluec"></i></div>
+                  <div>
+                    <h3 class="hmk-plan-name">VPS Starter</h3>
+                    <p class="hmk-plan-text">Dev & small projects</p>
+                  </div>
+                </div>
+                <div class="hmk-mini-tags">
+                  <span>1 vCPU</span>
+                  <span class="tag-blue">2GB RAM</span>
+                  <span>20GB NVMe</span>
+                </div>
+                <div class="hmk-price-wrap">
+                  <span class="hmk-price">£8</span>
+                  <span class="hmk-price-small">/month</span>
+                </div>
+                <p class="hmk-year-text">Or Yearly for £80/Year</p>
+                <div class="hmk-divider"></div>
+                <h6 class="hmk-feature-title">FEATURES INCLUDED:</h6>
+                <ul class="hmk-feature-list">
+                  <li><i class="fas fa-check-circle bluec"></i> 1 vCPU Core</li>
+                  <li><i class="fas fa-check-circle bluec"></i> 2 GB Guaranteed RAM</li>
+                  <li><i class="fas fa-check-circle bluec"></i> 20 GB NVMe SSD</li>
+                  <li><i class="fas fa-check-circle bluec"></i> 1 TB Bandwidth</li>
+                  <li><i class="fas fa-check-circle bluec"></i> Full Root SSH Access</li>
+                  <li><i class="fas fa-check-circle bluec"></i> DDoS Protection</li>
+                </ul>
+                <a href="#" class="hmk-order-btn-full go-blue">ORDER NOW</a>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="hmk-price-card hmk-popular-card vps-popular">
+                <div class="hmk-card-top">
+                  <div class="hmk-icon-box"><i class="fa-solid fa-bolt bluec"></i></div>
+                  <div>
+                    <span class="d-flex flex-row gap-3 align-items-center">
+                      <h3 class="hmk-plan-name">VPS Pro</h3>
+                      <div class="hmk-popular-badge vps-badge-popular">MOST POPULAR</div>
+                    </span>
+                    <p class="hmk-plan-text">Busy apps & stores</p>
+                  </div>
+                </div>
+                <div class="hmk-mini-tags">
+                  <span>2 vCPU</span>
+                  <span class="tag-blue">4GB RAM</span>
+                  <span>60GB NVMe</span>
+                </div>
+                <div class="hmk-price-wrap">
+                  <span class="hmk-price">£18</span>
+                  <span class="hmk-price-small">/month</span>
+                </div>
+                <p class="hmk-year-text">Or Yearly for £180/Year</p>
+                <div class="hmk-divider"></div>
+                <h6 class="hmk-feature-title">FEATURES INCLUDED:</h6>
+                <ul class="hmk-feature-list">
+                  <li><i class="fas fa-check-circle bluec"></i> 2 vCPU Cores</li>
+                  <li><i class="fas fa-check-circle bluec"></i> 4 GB Guaranteed RAM</li>
+                  <li><i class="fas fa-check-circle bluec"></i> 60 GB NVMe SSD</li>
+                  <li><i class="fas fa-check-circle bluec"></i> 3 TB Bandwidth</li>
+                  <li><i class="fas fa-check-circle bluec"></i> Free Weekly Snapshots</li>
+                  <li><i class="fas fa-check-circle bluec"></i> Priority Support</li>
+                </ul>
+                <a href="#" class="hmk-order-btn-full go-blue-solid">ORDER NOW</a>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="hmk-price-card">
+                <div class="hmk-card-top">
+                  <div class="hmk-icon-box"><i class="fa-solid fa-server orange"></i></div>
+                  <div>
+                    <h3 class="hmk-plan-name">VPS Business</h3>
+                    <p class="hmk-plan-text">High-traffic production</p>
+                  </div>
+                </div>
+                <div class="hmk-mini-tags">
+                  <span>4 vCPU</span>
+                  <span class="tag-orange">8GB RAM</span>
+                  <span>100GB NVMe</span>
+                </div>
+                <div class="hmk-price-wrap">
+                  <span class="hmk-price">£35</span>
+                  <span class="hmk-price-small">/month</span>
+                </div>
+                <p class="hmk-year-text">Or Yearly for £350/Year</p>
+                <div class="hmk-divider"></div>
+                <h6 class="hmk-feature-title">FEATURES INCLUDED:</h6>
+                <ul class="hmk-feature-list">
+                  <li><i class="fas fa-check-circle orange"></i> 4 vCPU Cores</li>
+                  <li><i class="fas fa-check-circle orange"></i> 8 GB Guaranteed RAM</li>
+                  <li><i class="fas fa-check-circle orange"></i> 100 GB NVMe SSD</li>
+                  <li><i class="fas fa-check-circle orange"></i> 5 TB Bandwidth</li>
+                  <li><i class="fas fa-check-circle orange"></i> Daily Snapshots</li>
+                  <li><i class="fas fa-check-circle orange"></i> Free Dedicated IP</li>
+                </ul>
+                <a href="#" class="hmk-order-btn-full go-orange">ORDER NOW</a>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="hmk-price-card">
+                <div class="hmk-card-top">
+                  <div class="hmk-icon-box"><i class="fa-solid fa-crown" style="color:#c084fc;"></i></div>
+                  <div>
+                    <h3 class="hmk-plan-name">VPS Elite</h3>
+                    <p class="hmk-plan-text">Enterprise & agencies</p>
+                  </div>
+                </div>
+                <div class="hmk-mini-tags">
+                  <span>8 vCPU</span>
+                  <span class="tag-purple">16GB RAM</span>
+                  <span>200GB NVMe</span>
+                </div>
+                <div class="hmk-price-wrap">
+                  <span class="hmk-price">£65</span>
+                  <span class="hmk-price-small">/month</span>
+                </div>
+                <p class="hmk-year-text">Or Yearly for £650/Year</p>
+                <div class="hmk-divider"></div>
+                <h6 class="hmk-feature-title">FEATURES INCLUDED:</h6>
+                <ul class="hmk-feature-list">
+                  <li><i class="fas fa-check-circle" style="color:#c084fc;"></i> 8 vCPU Cores</li>
+                  <li><i class="fas fa-check-circle" style="color:#c084fc;"></i> 16 GB Guaranteed RAM</li>
+                  <li><i class="fas fa-check-circle" style="color:#c084fc;"></i> 200 GB NVMe SSD</li>
+                  <li><i class="fas fa-check-circle" style="color:#c084fc;"></i> Unmetered Bandwidth</li>
+                  <li><i class="fas fa-check-circle" style="color:#c084fc;"></i> Managed Backups</li>
+                  <li><i class="fas fa-check-circle" style="color:#c084fc;"></i> Dedicated Account Manager</li>
+                </ul>
+                <a href="#" class="hmk-order-btn-full go-purple">ORDER NOW</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="tab-pane fade" id="hmk-yearly" role="tabpanel">
+          <div class="row g-4 justify-content-center">
+
+            <div class="col-lg-3 col-md-6">
+              <div class="hmk-price-card">
+                <div class="hmk-card-top">
+                  <div class="hmk-icon-box"><i class="fa-solid fa-seedling bluec"></i></div>
+                  <div>
+                    <h3 class="hmk-plan-name">VPS Starter</h3>
+                    <p class="hmk-plan-text">Dev & small projects</p>
+                  </div>
+                </div>
+                <div class="hmk-mini-tags">
+                  <span>1 vCPU</span>
+                  <span class="tag-blue">2GB RAM</span>
+                  <span>20GB NVMe</span>
+                </div>
+                <div class="hmk-price-wrap">
+                  <span class="hmk-price">£80</span>
+                  <span class="hmk-price-small">/year</span>
+                </div>
+                <p class="hmk-year-text">Or Monthly for £8/Month</p>
+                <div class="hmk-divider"></div>
+                <h6 class="hmk-feature-title">FEATURES INCLUDED:</h6>
+                <ul class="hmk-feature-list">
+                  <li><i class="fas fa-check-circle bluec"></i> 1 vCPU Core</li>
+                  <li><i class="fas fa-check-circle bluec"></i> 2 GB Guaranteed RAM</li>
+                  <li><i class="fas fa-check-circle bluec"></i> 20 GB NVMe SSD</li>
+                  <li><i class="fas fa-check-circle bluec"></i> 1 TB Bandwidth</li>
+                  <li><i class="fas fa-check-circle bluec"></i> Full Root SSH Access</li>
+                  <li><i class="fas fa-check-circle bluec"></i> DDoS Protection</li>
+                </ul>
+                <a href="#" class="hmk-order-btn-full go-blue">ORDER NOW</a>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="hmk-price-card hmk-popular-card vps-popular">
+                <div class="hmk-card-top">
+                  <div class="hmk-icon-box"><i class="fa-solid fa-bolt bluec"></i></div>
+                  <div>
+                    <span class="d-flex flex-row gap-3 align-items-center">
+                      <h3 class="hmk-plan-name">VPS Pro</h3>
+                      <div class="hmk-popular-badge vps-badge-popular">MOST POPULAR</div>
+                    </span>
+                    <p class="hmk-plan-text">Busy apps & stores</p>
+                  </div>
+                </div>
+                <div class="hmk-mini-tags">
+                  <span>2 vCPU</span>
+                  <span class="tag-blue">4GB RAM</span>
+                  <span>60GB NVMe</span>
+                </div>
+                <div class="hmk-price-wrap">
+                  <span class="hmk-price">£180</span>
+                  <span class="hmk-price-small">/year</span>
+                </div>
+                <p class="hmk-year-text">Or Monthly for £18/Month</p>
+                <div class="hmk-divider"></div>
+                <h6 class="hmk-feature-title">FEATURES INCLUDED:</h6>
+                <ul class="hmk-feature-list">
+                  <li><i class="fas fa-check-circle bluec"></i> 2 vCPU Cores</li>
+                  <li><i class="fas fa-check-circle bluec"></i> 4 GB Guaranteed RAM</li>
+                  <li><i class="fas fa-check-circle bluec"></i> 60 GB NVMe SSD</li>
+                  <li><i class="fas fa-check-circle bluec"></i> 3 TB Bandwidth</li>
+                  <li><i class="fas fa-check-circle bluec"></i> Free Weekly Snapshots</li>
+                  <li><i class="fas fa-check-circle bluec"></i> Priority Support</li>
+                </ul>
+                <a href="#" class="hmk-order-btn-full go-blue-solid">ORDER NOW</a>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="hmk-price-card">
+                <div class="hmk-card-top">
+                  <div class="hmk-icon-box"><i class="fa-solid fa-server orange"></i></div>
+                  <div>
+                    <h3 class="hmk-plan-name">VPS Business</h3>
+                    <p class="hmk-plan-text">High-traffic production</p>
+                  </div>
+                </div>
+                <div class="hmk-mini-tags">
+                  <span>4 vCPU</span>
+                  <span class="tag-orange">8GB RAM</span>
+                  <span>100GB NVMe</span>
+                </div>
+                <div class="hmk-price-wrap">
+                  <span class="hmk-price">£350</span>
+                  <span class="hmk-price-small">/year</span>
+                </div>
+                <p class="hmk-year-text">Or Monthly for £35/Month</p>
+                <div class="hmk-divider"></div>
+                <h6 class="hmk-feature-title">FEATURES INCLUDED:</h6>
+                <ul class="hmk-feature-list">
+                  <li><i class="fas fa-check-circle orange"></i> 4 vCPU Cores</li>
+                  <li><i class="fas fa-check-circle orange"></i> 8 GB Guaranteed RAM</li>
+                  <li><i class="fas fa-check-circle orange"></i> 100 GB NVMe SSD</li>
+                  <li><i class="fas fa-check-circle orange"></i> 5 TB Bandwidth</li>
+                  <li><i class="fas fa-check-circle orange"></i> Daily Snapshots</li>
+                  <li><i class="fas fa-check-circle orange"></i> Free Dedicated IP</li>
+                </ul>
+                <a href="#" class="hmk-order-btn-full go-orange">ORDER NOW</a>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+              <div class="hmk-price-card">
+                <div class="hmk-card-top">
+                  <div class="hmk-icon-box"><i class="fa-solid fa-crown" style="color:#c084fc;"></i></div>
+                  <div>
+                    <h3 class="hmk-plan-name">VPS Elite</h3>
+                    <p class="hmk-plan-text">Enterprise & agencies</p>
+                  </div>
+                </div>
+                <div class="hmk-mini-tags">
+                  <span>8 vCPU</span>
+                  <span class="tag-purple">16GB RAM</span>
+                  <span>200GB NVMe</span>
+                </div>
+                <div class="hmk-price-wrap">
+                  <span class="hmk-price">£650</span>
+                  <span class="hmk-price-small">/year</span>
+                </div>
+                <p class="hmk-year-text">Or Monthly for £65/Month</p>
+                <div class="hmk-divider"></div>
+                <h6 class="hmk-feature-title">FEATURES INCLUDED:</h6>
+                <ul class="hmk-feature-list">
+                  <li><i class="fas fa-check-circle" style="color:#c084fc;"></i> 8 vCPU Cores</li>
+                  <li><i class="fas fa-check-circle" style="color:#c084fc;"></i> 16 GB Guaranteed RAM</li>
+                  <li><i class="fas fa-check-circle" style="color:#c084fc;"></i> 200 GB NVMe SSD</li>
+                  <li><i class="fas fa-check-circle" style="color:#c084fc;"></i> Unmetered Bandwidth</li>
+                  <li><i class="fas fa-check-circle" style="color:#c084fc;"></i> Managed Backups</li>
+                  <li><i class="fas fa-check-circle" style="color:#c084fc;"></i> Dedicated Account Manager</li>
+                </ul>
+                <a href="#" class="hmk-order-btn-full go-purple">ORDER NOW</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hmk-faq-section" id="vps-faq">
+    <div class="container-fluid container-custom">
+      <div class="hmk-faq-wrap">
+        <div class="hmk-faq-intro">
+          <span class="hmk-section-kicker">Quick Answers</span>
+          <h2 class="hmk-faq-title">VPS Questions, Answered</h2>
+          <p class="hmk-faq-subtitle">Everything you need to know before spinning up your virtual private server.</p>
+          <div class="hmk-faq-help-card mt-4 p-4 rounded-4" style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08);">
+            <h4 class="text-white mb-2">Need a custom spec?</h4>
+            <p style="color:#94a3b8; font-size:0.9rem;">We can build a bespoke VPS configuration for your exact workload requirements.</p>
+            <a href="contact.php" style="color:#2f86ff; font-weight:600; text-decoration:none;">Get a Custom Quote →</a>
+          </div>
+        </div>
+
+        <div class="hmk-faq-list">
+          <details class="hmk-faq-item" open>
+            <summary>What's the difference between VPS and shared hosting?</summary>
+            <p>Shared hosting puts dozens of sites on one server with shared CPU, RAM, and disk. A VPS gives you dedicated, guaranteed resources — your own slice of hardware that nobody else can eat into. You get root access, isolation, and consistent performance regardless of what other customers are doing.</p>
+          </details>
+          <details class="hmk-faq-item">
+            <summary>Do I get full root SSH access?</summary>
+            <p>Yes, on every plan. From the moment your VPS is provisioned you receive SSH credentials with full root privileges. You can install packages, configure firewalls, run cron jobs, and modify the OS however you like.</p>
+          </details>
+          <details class="hmk-faq-item">
+            <summary>Which operating systems are available?</summary>
+            <p>We offer Ubuntu 20.04 / 22.04, Debian 11 / 12, CentOS Stream 9, and AlmaLinux 9 as standard images. You can also request a custom ISO if you need a specific distro not on the list.</p>
+          </details>
+          <details class="hmk-faq-item">
+            <summary>Can I upgrade my VPS plan later?</summary>
+            <p>Absolutely. You can upgrade RAM, vCPU, and storage at any time from your client portal. Upgrades apply instantly with a brief restart. Downgrading is also available at your next billing cycle.</p>
+          </details>
+          <details class="hmk-faq-item">
+            <summary>Are snapshots and backups included?</summary>
+            <p>VPS Pro includes free weekly snapshots. VPS Business adds daily snapshots, and VPS Elite includes fully managed backups with 30-day retention. You can also create manual snapshots on demand from the control panel at any time.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+       <div class="footer-wrap">
+    <div class="footer-horizon"></div>
+    <div class="container container-custom">
+      <div class="row footer_links">
+        <div class="col-lg-8 col-md-12">
+          <div class="row">
+            <div class="col-md-4 col-sm-6">
+              <h4>Solutions</h4>
+              <ul>
+                <li><a href="web-hosting.html">Web Hosting</a></li>
+                <li><a href="wordpress-hosting.html">WordPress Hosting</a></li>
+                <li><a href="reseller-hosting.html">Reseller Hosting</a></li>
+                <li><a href="vps-hosting.html">VPS Hosting</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <h4>Resources</h4>
+              <ul>
+                <li><a href="https://clients.hostmeerkat.co.uk/login">Client Portal</a></li>
+                <li><a href="#">Knowledge Base</a></li>
+                <li><a href="https://hostmeerkat.co.uk/#payment-methods">Payment Methods</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <h4>Company</h4>
+              <ul>
+                <li><a href="about.html">About HostMeerkat</a></li>
+                <li><a href="why-chose.html">Why Choose Us</a></li>
+                <li><a href="contact.php">Contact Sales</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
+                <li><a href="anti-spam-policy.html">Anti-Spam Policy</a></li>
+                <li><a href="report-abuse.html">Report Abuse</a></li>
+                <li><a href="reseller-agreement.html">Reseller Agreement</a></li>
+                <li><a href="cancellation-and-refund.html">Cancellation &amp; Refund</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 footer_about">
+          <div class="d-flex align-items-center mb-3">
+            <img class="mr-2" src="assets/images/logo.png" alt="HostMeerkat Secure UK Hosting" height="38">
+            <h2 class="mb-0 d-flex align-items-center text-white" style="font-weight:800;font-size:1.8rem;">Host<span style="color:#3b82f6;">Meerkat</span></h2>
+          </div>
+          <p>Deploy your digital future on our blazing-fast, secure, and infinitely scalable UK cloud infrastructure.</p>
+          <div class="footer-status">
+            <div class="pulse"></div>
+            All Systems Operational
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer_bottom">
+      <div class="container container-custom">
+        <div class="row d-flex justify-content-between align-items-center">
+          <div class="col-md-6 d-flex align-items-center justify-content-center justify-content-md-start mb-3 mb-md-0">
+            <img src="assets/images/paymethod.png" height="28" alt="Pay for hosting securely with Visa, Mastercard, or PayPal" style="opacity:0.9;transition:0.3s;">
+          </div>
+          <div class="col-md-6 d-flex align-items-center justify-content-center justify-content-md-end">
+            <p class="mb-0">&copy; 2026 HostMeerkat.co.uk. Designed for performance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Theme Toggle
+    document.addEventListener("DOMContentLoaded", function () {
+      var toggleBtns = document.querySelectorAll('.theme-toggle-btn');
+      if (localStorage.getItem('hmk-theme') === 'light') { document.body.classList.add('light-mode'); }
+      toggleBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.body.classList.toggle('light-mode');
+          localStorage.setItem('hmk-theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
+        });
+      });
+    });
+
+    // Countdown Timer
+    function updateCountdown() {
+      var target = new Date();
+      target.setDate(target.getDate() + 3);
+      target.setHours(23, 59, 59, 0);
+      var now = new Date();
+      var diff = target - now;
+      if (diff <= 0) return;
+      var d = Math.floor(diff / 86400000);
+      var h = Math.floor((diff % 86400000) / 3600000);
+      var m = Math.floor((diff % 3600000) / 60000);
+      var s = Math.floor((diff % 60000) / 1000);
+      var pad = function(n) { return n < 10 ? '0' + n : n; };
+      
+      // Safety check in case these IDs exist on the page
+      if(document.getElementById('sale-d')){
+          document.getElementById('sale-d').textContent = pad(d);
+          document.getElementById('sale-h').textContent = pad(h);
+          document.getElementById('sale-m').textContent = pad(m);
+          document.getElementById('sale-s').textContent = pad(s);
+      }
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // Copy coupon
+    if(document.getElementById('btnCode')){
+        document.getElementById('btnCode').addEventListener('click', function () {
+          var code = document.getElementById('couponCode').textContent;
+          navigator.clipboard.writeText(code).then(function () {
+            var el = document.getElementById('btnCode');
+            var orig = el.innerHTML;
+            el.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+            setTimeout(function () { el.innerHTML = orig; }, 1500);
+          });
+        });
+    }
+  </script>
+
+</body>
+</html>

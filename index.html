@@ -1,0 +1,1525 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    
+    
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="HostMeerkat.co.uk">
+  <link rel="canonical" href="https://hostmeerkat.co.uk/" />
+
+  <!-- Primary Meta Tags -->
+  <title>HostMeerkat: High-Speed UK Web Hosting</title>
+  <meta name="description" content="Experience blazing-fast, reliable web hosting with HostMeerkat. SSD-powered servers, instant deployment & 24/7 support.">
+  <meta name="robots" content="index, nofollow">
+  <meta name="copyright" content=" 2026 HostMeerkat.co.uk.">
+  <meta name="language" content="EN">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hostmeerkat.co.uk/" />
+  <meta property="og:title" content="HostMeerkat: High-Speed UK Web Hosting for 2026" />
+  <meta property="og:description" content="Experience blazing-fast, reliable web hosting with HostMeerkat. SSD-powered servers, instant deployment & 24/7 support." />
+  <meta property="og:image" content="assets/images/og_image.png" />
+
+<!-- X (Twitter) -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://hostmeerkat.co.uk/" />
+  <meta property="twitter:title" content="HostMeerkat: High-Speed UK Web Hosting for 2026" />
+  <meta property="twitter:description" content="Experience blazing-fast, reliable web hosting with HostMeerkat. SSD-powered servers, instant deployment & 24/7 support." />
+  <meta property="twitter:image" content="assets/images/og_image.png" />
+
+<!-- Fav Icon -->
+<link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+<link rel="manifest" href="assets/images/site.webmanifest">
+<link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/customize.css">
+  <link rel="stylesheet" href="assets/css/light-dark.css">
+  <link rel="stylesheet" href="assets/css/support-widget.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+
+
+  <div class="support-widget">
+  <div class="support-popup" id="supportPopup">
+    <div class="support-header">
+      <div class="support-head-icon">🎧</div>
+      <span>Support Desk</span>
+      <h2>Need Help?</h2>
+      <p>Our team is online. Choose your preferred support option.</p>
+    </div>
+
+    <div class="support-options">
+      <a href="https://wa.me/447761958885" target="_blank" class="support-item whatsapp">
+        <div class="support-icon-box">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+        </div>
+
+        <div class="support-text">
+          <strong>WhatsApp</strong>
+          <small>Chat with us instantly</small>
+        </div>
+
+        <span class="support-arrow">›</span>
+      </a>
+
+      <a href="https://clients.hostmeerkat.co.uk/submitticket.php" class="support-item ticket">
+        <div class="support-icon-box ticket-box">
+          🎫
+        </div>
+
+        <div class="support-text">
+          <strong>Support Ticket</strong>
+          <small>Create a support request</small>
+        </div>
+
+        <span class="support-arrow">›</span>
+      </a>
+    </div>
+
+    <div class="support-footer">
+      Usually replies within a few minutes
+    </div>
+  </div>
+
+  <button type="button" class="support-button" id="supportButton" aria-label="Open support">
+    <span class="support-open-icon">💬</span>
+    <span class="support-close-icon">×</span>
+  </button>
+</div>
+  
+  
+  
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const supportButton = document.getElementById("supportButton");
+      const supportPopup = document.getElementById("supportPopup");
+
+      if (supportButton && supportPopup) {
+        supportButton.addEventListener("click", function (event) {
+          event.stopPropagation();
+          supportPopup.classList.toggle("active");
+          supportButton.classList.toggle("active");
+        });
+
+        document.addEventListener("click", function (event) {
+          if (!event.target.closest(".support-widget")) {
+            supportPopup.classList.remove("active");
+            supportButton.classList.remove("active");
+          }
+        });
+
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") {
+            supportPopup.classList.remove("active");
+            supportButton.classList.remove("active");
+          }
+        });
+      }
+    });
+    </script>
+    
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "HostMeerkat",
+  "url": "https://hostmeerkat.co.uk/",
+  "logo": "https://hostmeerkat.co.uk/assets/images/logo.png",
+  "description": "Experience blazing-fast, reliable web hosting with HostMeerkat. SSD-powered servers, instant deployment & 24/7 support in the UK.",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+447761958885",
+    "contactType": "customer service",
+    "areaServed": "GB",
+    "availableLanguage": "English"
+  },
+  "sameAs": [
+    "https://twitter.com/HostMeerkat",
+    "https://www.facebook.com/HostMeerkat"
+  ]
+}
+</script>
+
+<style>
+    
+    @media (max-width: 992px) {
+    .header .header_h2, .header .header_p {
+        padding-top:60px;
+    }
+       @media (max-width: 575px) {
+    .header .header_h2, .header .header_p {
+        padding-top:0px;
+    }
+}
+</style>
+
+    </head>
+
+
+<body>
+
+  <div class="object_1 text-center">
+    <img src="assets/images/vector_object_1.png" class="img-fluid" alt="HostMeerkat UK Cloud Infrastructure">
+  </div>
+
+  <nav id="fixedR" class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid container-custom">
+      <a class="navbar-brand text-white" href="index.html">
+        <div class="d-flex align-items-center">
+          <img class="mr-2" src="assets/images/logo.png" alt="HostMeerkat UK Web Hosting Logo">
+          <h2 class="mb-0 d-flex align-items-center">Host<span>Meerkat</span></h2>
+        </div>
+      </a>
+
+      <div class="d-flex align-items-center d-lg-none gap-3 hmk-nav-actions">
+        <button class="theme-toggle-btn" aria-label="Toggle theme">
+          <i class="fa-solid fa-moon icon-dark"></i>
+          <i class="fa-solid fa-sun icon-light"></i>
+        </button>
+
+        <button class="navbar-toggler ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarType"
+          aria-controls="navbarType">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="navbarType" aria-labelledby="navbarTypeLabel">
+        <div class="offcanvas-header border-0">
+          <a class="navbar-brand d-flex align-items-center" href="index.html" style="text-decoration: none;">
+            <img src="assets/images/logo.png" alt="Logo" style="height: 32px; margin-right: 8px;">
+            <h3 class="mb-0 hmk-drawer-brand" style="font-weight: 800; font-size: 1.2rem; color: #fff;">
+              Host<span style="color: #3b82f6;">MEERKAT</span>
+            </h3>
+          </a>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body p-lg-0">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle " href="#" data-bs-toggle="dropdown">Hosting</a>
+           <ul class="dropdown-menu">
+  <li><a class="dropdown-item" href="web-hosting.html">Web Hosting</a></li>
+  <li><a class="dropdown-item" href="wordpress-hosting.html">WordPress Hosting</a></li>
+  <li><a class="dropdown-item" href="reseller-hosting.html">Reseller Hosting</a></li>
+  <li><a class="dropdown-item" href="vps-hosting.html">VPS Hosting</a></li>
+</ul>
+            </li>
+     <li class="nav-item">
+              <a class="nav-link" href="design-development.html">Design & Development</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.php">Contact</a>
+            </li>
+
+            <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+              <div class="button">
+                <div class="dropdown w-100">
+                  <a href="#" class="btn dropdown-toggle w-100" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-user me-2 d-lg-none"></i> <img src="assets/images/user.svg" alt="User"
+                      class="d-none d-lg-inline"> LOGIN
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="https://clients.hostmeerkat.co.uk/login">Client Area</a></li>
+                    <li><a class="dropdown-item" href="#">Web Panel</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item ms-lg-4 mt-4 mt-lg-0 d-none d-lg-block">
+              <button class="theme-toggle-btn" aria-label="Toggle theme">
+                <i class="fa-solid fa-moon icon-dark"></i>
+                <i class="fa-solid fa-sun icon-light"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="header">
+    <div class="container ">
+      <div class="row d-flex justify-content-between">
+        <div class="col-lg-6 col-12 d-flex align-items-center">
+          <div>
+            <h1 class="header_h2 mb-2">High-Speed & <span class="blue">Reliable</span> Web Hosting</h1>
+            <p class="header_p mb-4">Power your website with SSD-powered hosting servers, blazing-fast load speeds,
+              instant deployment, and complete administrative control - built for performance, security, and
+              scalability.</p>
+            <div class="button">
+              <a href="web-hosting.html" class="btn">View Plans <img src="assets/images/arrow-right.svg"></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-12 d-flex align-items-center justify-content-center ani-padding">
+          <div class="hmk-hero" id="heroAnimation">
+
+            <div class="hp-scene">
+              <svg viewBox="0 0 560 600" xmlns="http://www.w3.org/2000/svg">
+
+                <defs>
+                  <linearGradient id="faceT" x1="0" y1="0" x2="0.55" y2="1">
+                    <stop offset="0" stop-color="#56709a" />
+                    <stop offset="1" stop-color="#33445f" />
+                  </linearGradient>
+                  <linearGradient id="topInner" x1="0" y1="0" x2="0.6" y2="1">
+                    <stop offset="0" stop-color="#3d5276" />
+                    <stop offset="1" stop-color="#2a3a55" />
+                  </linearGradient>
+                  <linearGradient id="faceL" x1="0" y1="0" x2="0.3" y2="1">
+                    <stop offset="0" stop-color="#34466a" />
+                    <stop offset="1" stop-color="#1d2a44" />
+                  </linearGradient>
+                  <linearGradient id="faceR" x1="0" y1="0" x2="0.3" y2="1">
+                    <stop offset="0" stop-color="#202d49" />
+                    <stop offset="1" stop-color="#0f1729" />
+                  </linearGradient>
+                  <linearGradient id="unitL" x1="0" y1="0" x2="0.2" y2="1">
+                    <stop offset="0" stop-color="#3f547c" />
+                    <stop offset="1" stop-color="#243250" />
+                  </linearGradient>
+                  <linearGradient id="unitR" x1="0" y1="0" x2="0.2" y2="1">
+                    <stop offset="0" stop-color="#27365a" />
+                    <stop offset="1" stop-color="#141d33" />
+                  </linearGradient>
+                  <linearGradient id="seam" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#9bf3fb" />
+                    <stop offset="0.5" stop-color="#16d3e0" />
+                    <stop offset="1" stop-color="#2f7bff" />
+                  </linearGradient>
+                  <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0" stop-color="#2f7bff" />
+                    <stop offset="0.5" stop-color="#16d3e0" />
+                    <stop offset="1" stop-color="#8b5cf6" />
+                  </linearGradient>
+                  <linearGradient id="scanGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#16d3e0" stop-opacity="0" />
+                    <stop offset="0.5" stop-color="#bdf3fa" stop-opacity="0.55" />
+                    <stop offset="1" stop-color="#16d3e0" stop-opacity="0" />
+                  </linearGradient>
+                  <linearGradient id="aiGauge" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#9bf3fb" />
+                    <stop offset="0.5" stop-color="#16d3e0" />
+                    <stop offset="1" stop-color="#8b5cf6" />
+                  </linearGradient>
+                  <clipPath id="frontClip">
+                    <polygon points="404.0,178.0 280.0,238.0 280.0,470.0 404.0,410.0" />
+                    <polygon points="280.0,238.0 156.0,178.0 156.0,410.0 280.0,470.0" />
+                  </clipPath>
+                  <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
+                    <feGaussianBlur stdDeviation="26" />
+                  </filter>
+                  <filter id="glow" x="-120%" y="-120%" width="340%" height="340%">
+                    <feGaussianBlur stdDeviation="3.4" result="b" />
+                    <feMerge>
+                      <feMergeNode in="b" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                </defs>
+
+                <g filter="url(#soft)">
+                  <ellipse cx="200" cy="220" rx="150" ry="150" fill="#2f7bff" opacity=".34" class="amb a1" />
+                  <ellipse cx="400" cy="360" rx="140" ry="140" fill="#16d3e0" opacity=".30" class="amb a2" />
+                  <ellipse cx="300" cy="470" rx="160" ry="90" fill="#8b5cf6" opacity=".22" class="amb a3" />
+                </g>
+                <path id="orbit" d="M58,492 A222,104 0 1 0 502,492 A222,104 0 1 0 58,492 Z" fill="none"
+                  stroke="url(#ringGrad)" stroke-width="1.6" opacity=".55" />
+                <ellipse cx="280" cy="492" rx="196" ry="92" fill="none" stroke="rgba(120,170,255,.16)"
+                  stroke-width="1" />
+                <ellipse cx="280" cy="476" rx="150" ry="46" fill="#02060f" opacity=".62" filter="url(#soft)" />
+                <polygon points="404.0,178.0 280.0,238.0 280.0,470.0 404.0,410.0" fill="url(#faceR)" />
+                <polygon points="280.0,238.0 156.0,178.0 156.0,410.0 280.0,470.0" fill="url(#faceL)" />
+                <polygon points="280.0,118.0 404.0,178.0 280.0,238.0 156.0,178.0" fill="url(#faceT)" />
+                <polygon points="404.0,189.6 280.0,249.6 280.0,286.6 404.0,226.6" fill="url(#unitR)" />
+                <line x1="404.0" y1="189.6" x2="280.0" y2="249.6" stroke="rgba(255,255,255,.16)" stroke-width="1" />
+                <line x1="404.0" y1="226.6" x2="280.0" y2="286.6" stroke="rgba(0,0,0,.45)" stroke-width="1.4" />
+                <line x1="384.2" y1="208.8" x2="327.1" y2="236.4" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <line x1="384.2" y1="214.8" x2="327.1" y2="242.4" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <line x1="384.2" y1="220.7" x2="327.1" y2="248.3" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <line x1="384.2" y1="226.6" x2="327.1" y2="254.2" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <polygon points="280.0,249.6 156.0,189.6 156.0,226.6 280.0,286.6" fill="url(#unitL)" />
+                <line x1="280.0" y1="249.6" x2="156.0" y2="189.6" stroke="rgba(255,255,255,.16)" stroke-width="1" />
+                <line x1="280.0" y1="286.6" x2="156.0" y2="226.6" stroke="rgba(0,0,0,.45)" stroke-width="1.4" />
+                <line x1="235.4" y1="237.6" x2="175.8" y2="208.8" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <line x1="235.4" y1="243.6" x2="175.8" y2="214.8" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <line x1="235.4" y1="249.5" x2="175.8" y2="220.7" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <line x1="235.4" y1="255.4" x2="175.8" y2="226.6" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <polygon points="404.0,230.8 280.0,290.8 280.0,327.8 404.0,267.8" fill="url(#unitR)" />
+                <line x1="404.0" y1="230.8" x2="280.0" y2="290.8" stroke="rgba(255,255,255,.16)" stroke-width="1" />
+                <line x1="404.0" y1="267.8" x2="280.0" y2="327.8" stroke="rgba(0,0,0,.45)" stroke-width="1.4" />
+                <line x1="384.2" y1="250.0" x2="327.1" y2="277.6" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <line x1="384.2" y1="256.0" x2="327.1" y2="283.6" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <line x1="384.2" y1="261.9" x2="327.1" y2="289.5" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <line x1="384.2" y1="267.8" x2="327.1" y2="295.4" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <polygon points="280.0,290.8 156.0,230.8 156.0,267.8 280.0,327.8" fill="url(#unitL)" />
+                <line x1="280.0" y1="290.8" x2="156.0" y2="230.8" stroke="rgba(255,255,255,.16)" stroke-width="1" />
+                <line x1="280.0" y1="327.8" x2="156.0" y2="267.8" stroke="rgba(0,0,0,.45)" stroke-width="1.4" />
+                <line x1="235.4" y1="278.8" x2="175.8" y2="250.0" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <line x1="235.4" y1="284.8" x2="175.8" y2="256.0" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <line x1="235.4" y1="290.7" x2="175.8" y2="261.9" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <line x1="235.4" y1="296.6" x2="175.8" y2="267.8" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <polygon points="404.0,272.0 280.0,332.0 280.0,369.0 404.0,309.0" fill="url(#unitR)" />
+                <line x1="404.0" y1="272.0" x2="280.0" y2="332.0" stroke="rgba(255,255,255,.16)" stroke-width="1" />
+                <line x1="404.0" y1="309.0" x2="280.0" y2="369.0" stroke="rgba(0,0,0,.45)" stroke-width="1.4" />
+                <line x1="384.2" y1="291.2" x2="327.1" y2="318.8" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <line x1="384.2" y1="297.2" x2="327.1" y2="324.8" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <line x1="384.2" y1="303.1" x2="327.1" y2="330.7" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <line x1="384.2" y1="309.0" x2="327.1" y2="336.6" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <polygon points="280.0,332.0 156.0,272.0 156.0,309.0 280.0,369.0" fill="url(#unitL)" />
+                <line x1="280.0" y1="332.0" x2="156.0" y2="272.0" stroke="rgba(255,255,255,.16)" stroke-width="1" />
+                <line x1="280.0" y1="369.0" x2="156.0" y2="309.0" stroke="rgba(0,0,0,.45)" stroke-width="1.4" />
+                <line x1="235.4" y1="320.0" x2="175.8" y2="291.2" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <line x1="235.4" y1="326.0" x2="175.8" y2="297.2" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <line x1="235.4" y1="331.9" x2="175.8" y2="303.1" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <line x1="235.4" y1="337.8" x2="175.8" y2="309.0" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <polygon points="404.0,313.2 280.0,373.2 280.0,410.2 404.0,350.2" fill="url(#unitR)" />
+                <line x1="404.0" y1="313.2" x2="280.0" y2="373.2" stroke="rgba(255,255,255,.16)" stroke-width="1" />
+                <line x1="404.0" y1="350.2" x2="280.0" y2="410.2" stroke="rgba(0,0,0,.45)" stroke-width="1.4" />
+                <line x1="384.2" y1="332.4" x2="327.1" y2="360.0" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <line x1="384.2" y1="338.4" x2="327.1" y2="366.0" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <line x1="384.2" y1="344.3" x2="327.1" y2="371.9" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <line x1="384.2" y1="350.2" x2="327.1" y2="377.8" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <polygon points="280.0,373.2 156.0,313.2 156.0,350.2 280.0,410.2" fill="url(#unitL)" />
+                <line x1="280.0" y1="373.2" x2="156.0" y2="313.2" stroke="rgba(255,255,255,.16)" stroke-width="1" />
+                <line x1="280.0" y1="410.2" x2="156.0" y2="350.2" stroke="rgba(0,0,0,.45)" stroke-width="1.4" />
+                <line x1="235.4" y1="361.2" x2="175.8" y2="332.4" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <line x1="235.4" y1="367.2" x2="175.8" y2="338.4" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <line x1="235.4" y1="373.1" x2="175.8" y2="344.3" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <line x1="235.4" y1="379.0" x2="175.8" y2="350.2" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <polygon points="404.0,354.4 280.0,414.4 280.0,451.4 404.0,391.4" fill="url(#unitR)" />
+                <line x1="404.0" y1="354.4" x2="280.0" y2="414.4" stroke="rgba(255,255,255,.16)" stroke-width="1" />
+                <line x1="404.0" y1="391.4" x2="280.0" y2="451.4" stroke="rgba(0,0,0,.45)" stroke-width="1.4" />
+                <line x1="384.2" y1="373.6" x2="327.1" y2="401.2" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <line x1="384.2" y1="379.6" x2="327.1" y2="407.2" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <line x1="384.2" y1="385.5" x2="327.1" y2="413.1" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <line x1="384.2" y1="391.4" x2="327.1" y2="419.0" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <polygon points="280.0,414.4 156.0,354.4 156.0,391.4 280.0,451.4" fill="url(#unitL)" />
+                <line x1="280.0" y1="414.4" x2="156.0" y2="354.4" stroke="rgba(255,255,255,.16)" stroke-width="1" />
+                <line x1="280.0" y1="451.4" x2="156.0" y2="391.4" stroke="rgba(0,0,0,.45)" stroke-width="1.4" />
+                <line x1="235.4" y1="402.4" x2="175.8" y2="373.6" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <line x1="235.4" y1="408.4" x2="175.8" y2="379.6" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <line x1="235.4" y1="414.3" x2="175.8" y2="385.5" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <line x1="235.4" y1="420.2" x2="175.8" y2="391.4" stroke="rgba(0,0,0,.4)" stroke-width="2" />
+                <line x1="280" y1="238" x2="280" y2="470" stroke="url(#seam)" stroke-width="2.4" filter="url(#glow)"
+                  class="seam" />
+                <polygon points="280.0,130.0 379.2,178.0 280.0,226.0 180.8,178.0" fill="url(#topInner)" />
+                <ellipse cx="294.9" cy="161.2" rx="64" ry="20" fill="#dff1ff" opacity=".18" filter="url(#soft)" />
+                <line x1="270.1" y1="149.2" x2="218.0" y2="174.4" stroke="rgba(0,0,0,.32)" stroke-width="2.2" />
+                <line x1="285.0" y1="156.4" x2="232.9" y2="181.6" stroke="rgba(0,0,0,.32)" stroke-width="2.2" />
+                <line x1="299.8" y1="163.6" x2="247.8" y2="188.8" stroke="rgba(0,0,0,.32)" stroke-width="2.2" />
+                <line x1="314.7" y1="170.8" x2="262.6" y2="196.0" stroke="rgba(0,0,0,.32)" stroke-width="2.2" />
+                <line x1="329.6" y1="178.0" x2="277.5" y2="203.2" stroke="rgba(0,0,0,.32)" stroke-width="2.2" />
+                <circle cx="280.0" cy="206.8" r="11" fill="none" stroke="#16d3e0" stroke-width="2.4" filter="url(#glow)"
+                  class="seam" />
+                <circle cx="280.0" cy="206.8" r="3.4" fill="#9bf3fb" />
+                <polyline points="156.0,178.0 280.0,118.0 404.0,178.0" fill="none" stroke="rgba(255,255,255,.5)"
+                  stroke-width="1.6" />
+                <line x1="280" y1="118" x2="280" y2="238" stroke="rgba(255,255,255,.16)" stroke-width="1" />
+                <g clip-path="url(#frontClip)">
+                  <rect class="scan" x="120" y="0" width="320" height="150" fill="url(#scanGrad)" />
+                </g>
+                <circle cx="304.8" cy="256.1" r="6.5" fill="#22d07e" opacity=".35" class="led-h"
+                  style="animation-delay:0.00s" />
+                <circle cx="304.8" cy="256.1" r="2.7" fill="#22d07e" class="led" style="animation-delay:0.00s" />
+                <circle cx="314.1" cy="251.6" r="6.5" fill="#16d3e0" opacity=".35" class="led-h"
+                  style="animation-delay:0.37s" />
+                <circle cx="314.1" cy="251.6" r="2.7" fill="#16d3e0" class="led" style="animation-delay:0.37s" />
+                <circle cx="323.4" cy="247.1" r="6.5" fill="#ffb13d" opacity=".35" class="led-h"
+                  style="animation-delay:0.74s" />
+                <circle cx="323.4" cy="247.1" r="2.7" fill="#ffb13d" class="led" style="animation-delay:0.74s" />
+                <circle cx="267.6" cy="262.1" r="6.5" fill="#22d07e" opacity=".35" class="led-h"
+                  style="animation-delay:1.11s" />
+                <circle cx="267.6" cy="262.1" r="2.7" fill="#22d07e" class="led" style="animation-delay:1.11s" />
+                <circle cx="258.3" cy="257.6" r="6.5" fill="#16d3e0" opacity=".35" class="led-h"
+                  style="animation-delay:1.48s" />
+                <circle cx="258.3" cy="257.6" r="2.7" fill="#16d3e0" class="led" style="animation-delay:1.48s" />
+                <circle cx="249.0" cy="253.1" r="6.5" fill="#ffb13d" opacity=".35" class="led-h"
+                  style="animation-delay:1.85s" />
+                <circle cx="249.0" cy="253.1" r="2.7" fill="#ffb13d" class="led" style="animation-delay:1.85s" />
+                <circle cx="304.8" cy="297.3" r="6.5" fill="#22d07e" opacity=".35" class="led-h"
+                  style="animation-delay:2.22s" />
+                <circle cx="304.8" cy="297.3" r="2.7" fill="#22d07e" class="led" style="animation-delay:2.22s" />
+                <circle cx="314.1" cy="292.8" r="6.5" fill="#16d3e0" opacity=".35" class="led-h"
+                  style="animation-delay:0.19s" />
+                <circle cx="314.1" cy="292.8" r="2.7" fill="#16d3e0" class="led" style="animation-delay:0.19s" />
+                <circle cx="323.4" cy="288.3" r="6.5" fill="#ffb13d" opacity=".35" class="led-h"
+                  style="animation-delay:0.56s" />
+                <circle cx="323.4" cy="288.3" r="2.7" fill="#ffb13d" class="led" style="animation-delay:0.56s" />
+                <circle cx="267.6" cy="303.3" r="6.5" fill="#22d07e" opacity=".35" class="led-h"
+                  style="animation-delay:0.93s" />
+                <circle cx="267.6" cy="303.3" r="2.7" fill="#22d07e" class="led" style="animation-delay:0.93s" />
+                <circle cx="258.3" cy="298.8" r="6.5" fill="#16d3e0" opacity=".35" class="led-h"
+                  style="animation-delay:1.30s" />
+                <circle cx="258.3" cy="298.8" r="2.7" fill="#16d3e0" class="led" style="animation-delay:1.30s" />
+                <circle cx="249.0" cy="294.3" r="6.5" fill="#ffb13d" opacity=".35" class="led-h"
+                  style="animation-delay:1.67s" />
+                <circle cx="249.0" cy="294.3" r="2.7" fill="#ffb13d" class="led" style="animation-delay:1.67s" />
+                <circle cx="304.8" cy="338.5" r="6.5" fill="#22d07e" opacity=".35" class="led-h"
+                  style="animation-delay:2.04s" />
+                <circle cx="304.8" cy="338.5" r="2.7" fill="#22d07e" class="led" style="animation-delay:2.04s" />
+                <circle cx="314.1" cy="334.0" r="6.5" fill="#16d3e0" opacity=".35" class="led-h"
+                  style="animation-delay:0.01s" />
+                <circle cx="314.1" cy="334.0" r="2.7" fill="#16d3e0" class="led" style="animation-delay:0.01s" />
+                <circle cx="323.4" cy="329.5" r="6.5" fill="#ffb13d" opacity=".35" class="led-h"
+                  style="animation-delay:0.38s" />
+                <circle cx="323.4" cy="329.5" r="2.7" fill="#ffb13d" class="led" style="animation-delay:0.38s" />
+                <circle cx="267.6" cy="344.5" r="6.5" fill="#22d07e" opacity=".35" class="led-h"
+                  style="animation-delay:0.75s" />
+                <circle cx="267.6" cy="344.5" r="2.7" fill="#22d07e" class="led" style="animation-delay:0.75s" />
+                <circle cx="258.3" cy="340.0" r="6.5" fill="#16d3e0" opacity=".35" class="led-h"
+                  style="animation-delay:1.12s" />
+                <circle cx="258.3" cy="340.0" r="2.7" fill="#16d3e0" class="led" style="animation-delay:1.12s" />
+                <circle cx="249.0" cy="335.5" r="6.5" fill="#ffb13d" opacity=".35" class="led-h"
+                  style="animation-delay:1.49s" />
+                <circle cx="249.0" cy="335.5" r="2.7" fill="#ffb13d" class="led" style="animation-delay:1.49s" />
+                <circle cx="304.8" cy="379.7" r="6.5" fill="#22d07e" opacity=".35" class="led-h"
+                  style="animation-delay:1.86s" />
+                <circle cx="304.8" cy="379.7" r="2.7" fill="#22d07e" class="led" style="animation-delay:1.86s" />
+                <circle cx="314.1" cy="375.2" r="6.5" fill="#16d3e0" opacity=".35" class="led-h"
+                  style="animation-delay:2.23s" />
+                <circle cx="314.1" cy="375.2" r="2.7" fill="#16d3e0" class="led" style="animation-delay:2.23s" />
+                <circle cx="323.4" cy="370.7" r="6.5" fill="#ffb13d" opacity=".35" class="led-h"
+                  style="animation-delay:0.20s" />
+                <circle cx="323.4" cy="370.7" r="2.7" fill="#ffb13d" class="led" style="animation-delay:0.20s" />
+                <circle cx="267.6" cy="385.7" r="6.5" fill="#22d07e" opacity=".35" class="led-h"
+                  style="animation-delay:0.57s" />
+                <circle cx="267.6" cy="385.7" r="2.7" fill="#22d07e" class="led" style="animation-delay:0.57s" />
+                <circle cx="258.3" cy="381.2" r="6.5" fill="#16d3e0" opacity=".35" class="led-h"
+                  style="animation-delay:0.94s" />
+                <circle cx="258.3" cy="381.2" r="2.7" fill="#16d3e0" class="led" style="animation-delay:0.94s" />
+                <circle cx="249.0" cy="376.7" r="6.5" fill="#ffb13d" opacity=".35" class="led-h"
+                  style="animation-delay:1.31s" />
+                <circle cx="249.0" cy="376.7" r="2.7" fill="#ffb13d" class="led" style="animation-delay:1.31s" />
+                <circle cx="304.8" cy="420.9" r="6.5" fill="#22d07e" opacity=".35" class="led-h"
+                  style="animation-delay:1.68s" />
+                <circle cx="304.8" cy="420.9" r="2.7" fill="#22d07e" class="led" style="animation-delay:1.68s" />
+                <circle cx="314.1" cy="416.4" r="6.5" fill="#16d3e0" opacity=".35" class="led-h"
+                  style="animation-delay:2.05s" />
+                <circle cx="314.1" cy="416.4" r="2.7" fill="#16d3e0" class="led" style="animation-delay:2.05s" />
+                <circle cx="323.4" cy="411.9" r="6.5" fill="#ffb13d" opacity=".35" class="led-h"
+                  style="animation-delay:0.02s" />
+                <circle cx="323.4" cy="411.9" r="2.7" fill="#ffb13d" class="led" style="animation-delay:0.02s" />
+                <circle cx="267.6" cy="426.9" r="6.5" fill="#22d07e" opacity=".35" class="led-h"
+                  style="animation-delay:0.39s" />
+                <circle cx="267.6" cy="426.9" r="2.7" fill="#22d07e" class="led" style="animation-delay:0.39s" />
+                <circle cx="258.3" cy="422.4" r="6.5" fill="#16d3e0" opacity=".35" class="led-h"
+                  style="animation-delay:0.76s" />
+                <circle cx="258.3" cy="422.4" r="2.7" fill="#16d3e0" class="led" style="animation-delay:0.76s" />
+                <circle cx="249.0" cy="417.9" r="6.5" fill="#ffb13d" opacity=".35" class="led-h"
+                  style="animation-delay:1.13s" />
+                <circle cx="249.0" cy="417.9" r="2.7" fill="#ffb13d" class="led" style="animation-delay:1.13s" />
+                <circle cx="235" cy="227" r="2.2" fill="#bfe6ff" class="dust"
+                  style="animation-delay:3.9s;animation-duration:6.4s" />
+                <circle cx="344" cy="198" r="2.2" fill="#bfe6ff" class="dust"
+                  style="animation-delay:3.5s;animation-duration:10.5s" />
+                <circle cx="179" cy="169" r="1.6" fill="#bfe6ff" class="dust"
+                  style="animation-delay:2.6s;animation-duration:6.3s" />
+                <circle cx="116" cy="367" r="1.6" fill="#bfe6ff" class="dust"
+                  style="animation-delay:5.0s;animation-duration:6.6s" />
+                <circle cx="184" cy="181" r="2.8" fill="#bfe6ff" class="dust"
+                  style="animation-delay:3.5s;animation-duration:6.2s" />
+                <circle cx="183" cy="173" r="2.8" fill="#bfe6ff" class="dust"
+                  style="animation-delay:5.2s;animation-duration:7.4s" />
+                <circle cx="143" cy="426" r="1.6" fill="#bfe6ff" class="dust"
+                  style="animation-delay:3.4s;animation-duration:8.8s" />
+                <circle cx="419" cy="242" r="1.6" fill="#bfe6ff" class="dust"
+                  style="animation-delay:3.5s;animation-duration:9.2s" />
+                <circle cx="260" cy="199" r="2.8" fill="#bfe6ff" class="dust"
+                  style="animation-delay:4.3s;animation-duration:8.8s" />
+                <circle r="4.5" fill="#16d3e0" filter="url(#glow)">
+                  <animateMotion dur="7s" begin="0s" repeatCount="indefinite" rotate="auto">
+                    <mpath href="#orbit" />
+                  </animateMotion>
+                </circle>
+                <circle r="4.5" fill="#22d07e" filter="url(#glow)">
+                  <animateMotion dur="10s" begin="-4s" repeatCount="indefinite" rotate="auto">
+                    <mpath href="#orbit" />
+                  </animateMotion>
+                </circle>
+              </svg>
+            </div>
+
+            <div class="hp-card card-ai">
+              <div class="hp-gauge">
+                <svg viewBox="0 0 46 46">
+                  <circle class="g-track" cx="23" cy="23" r="20" />
+                  <circle class="g-fill" cx="23" cy="23" r="20" />
+                </svg>
+                <span class="g-num">98</span>
+              </div>
+              <div class="tx">
+                <b><span class="spark"></span>Ultra Fast</b>
+                <span>Performance tuned</span>
+              </div>
+            </div>
+
+            <div class="hp-card card-ssl">
+              <div class="ic"><i class="fas fa-shield-halved"></i></div>
+              <div class="tx"><b>SSL Secured</b><span>HTTPS active</span></div>
+            </div>
+
+            <div class="hp-card card-up">
+              <div class="ic"><i class="fas fa-chart-line"></i></div>
+              <div class="tx"><b>99.9% Uptime</b><span>Last 30 days</span></div>
+            </div>
+
+            <div class="hp-pill"><span class="dot"></span> UK Data Centre - London</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container pb-5">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6 col-md-6">
+        <div class="feature-card">
+          <div class="icon-box icon-orange">
+            <i class="bi bi-lightning-charge fs-4"></i>
+          </div>
+          <h4 class="feature-title">Ultra Fast Performance</h4>
+          <p class="feature-text">
+            Engineered with NVMe SSDs and optimized network routing to ensure your applications load in milliseconds.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-6">
+        <div class="feature-card">
+          <div class="icon-box icon-green">
+            <i class="bi bi-shield-check fs-4"></i>
+          </div>
+          <h4 class="feature-title">99.9% Uptime SLA</h4>
+          <p class="feature-text">
+            Redundant infrastructure and self-healing architecture guarantee your website stays online without
+            interruption.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-6">
+        <div class="feature-card">
+          <div class="icon-box icon-blue">
+            <i class="bi bi-fingerprint fs-4"></i>
+          </div>
+          <h4 class="feature-title">Enterprise Security</h4>
+          <p class="feature-text">
+            Real-time DDoS mitigation, automated malware scanning, and free SSL certificates protect your critical data.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-6">
+        <div class="feature-card">
+          <div class="icon-box icon-purple">
+            <i class="bi bi-headset fs-4"></i>
+          </div>
+          <h4 class="feature-title">24/7 Expert Support</h4>
+          <p class="feature-text">
+            Our Tier-3 cloud engineers are available around the clock to resolve complex technical challenges instantly.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+  <section class="hmk-compare-section py-5">
+    <div class="container-fluid container-custom">
+      <div class="row mb-5">
+        <div class="col-lg-7 mx-auto text-center">
+          <span class="hmk-section-kicker">The HostMeerkat Advantage</span>
+          <h2 class="hmk-compare-title">Why Settle for Less?</h2>
+          <p class="hmk-compare-subtitle">See how our features stack up against the competition.</p>
+        </div>
+      </div>
+
+      <div class="hmk-compare-table-wrapper">
+        <table class="hmk-compare-table">
+          <thead>
+            <tr>
+              <th class="feature-col">Features</th>
+              <th class="hmk-col">
+                <div class="hmk-brand-badge">
+                  <img src="assets/images/logo.png" alt="HostMeerkat" height="24">
+                  <span>HostMeerkat</span>
+                </div>
+              </th>
+              <th class="others-col">Other Hosts</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="feature-col">NVMe SSD Storage</td>
+              <td class="hmk-col"><i class="fas fa-check-circle text-success"></i> Standard</td>
+              <td class="others-col"><i class="fas fa-exclamation-triangle text-warning"></i> Expensive Add-on</td>
+            </tr>
+            <tr>
+              <td class="feature-col">Enterprise DDoS Protection</td>
+              <td class="hmk-col"><i class="fas fa-check-circle text-success"></i> Included</td>
+              <td class="others-col"><i class="fas fa-exclamation-triangle text-warning"></i> Basic Only</td>
+            </tr>
+            <tr>
+              <td class="feature-col">Free Unlimited SSL</td>
+              <td class="hmk-col"><i class="fas fa-check-circle text-success"></i> Included</td>
+              <td class="others-col"><i class="fas fa-exclamation-triangle text-warning"></i> 1 Year Only</td>
+            </tr>
+            <tr>
+              <td class="feature-col">Premium UK Data Centres</td>
+              <td class="hmk-col"><i class="fas fa-check-circle text-success"></i> London, UK</td>
+              <td class="others-col"><i class="fas fa-times-circle text-danger"></i> Offshore / Slow</td>
+            </tr>
+            <tr>
+              <td class="feature-col">24/7 Expert Support</td>
+              <td class="hmk-col"><i class="fas fa-check-circle text-success"></i> Real Experts</td>
+              <td class="others-col"><i class="fas fa-exclamation-triangle text-warning"></i> Bots & Tier 1</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ==========================================
+       HOW IT WORKS (4 STEPS) SECTION
+       ========================================== -->
+  <section class="hmk-steps-section py-5">
+    <div class="container-fluid container-custom">
+      <div class="row mb-4">
+        <div class="col-lg-8 mx-auto text-center">
+          <span class="hmk-section-kicker">ðŸš€ Get Started in Minutes</span>
+          <h2 class="hmk-compare-title">Your Journey to Better Hosting</h2>
+          <p class="hmk-compare-subtitle">We have streamlined the entire process so you can focus on building, not configuring.</p>
+        </div>
+      </div>
+
+      <!-- The Wrapper turns into a Swipeable Slider on Mobile -->
+      <div class="hmk-steps-wrapper">
+        
+        <!-- Step 1 -->
+        <div class="hmk-step-card">
+          <div class="step-number">1</div>
+          <div class="step-icon"><i class="fas fa-server"></i></div>
+          <h3>Choose Your Plan</h3>
+          <p>Select the package that perfectly fits your website needs and traffic.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="hmk-step-card">
+          <div class="step-number">2</div>
+          <div class="step-icon"><i class="fas fa-user-plus"></i></div>
+          <h3>Create Account</h3>
+          <p>Complete a secure checkout and receive instant access to your portal.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="hmk-step-card">
+          <div class="step-number">3</div>
+          <div class="step-icon"><i class="fas fa-cloud-arrow-up"></i></div>
+          <h3>Set Up or Migrate</h3>
+          <p>Upload your website files or let our expert team migrate it for free.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="hmk-step-card">
+          <div class="step-number">4</div>
+          <div class="step-icon"><i class="fas fa-rocket"></i></div>
+          <h3>Go Live</h3>
+          <p>Point your domain to our nameservers and instantly launch your website.</p>
+        </div>
+        
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-12 text-center">
+          <a href="#pricing" class="hmk-section-btn">
+            View Hosting Plans <i class="fas fa-arrow-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  <section class="hmk-pricing-section py-5" id="pricing">
+    <div class="container-fluid container-custom">
+
+      <div class="row mb-5">
+        <div class="col-lg-7 mx-auto text-center">
+          <h2 class="hmk-pricing-title">
+            Choose Your Perfect Plan
+          </h2>
+
+          <p class="hmk-pricing-subtitle">
+            Flexible pricing options designed to scale with your business
+          </p>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-center align-items-center gap-3 mb-5 flex-wrap">
+        <ul class="nav nav-pills hmk-toggle-wrap p-1" role="tablist">
+          <li class="nav-item">
+            <button class="nav-link active hmk-toggle-btn" id="monthly-tab" data-bs-toggle="pill"
+              data-bs-target="#hmk-monthly" type="button" role="tab">
+              Monthly
+            </button>
+          </li>
+
+          <li class="nav-item">
+            <button class="nav-link hmk-toggle-btn" id="yearly-tab" data-bs-toggle="pill" data-bs-target="#hmk-yearly"
+              type="button" role="tab">
+              Yearly
+            </button>
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="tab-content">
+
+        <div class="tab-pane fade show active" id="hmk-monthly" role="tabpanel">
+          <div class="row g-4 justify-content-center">
+
+            <div class="col-lg-4 col-md-6">
+              <div class="hmk-price-card hmk-card-purple">
+                <div class="hmk-card-top">
+                  <div class="hmk-icon-box hmk-icon-box  ">
+                    <i class="fas fa-server hmk-btn-purple "></i>
+                  </div>
+
+                  <div>
+                    <h3 class="hmk-plan-name">Starter</h3>
+                    <p class="hmk-plan-text">Perfect for personal websites</p>
+                  </div>
+                </div>
+
+                <div class="hmk-mini-tags">
+                  <span>cPanel</span>
+                  <span class="hmk-btn-purple">10GB SSD</span>
+                  <span>100GB BW</span>
+                  <span>1 Website</span>
+                </div>
+
+                <div class="hmk-price-wrap">
+                  <span class="hmk-price">£5</span>
+                  <span class="hmk-price-small">/month</span>
+                </div>
+
+                <p class="hmk-year-text">Or Yearly for £50/Year</p>
+
+                <div class="hmk-divider"></div>
+
+                <h6 class="hmk-feature-title">FEATURES INCLUDED:</h6>
+
+                <ul class="hmk-feature-list ">
+                  <li><i class="fas fa-check-circle purple"></i> 10 GB NVMe SSD Storage</li>
+                  <li><i class="fas fa-check-circle purple"></i> 100 GB Bandwidth</li>
+                  <li><i class="fas fa-check-circle purple"></i> 1 Website</li>
+                  <li><i class="fas fa-check-circle purple"></i> 24/7 Support</li>
+                </ul>
+
+                <a href="https://hostmeerkat.co.uk/clients/store/uk-hosting-uk-server-london/uk-starter-10"
+                  class="hmk-order-btn hmk-btn-purple">
+                  ORDER NOW
+                </a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="hmk-price-card hmk-card-blue hmk-popular-card">
+
+
+                <div class="hmk-card-top">
+                  <div class="hmk-icon-box">
+                    <i class="fas fa-bolt"></i>
+                  </div>
+
+                  <div>
+                    <span class="d-flex d-flex flex-column flex-sm-row align-items-start align-items-sm-center gap-2 gap-sm-3">
+                      <h3 class="hmk-plan-name">Business</h3>
+                      <div class="hmk-popular-badge align-self-start align-self-sm-center">MOST POPULAR</div>
+                    </span>
+
+                    <p class="hmk-plan-text">Ideal for growing businesses</p>
+                  </div>
+
+                </div>
+
+                <div class="hmk-mini-tags">
+                  <span>cPanel</span>
+                  <span class="hmk-btn-blue">30GB SSD</span>
+                  <span>Unlim BW</span>
+                  <span>5 Websites</span>
+                </div>
+
+                <div class="hmk-price-wrap">
+                  <span class="hmk-price">£12</span>
+                  <span class="hmk-price-small">/month</span>
+                </div>
+
+                <p class="hmk-year-text">Or Yearly for £120/Year</p>
+
+                <div class="hmk-divider"></div>
+
+                <h6 class="hmk-feature-title">FEATURES INCLUDED:</h6>
+
+                <ul class="hmk-feature-list">
+                  <li><i class="fas fa-check-circle bluec"></i> 30 GB NVMe SSD Storage</li>
+                  <li><i class="fas fa-check-circle bluec"></i> Unlimited Bandwidth</li>
+                  <li><i class="fas fa-check-circle bluec"></i> 5 Websites</li>
+                  <li><i class="fas fa-check-circle bluec"></i> Daily Backups</li>
+                  <li><i class="fas fa-check-circle bluec"></i> Priority Support</li>
+                </ul>
+
+                <a href="https://hostmeerkat.co.uk/clients/store/uk-hosting-uk-server-london/uk-business-30gb"
+                  class="hmk-order-btn hmk-btn-blue">
+                  ORDER NOW
+                </a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="hmk-price-card hmk-card-orange">
+                <div class="hmk-card-top">
+                  <div class="hmk-icon-box">
+                    <i class="fas fa-cubes"></i>
+                  </div>
+
+                  <div>
+                    <h3 class="hmk-plan-name">Pro</h3>
+                    <p class="hmk-plan-text">For high-traffic websites</p>
+                  </div>
+                </div>
+
+                <div class="hmk-mini-tags">
+                  <span>cPanel</span>
+                  <span class="hmk-btn-orange">60GB SSD</span>
+                  <span>Unlim BW</span>
+                  <span>Dedicated IP</span>
+                </div>
+
+                <div class="hmk-price-wrap">
+                  <span class="hmk-price">£21</span>
+                  <span class="hmk-price-small">/month</span>
+                </div>
+
+                <p class="hmk-year-text">Or Yearly for £250/Year</p>
+
+                <div class="hmk-divider"></div>
+
+                <h6 class="hmk-feature-title">FEATURES INCLUDED:</h6>
+
+                <ul class="hmk-feature-list">
+                  <li><i class="fas fa-check-circle orange"></i> 60 GB NVMe SSD Storage</li>
+                  <li><i class="fas fa-check-circle orange"></i> Unlimited Everything</li>
+                  <li><i class="fas fa-check-circle orange"></i> Dedicated IP</li>
+                  <li><i class="fas fa-check-circle orange"></i> Advanced Security</li>
+                </ul>
+
+                <a href="https://hostmeerkat.co.uk/clients/store/uk-hosting-uk-server-london/uk-pro-60"
+                  class="hmk-order-btn hmk-btn-orange">
+                  ORDER NOW
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="tab-pane fade" id="hmk-yearly" role="tabpanel">
+          <div class="row g-4 justify-content-center">
+
+            <div class="col-lg-4 col-md-6">
+              <div class="hmk-price-card hmk-card-purple">
+                <div class="hmk-card-top">
+                  <div class="hmk-icon-box">
+                    <i class="fas fa-server"></i>
+                  </div>
+
+                  <div>
+                    <h3 class="hmk-plan-name">Starter</h3>
+                    <p class="hmk-plan-text">Perfect for personal websites</p>
+                  </div>
+                </div>
+
+                <div class="hmk-mini-tags">
+                  <span>cPanel</span>
+                  <span class="hmk-btn-purple">10GB SSD</span>
+                  <span>100GB BW</span>
+                  <span>1 Website</span>
+                </div>
+
+                <div class="hmk-price-wrap">
+                  <span class="hmk-price">£50</span>
+                  <span class="hmk-price-small">/year</span>
+                </div>
+
+                <p class="hmk-year-text">Or Monthly for £5/Month</p>
+
+                <div class="hmk-divider"></div>
+
+                <h6 class="hmk-feature-title">FEATURES INCLUDED:</h6>
+
+                <ul class="hmk-feature-list">
+                  <li><i class="fas fa-check-circle purple"></i> 10 GB NVMe SSD Storage</li>
+                  <li><i class="fas fa-check-circle purple"></i> 100 GB Bandwidth</li>
+                  <li><i class="fas fa-check-circle purple"></i> 1 Website</li>
+                  <li><i class="fas fa-check-circle purple"></i> 24/7 Support</li>
+                </ul>
+
+                <a href="https://hostmeerkat.co.uk/clients/store/uk-hosting-uk-server-london/uk-starter-10"
+                  class="hmk-order-btn hmk-btn-purple">
+                  ORDER NOW
+                </a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="hmk-price-card hmk-card-blue hmk-popular-card">
+
+
+                <div class="hmk-card-top">
+                  <div class="hmk-icon-box">
+                    <i class="fas fa-bolt"></i>
+                  </div>
+
+                  <div>
+                    <span class="d-flex flex-row gap-3">
+                      <h3 class="hmk-plan-name">Business</h3>
+                      <div class="hmk-popular-badge">MOST POPULAR</div>
+                    </span>
+                    <p class="hmk-plan-text">Ideal for growing businesses</p>
+                  </div>
+                </div>
+
+                <div class="hmk-mini-tags">
+                  <span>cPanel</span>
+                  <span class="hmk-btn-blue">30GB SSD</span>
+                  <span>Unlim BW</span>
+                  <span>5 Websites</span>
+                </div>
+
+                <div class="hmk-price-wrap">
+                  <span class="hmk-price">£120</span>
+                  <span class="hmk-price-small">/year</span>
+                </div>
+
+                <p class="hmk-year-text">Or Monthly for £12/Month</p>
+
+                <div class="hmk-divider"></div>
+
+                <h6 class="hmk-feature-title">FEATURES INCLUDED:</h6>
+
+                <ul class="hmk-feature-list">
+                  <li><i class="fas fa-check-circle bluec"></i> 30 GB NVMe SSD Storage</li>
+                  <li><i class="fas fa-check-circle bluec"></i> Unlimited Bandwidth</li>
+                  <li><i class="fas fa-check-circle bluec"></i> 5 Websites</li>
+                  <li><i class="fas fa-check-circle bluec"></i> Daily Backups</li>
+                  <li><i class="fas fa-check-circle bluec"></i> Priority Support</li>
+                </ul>
+
+                <a href="https://hostmeerkat.co.uk/clients/store/uk-hosting-uk-server-london/uk-business-30gb"
+                  class="hmk-order-btn hmk-btn-blue">
+                  ORDER NOW
+                </a>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <div class="hmk-price-card hmk-card-orange">
+                <div class="hmk-card-top">
+                  <div class="hmk-icon-box">
+                    <i class="fas fa-cubes"></i>
+                  </div>
+
+                  <div>
+                    <h3 class="hmk-plan-name">Pro</h3>
+                    <p class="hmk-plan-text">For high-traffic websites</p>
+                  </div>
+                </div>
+
+                <div class="hmk-mini-tags">
+                  <span>cPanel</span>
+                  <span class="hmk-btn-orange">60GB SSD</span>
+                  <span>Unlim BW</span>
+                  <span>Dedicated IP</span>
+                </div>
+
+                <div class="hmk-price-wrap">
+                  <span class="hmk-price">£250</span>
+                  <span class="hmk-price-small">/year</span>
+                </div>
+
+                <p class="hmk-year-text">Or Monthly for £21/Month</p>
+
+                <div class="hmk-divider"></div>
+
+                <h6 class="hmk-feature-title">FEATURES INCLUDED:</h6>
+
+                <ul class="hmk-feature-list">
+                  <li><i class="fas fa-check-circle orange"></i> 60 GB NVMe SSD Storage</li>
+                  <li><i class="fas fa-check-circle orange"></i> Unlimited Everything</li>
+                  <li><i class="fas fa-check-circle orange"></i> Dedicated IP</li>
+                  <li><i class="fas fa-check-circle orange"></i> Advanced Security</li>
+                </ul>
+
+                <a href="https://hostmeerkat.co.uk/clients/store/uk-hosting-uk-server-london/uk-pro-60"
+                  class="hmk-order-btn hmk-btn-orange">
+                  ORDER NOW
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="hmk-migration-section" id="free-migration">
+    <div class="container-fluid container-custom">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5">
+          <div class="hmk-section-copy">
+            <span class="hmk-section-kicker">Free Website Migration</span>
+            <h2 class="hmk-migration-title">Move to HostMeerkat Without the Hassle</h2>
+            <p class="hmk-migration-subtitle">
+              Switching hosting should be simple. After you choose your plan, our support team can help move your
+              website files, databases and emails across to your new HostMeerkat account with care.
+            </p>
+            <a href="web-hosting.html" class="hmk-section-btn">View Hosting Plans <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="hmk-migration-steps">
+            <div class="hmk-migration-card">
+              <div class="hmk-migration-icon hmk-icon-dark"><i class="fas fa-box-open"></i></div>
+              <div>
+                <h3>Choose Your Hosting Plan</h3>
+                <p>Select the HostMeerkat package that fits your website, from Starter through to Business or Pro.</p>
+              </div>
+            </div>
+
+            <div class="hmk-migration-card">
+              <div class="hmk-migration-icon hmk-icon-blue"><i class="fas fa-headset"></i></div>
+              <div>
+                <h3>Send Us Your Migration Request</h3>
+                <p>Open a support ticket and share the basic access details we need to safely begin the transfer.</p>
+              </div>
+            </div>
+
+            <div class="hmk-migration-card">
+              <div class="hmk-migration-icon hmk-icon-green"><i class="fas fa-rocket"></i></div>
+              <div>
+                <h3>We Move, Check & Launch</h3>
+                <p>Our team helps transfer the website, checks the setup and guides you through going live on
+                  HostMeerkat.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hmk-faq-section" id="hosting-faq">
+    <div class="container-fluid container-custom">
+      <div class="hmk-faq-wrap">
+        <div class="hmk-faq-intro">
+          <span class="hmk-section-kicker">Quick Answers</span>
+          <h2 class="hmk-faq-title">Hosting Questions, Answered</h2>
+          <p class="hmk-faq-subtitle">
+            Simple answers to help customers choose the right plan and understand what is included before ordering.
+          </p>
+          <div class="hmk-faq-help-card">
+            <div class="hmk-faq-help-icon"><i class="fas fa-headset"></i></div>
+            <div>
+              <h3>Still unsure?</h3>
+              <p>Our support team can help you choose the best plan for your website.</p>
+              <a href="https://hostmeerkat.net/clients/login">Contact Support</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hmk-faq-list">
+          <details class="hmk-faq-item" open>
+            <summary>Which hosting plan is best for me?</summary>
+            <p>Starter is ideal for small websites, Business is better for growing sites, and Pro is built for larger
+              websites that need more resources and performance.</p>
+          </details>
+
+          <details class="hmk-faq-item">
+            <summary>How quickly will my hosting be ready?</summary>
+            <p>Most hosting accounts are activated quickly after ordering, so you can log in, connect your domain,
+              upload files, and start building your website.</p>
+          </details>
+
+          <details class="hmk-faq-item">
+            <summary>Can I upgrade my plan later?</summary>
+            <p>Yes. You can start with a smaller package and upgrade later as your website grows, without needing to
+              rebuild your site from scratch.</p>
+          </details>
+
+          <details class="hmk-faq-item">
+            <summary>Do the plans include useful website tools?</summary>
+            <p>Yes. Plans are designed to include practical hosting tools such as cPanel access, NVMe SSD storage, email
+              features, and website management options.</p>
+          </details>
+
+          <details class="hmk-faq-item">
+            <summary>Will my website be secure?</summary>
+            <p>HostMeerkat hosting is built with security, reliable infrastructure, backups, and support in mind to help
+              keep your website protected and online.</p>
+          </details>
+
+          <details class="hmk-faq-item">
+            <summary>What if I need help after ordering?</summary>
+            <p>You can contact support through the client area if you need help with setup, hosting questions, technical
+              issues, or choosing the right next step.</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="hmk-payment-section" id="payment-methods">
+    <div class="container-fluid container-custom">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5">
+          <div class="hmk-section-copy">
+            <span class="hmk-section-kicker">Payment Methods</span>
+            <h2 class="hmk-payment-title">Simple, Secure Payments for Your Hosting</h2>
+            <p class="hmk-payment-subtitle">
+              Pay for your HostMeerkat hosting plan using trusted checkout options. We support major cards and PayPal so
+              customers can order quickly and securely.
+            </p>
+            <a href="#pricing" class="hmk-section-btn hmk-payment-btn">Choose a Plan <i
+                class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="hmk-payment-grid">
+            <div class="hmk-payment-card"><i class="fab fa-cc-mastercard"></i><span>Mastercard</span></div>
+            <div class="hmk-payment-card"><i class="fab fa-cc-visa"></i><span>Visa</span></div>
+            <div class="hmk-payment-card"><i class="fab fa-cc-amex"></i><span>American Express</span></div>
+            <div class="hmk-payment-card"><i class="fab fa-cc-discover"></i><span>Discover</span></div>
+            <div class="hmk-payment-card"><i class="fab fa-paypal"></i><span>PayPal</span></div>
+            <div class="hmk-payment-card hmk-payment-card-highlight"><i class="fas fa-lock"></i><span>Secure
+                Checkout</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="hmk-testimonial-section py-5">
+    <div class="container-fluid container-custom">
+      <div class="row mb-5">
+        <div class="col-lg-7 mx-auto text-center">
+          <span class="hmk-section-kicker">Client Stories</span>
+          <h2 class="hmk-compare-title">Loved by Thousands</h2>
+          <p class="hmk-compare-subtitle">See what our customers have to say about our speed, reliability, and support.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div id="reviews" class="owl-carousel owl-theme">
+            
+            <div class="item">
+              <div class="hmk-review-card">
+                <div class="quote-watermark"><i class="fa-solid fa-quote-right"></i></div>
+                <div class="hmk-stars">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="hmk-review-text">"Switching to HostMeerkat was the best decision for my agency. The NVMe speeds are incredible, and their 24/7 support team actually knows what they're doing!"</p>
+                <div class="hmk-review-author">
+                  <div class="hmk-avatar hmk-avatar-blue">JD</div>
+                  <div class="hmk-author-info">
+                    <h4 class="hmk-author-name">James Davies</h4>
+                    <span class="hmk-author-role">Digital Agency Owner</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="hmk-review-card">
+                <div class="quote-watermark"><i class="fa-solid fa-quote-right"></i></div>
+                <div class="hmk-stars">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="hmk-review-text">"Our eCommerce store used to crash during traffic spikes. Since moving to HostMeerkat's Business plan, we have had 100% uptime. Highly recommended."</p>
+                <div class="hmk-review-author">
+                  <div class="hmk-avatar hmk-avatar-orange">SW</div>
+                  <div class="hmk-author-info">
+                    <h4 class="hmk-author-name">Sarah Williams</h4>
+                    <span class="hmk-author-role">E-commerce Founder</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="hmk-review-card">
+                <div class="quote-watermark"><i class="fa-solid fa-quote-right"></i></div>
+                <div class="hmk-stars">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="hmk-review-text">"The free migration was flawless. I gave them the details to my old cPanel, went to sleep, and woke up with everything perfectly transferred. 10/10 service."</p>
+                <div class="hmk-review-author">
+                  <div class="hmk-avatar hmk-avatar-green">MT</div>
+                  <div class="hmk-author-info">
+                    <h4 class="hmk-author-name">Michael Thompson</h4>
+                    <span class="hmk-author-role">Freelance Developer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="hmk-review-card">
+                <div class="quote-watermark"><i class="fa-solid fa-quote-right"></i></div>
+                <div class="hmk-stars">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="hmk-review-text">"As a reseller, I need a host I can trust blindly. HostMeerkatâ€™s white-label infrastructure allows me to scale my own business without ever worrying about server drops."</p>
+                <div class="hmk-review-author">
+                  <div class="hmk-avatar hmk-avatar-purple">LP</div>
+                  <div class="hmk-author-info">
+                    <h4 class="hmk-author-name">Laura Palmer</h4>
+                    <span class="hmk-author-role">Hosting Reseller</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ── FOOTER ── -->
+  <div class="footer-wrap">
+    <div class="footer-horizon"></div>
+    <div class="container container-custom">
+      <div class="row footer_links">
+        <div class="col-lg-8 col-md-12">
+          <div class="row">
+            <div class="col-md-4 col-sm-6">
+              <h4>Solutions</h4>
+              <ul>
+                <li><a href="web-hosting.html">Web Hosting</a></li>
+                <li><a href="wordpress-hosting.html">WordPress Hosting</a></li>
+                <li><a href="reseller-hosting.html">Reseller Hosting</a></li>
+                <li><a href="vps-hosting.html">VPS Hosting</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <h4>Resources</h4>
+              <ul>
+                <li><a href="https://clients.hostmeerkat.co.uk/login">Client Portal</a></li>
+                <li><a href="#">Knowledge Base</a></li>
+                <li><a href="#payment-methods">Payment Methods</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <h4>Company</h4>
+              <ul>
+                <li><a href="about.html">About HostMeerkat</a></li>
+                <li><a href="why-chose.html">Why Choose Us</a></li>
+                <li><a href="contact.php">Contact Sales</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
+                <li><a href="anti-spam-policy.html">Anti-Spam Policy</a></li>
+                <li><a href="report-abuse.html">Report Abuse</a></li>
+                <li><a href="reseller-agreement.html">Reseller Agreement</a></li>
+                <li><a href="cancellation-and-refund.html">Cancellation &amp; Refund</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 footer_about">
+          <div class="d-flex align-items-center mb-3">
+            <img class="mr-2" src="assets/images/logo.png" alt="HostMeerkat Secure UK Hosting" height="38">
+            <h2 class="mb-0 d-flex align-items-center text-white" style="font-weight:800;font-size:1.8rem;">Host<span style="color:#3b82f6;">Meerkat</span></h2>
+          </div>
+          <p>Deploy your digital future on our blazing-fast, secure, and infinitely scalable UK cloud infrastructure.</p>
+          <div class="footer-status">
+            <div class="pulse"></div>
+            All Systems Operational
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer_bottom">
+      <div class="container container-custom">
+        <div class="row d-flex justify-content-between align-items-center">
+          <div class="col-md-6 d-flex align-items-center justify-content-center justify-content-md-start mb-3 mb-md-0">
+            <img src="assets/images/paymethod.png" height="28" alt="Pay for hosting securely with Visa, Mastercard, or PayPal" style="opacity:0.9;transition:0.3s;">
+          </div>
+          <div class="col-md-6 d-flex align-items-center justify-content-center justify-content-md-end">
+            <p class="mb-0">&copy; 2026 HostMeerkat.co.uk. Designed for performance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const hero = document.getElementById("heroAnimation");
+
+        if (!hero) return;
+
+        const isMobile = window.innerWidth <= 768;
+
+        document.addEventListener("mousemove", function (e) {
+
+            if(isMobile) return;
+
+            const x = (window.innerWidth / 2 - e.pageX) / 40;
+            const y = (window.innerHeight / 2 - e.pageY) / 40;
+
+            hero.style.transform =
+            `scale(1) rotateY(${-x}deg) rotateX(${y}deg)`;
+        });
+
+        document.addEventListener("mouseleave", function () {
+
+            if(isMobile){
+                hero.style.transform = "scale(.58)";
+            }else{
+                hero.style.transform = "scale(1) rotateY(0deg) rotateX(0deg)";
+            }
+
+        });
+
+    });
+  </script> -->
+
+ <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  var hero = document.getElementById("heroAnimation");
+
+  if (hero) {
+
+    function isTouch() { 
+      return window.innerWidth <= 991; 
+    }
+
+    document.addEventListener("mousemove", function (e) {
+      if (isTouch()) return;
+
+      var x = (window.innerWidth / 2 - e.pageX) / 40;
+      var y = (window.innerHeight / 2 - e.pageY) / 40;
+
+      hero.style.transform =
+        "rotateY(" + (-x) + "deg) rotateX(" + y + "deg)";
+    });
+
+
+    document.addEventListener("mouseleave", function () {
+      hero.style.transform = "rotateY(0deg) rotateX(0deg)";
+    });
+
+
+    window.addEventListener("resize", function () {
+      if (isTouch()) {
+        hero.style.transform = "none";
+      }
+    });
+
+  } 
+
+}); 
+
+</script>
+  <script>
+  // Theme Toggle Logic (Updated for multiple buttons)
+  document.addEventListener("DOMContentLoaded", function () {
+    var toggleBtns = document.querySelectorAll('.theme-toggle-btn');
+
+    // Check memory
+    if (localStorage.getItem('hmk-theme') === 'light') {
+      document.body.classList.add('light-mode');
+    }
+
+    // Add click event to all toggle buttons on the page
+    toggleBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        document.body.classList.toggle('light-mode');
+        localStorage.setItem('hmk-theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
+      });
+    });
+  });
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script src="https://cdn.websitepolicies.io/lib/cookieconsent/cookieconsent.min.js"></script>
+
+  <script src="./assets/js/custom.js"></script>
+
+  <script>
+  // Products  //
+  jQuery("#products").owlCarousel({ autoplay: !1, rewind: !0, margin: 20, mouseDrag: !1, nav: !0, dots: !1, navText: ['<span class="btn" aria-label="Previous">Previous</span>', '<span class="btn" aria-label="Next">Next</span>'], lazyLoad: !0, responsive: { 0: { items: 1 }, 576: { items: 2 }, 768: { items: 2 }, 1024: { items: 3 }, 1366: { items: 4 } } });
+  // Reviews //
+  jQuery("#reviews").owlCarousel({ autoplay: !0, rewind: !0, margin: 20, mouseDrag: !0, nav: !1, dots: !1, lazyLoad: !0, responsive: { 0: { items: 1 }, 576: { items: 2 }, 768: { items: 2 }, 1024: { items: 3 }, 1366: { items: 3 } } });
+  </script>
+</body>
+
+</html>
