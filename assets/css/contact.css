@@ -114,7 +114,6 @@ body.light-mode .navbar-toggler-icon {
 }
 
 .hmk-nav-actions {
-  display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
   gap: 12px !important;
