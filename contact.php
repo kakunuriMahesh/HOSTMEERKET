@@ -179,10 +179,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </a>
 
       <div class="d-flex align-items-center d-lg-none gap-3 hmk-nav-actions">
-        <button class="theme-toggle-btn" aria-label="Toggle theme">
-          <i class="fa-solid fa-moon icon-dark"></i>
-          <i class="fa-solid fa-sun icon-light"></i>
-        </button>
         <button class="navbar-toggler ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarType" aria-controls="navbarType">
           <span class="navbar-toggler-icon"></span>
         </button>

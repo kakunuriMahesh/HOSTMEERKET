@@ -111,10 +111,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </a>
 
         <div class="d-flex align-items-center d-lg-none gap-3">
-            <button class="theme-toggle-btn" aria-label="Toggle theme">
-                <i class="fa-solid fa-moon icon-dark"></i>
-                <i class="fa-solid fa-sun icon-light"></i>
-            </button>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarType" aria-controls="navbarType">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -344,20 +340,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <script src="assets/js/custom.js"></script>
 
   <script>
-    // Theme Toggle Logic
-    document.addEventListener("DOMContentLoaded", function () {
-      var btn = document.getElementById('theme-toggle');
-      if (localStorage.getItem('hmk-theme') === 'light') {
-        document.body.classList.add('light-mode');
-      }
-      if (btn) {
-        btn.addEventListener('click', function () {
-          document.body.classList.toggle('light-mode');
-          localStorage.setItem('hmk-theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
-        });
-      }
-    });
-
     // Form Handling Logic
     (function () {
       var params = new URLSearchParams(window.location.search);
